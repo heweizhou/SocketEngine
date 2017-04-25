@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E2CC0201DF156380094A088 /* CDataHub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC01D1DF156380094A088 /* CDataHub.cpp */; };
+		1E2CC0221DF156380094A088 /* DataRequestProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC01F1DF156380094A088 /* DataRequestProtocol.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1EBC649D1DDD8E270094949E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E2CBFF81DF156170094A088 /* CBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundle.h; sourceTree = "<group>"; };
+		1E2CBFF91DF156170094A088 /* CBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundleManager.h; sourceTree = "<group>"; };
+		1E2CBFFB1DF156170094A088 /* CHanderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHanderManager.h; sourceTree = "<group>"; };
+		1E2CBFFD1DF156170094A088 /* CLinuxTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLinuxTime.h; sourceTree = "<group>"; };
+		1E2CBFFE1DF156170094A088 /* CList_ZHW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CList_ZHW.h; sourceTree = "<group>"; };
+		1E2CBFFF1DF156170094A088 /* CMutexFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMutexFactory.h; sourceTree = "<group>"; };
+		1E2CC0011DF156170094A088 /* CSemaphoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSemaphoreManager.h; sourceTree = "<group>"; };
+		1E2CC0021DF156170094A088 /* CShareMemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CShareMemManager.h; sourceTree = "<group>"; };
+		1E2CC0031DF156170094A088 /* CSmartPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSmartPointer.h; sourceTree = "<group>"; };
+		1E2CC0041DF156170094A088 /* CThreadFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadFactory.h; sourceTree = "<group>"; };
+		1E2CC0051DF156170094A088 /* CThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadPool.h; sourceTree = "<group>"; };
+		1E2CC0081DF156170094A088 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		1E2CC0091DF156170094A088 /* ICMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMutex.h; sourceTree = "<group>"; };
+		1E2CC00A1DF156170094A088 /* ICSemaphoreNamed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSemaphoreNamed.h; sourceTree = "<group>"; };
+		1E2CC00B1DF156170094A088 /* ICSharedMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSharedMemory.h; sourceTree = "<group>"; };
+		1E2CC00C1DF156170094A088 /* IWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWork.h; sourceTree = "<group>"; };
+		1E2CC00D1DF156170094A088 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		1E2CC00E1DF156170094A088 /* RefBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefBase.h; sourceTree = "<group>"; };
+		1E2CC00F1DF156170094A088 /* reuse_pool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reuse_pool.hpp; sourceTree = "<group>"; };
+		1E2CC0101DF156170094A088 /* scope_lock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = scope_lock.hpp; sourceTree = "<group>"; };
+		1E2CC0191DF1562A0094A088 /* MessageAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAdapter.h; sourceTree = "<group>"; };
+		1E2CC01A1DF1562A0094A088 /* MessageDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDefines.h; sourceTree = "<group>"; };
+		1E2CC01B1DF1562A0094A088 /* SharedThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedThreadAdapter.h; sourceTree = "<group>"; };
+		1E2CC01C1DF1562A0094A088 /* SingleThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleThreadAdapter.h; sourceTree = "<group>"; };
+		1E2CC01D1DF156380094A088 /* CDataHub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CDataHub.cpp; path = ../../../src/datahub/CDataHub.cpp; sourceTree = "<group>"; };
+		1E2CC01F1DF156380094A088 /* DataRequestProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataRequestProtocol.cpp; path = ../../../src/datahub/DataRequestProtocol.cpp; sourceTree = "<group>"; };
+		1E2CC0231DF157EC0094A088 /* CDataHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDataHub.h; path = ../../../src/datahub/CDataHub.h; sourceTree = "<group>"; };
+		1E2CC0371DF15A060094A088 /* CDataHubCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDataHubCtrl.h; path = ../../../inc/datahub/CDataHubCtrl.h; sourceTree = "<group>"; };
+		1E2CC0391DF15A060094A088 /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataRequest.h; path = ../../../inc/datahub/DataRequest.h; sourceTree = "<group>"; };
+		1E2CC03A1DF15A060094A088 /* DataRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataRequestProtocol.h; path = ../../../inc/datahub/DataRequestProtocol.h; sourceTree = "<group>"; };
+		1EBC649F1DDD8E270094949E /* libDataHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDataHub.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EBC649C1DDD8E270094949E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E2CBFD21DF155970094A088 /* output_inc */ = {
+			isa = PBXGroup;
+			children = (
+				1E2CC0371DF15A060094A088 /* CDataHubCtrl.h */,
+				1E2CC0391DF15A060094A088 /* DataRequest.h */,
+				1E2CC03A1DF15A060094A088 /* DataRequestProtocol.h */,
+			);
+			name = output_inc;
+			sourceTree = "<group>";
+		};
+		1E2CBFF61DF156070094A088 /* DataHub */ = {
+			isa = PBXGroup;
+			children = (
+				1E2CC0231DF157EC0094A088 /* CDataHub.h */,
+				1E2CC01D1DF156380094A088 /* CDataHub.cpp */,
+				1E2CC01F1DF156380094A088 /* DataRequestProtocol.cpp */,
+				1E2CC0181DF1562A0094A088 /* MessageCenter */,
+				1E2CBFF71DF156170094A088 /* commons */,
+			);
+			name = DataHub;
+			sourceTree = "<group>";
+		};
+		1E2CBFF71DF156170094A088 /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				1E2CBFF81DF156170094A088 /* CBundle.h */,
+				1E2CBFF91DF156170094A088 /* CBundleManager.h */,
+				1E2CBFFB1DF156170094A088 /* CHanderManager.h */,
+				1E2CBFFD1DF156170094A088 /* CLinuxTime.h */,
+				1E2CBFFE1DF156170094A088 /* CList_ZHW.h */,
+				1E2CBFFF1DF156170094A088 /* CMutexFactory.h */,
+				1E2CC0011DF156170094A088 /* CSemaphoreManager.h */,
+				1E2CC0021DF156170094A088 /* CShareMemManager.h */,
+				1E2CC0031DF156170094A088 /* CSmartPointer.h */,
+				1E2CC0041DF156170094A088 /* CThreadFactory.h */,
+				1E2CC0051DF156170094A088 /* CThreadPool.h */,
+				1E2CC0081DF156170094A088 /* defines.h */,
+				1E2CC0091DF156170094A088 /* ICMutex.h */,
+				1E2CC00A1DF156170094A088 /* ICSemaphoreNamed.h */,
+				1E2CC00B1DF156170094A088 /* ICSharedMemory.h */,
+				1E2CC00C1DF156170094A088 /* IWork.h */,
+				1E2CC00D1DF156170094A088 /* log.h */,
+				1E2CC00E1DF156170094A088 /* RefBase.h */,
+				1E2CC00F1DF156170094A088 /* reuse_pool.hpp */,
+				1E2CC0101DF156170094A088 /* scope_lock.hpp */,
+			);
+			name = commons;
+			path = ../../../inc/commons;
+			sourceTree = "<group>";
+		};
+		1E2CC0181DF1562A0094A088 /* MessageCenter */ = {
+			isa = PBXGroup;
+			children = (
+				1E2CC0191DF1562A0094A088 /* MessageAdapter.h */,
+				1E2CC01A1DF1562A0094A088 /* MessageDefines.h */,
+				1E2CC01B1DF1562A0094A088 /* SharedThreadAdapter.h */,
+				1E2CC01C1DF1562A0094A088 /* SingleThreadAdapter.h */,
+			);
+			name = MessageCenter;
+			path = ../../../inc/MessageCenter;
+			sourceTree = "<group>";
+		};
+		1EBC64961DDD8E270094949E = {
+			isa = PBXGroup;
+			children = (
+				1E2CBFF61DF156070094A088 /* DataHub */,
+				1E2CBFD21DF155970094A088 /* output_inc */,
+				1EBC64A01DDD8E270094949E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EBC64A01DDD8E270094949E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EBC649F1DDD8E270094949E /* libDataHub.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EBC649E1DDD8E270094949E /* DataHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EBC64A81DDD8E270094949E /* Build configuration list for PBXNativeTarget "DataHub" */;
+			buildPhases = (
+				1EBC649B1DDD8E270094949E /* Sources */,
+				1EBC649C1DDD8E270094949E /* Frameworks */,
+				1EBC649D1DDD8E270094949E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataHub;
+			productName = DataHub;
+			productReference = 1EBC649F1DDD8E270094949E /* libDataHub.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EBC64971DDD8E270094949E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = fxiaoke;
+				TargetAttributes = {
+					1EBC649E1DDD8E270094949E = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1EBC649A1DDD8E270094949E /* Build configuration list for PBXProject "DataHub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1EBC64961DDD8E270094949E;
+			productRefGroup = 1EBC64A01DDD8E270094949E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EBC649E1DDD8E270094949E /* DataHub */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EBC649B1DDD8E270094949E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2CC0221DF156380094A088 /* DataRequestProtocol.cpp in Sources */,
+				1E2CC0201DF156380094A088 /* CDataHub.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1EBC64A61DDD8E270094949E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1EBC64A71DDD8E270094949E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EBC64A91DDD8E270094949E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1EBC64AA1DDD8E270094949E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EBC649A1DDD8E270094949E /* Build configuration list for PBXProject "DataHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EBC64A61DDD8E270094949E /* Debug */,
+				1EBC64A71DDD8E270094949E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EBC64A81DDD8E270094949E /* Build configuration list for PBXNativeTarget "DataHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EBC64A91DDD8E270094949E /* Debug */,
+				1EBC64AA1DDD8E270094949E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EBC64971DDD8E270094949E /* Project object */;
+}

@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EC21E1D1A21ADCB000BD1F3 /* MessageCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC21E191A21ADCB000BD1F3 /* MessageCenter.cpp */; };
+		1EC21E211A21CD4E000BD1F3 /* MessageAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC21E1F1A21CD4E000BD1F3 /* MessageAdapter.cpp */; };
+		1EE951B51C27F07400689236 /* SharedThreadAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EE951B31C27F07400689236 /* SharedThreadAdapter.cpp */; };
+		1EE951B61C27F07400689236 /* SingleThreadAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EE951B41C27F07400689236 /* SingleThreadAdapter.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1EFB42451A1B8D4F0073D79A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SRCROOT)/../../../inc/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1EB50AA21BFDACEB00630201 /* RefBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefBase.h; sourceTree = "<group>"; };
+		1EBDC6741A6A087D004C7354 /* CLinuxTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLinuxTime.h; sourceTree = "<group>"; };
+		1EC009BA1A260B4B0073ED47 /* CHanderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHanderManager.h; sourceTree = "<group>"; };
+		1EC009BB1A260B4B0073ED47 /* CMutexFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMutexFactory.h; sourceTree = "<group>"; };
+		1EC009BD1A260B4B0073ED47 /* CShareMemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CShareMemManager.h; sourceTree = "<group>"; };
+		1EC009BE1A260B4B0073ED47 /* CThreadFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadFactory.h; sourceTree = "<group>"; };
+		1EC009BF1A260B4B0073ED47 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		1EC009C01A260B4B0073ED47 /* ICMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMutex.h; sourceTree = "<group>"; };
+		1EC087C01A33E09F00741E8E /* CSemaphoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSemaphoreManager.h; sourceTree = "<group>"; };
+		1EC21E191A21ADCB000BD1F3 /* MessageCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MessageCenter.cpp; path = ../../src/MessageCenter/MessageCenter.cpp; sourceTree = "<group>"; };
+		1EC21E1A1A21ADCB000BD1F3 /* MessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageCenter.h; path = ../../src/MessageCenter/MessageCenter.h; sourceTree = "<group>"; };
+		1EC21E1F1A21CD4E000BD1F3 /* MessageAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MessageAdapter.cpp; path = ../../src/MessageCenter/MessageAdapter.cpp; sourceTree = "<group>"; };
+		1EC456B21A26B93B00ED7DD3 /* ICSemaphoreNamed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSemaphoreNamed.h; sourceTree = "<group>"; };
+		1ED2FC5A1B71CBEF009AD070 /* MessageAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageAdapter.h; sourceTree = "<group>"; };
+		1ED2FC5B1B71CBEF009AD070 /* MessageDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageDefines.h; sourceTree = "<group>"; };
+		1EE951B31C27F07400689236 /* SharedThreadAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SharedThreadAdapter.cpp; sourceTree = "<group>"; };
+		1EE951B41C27F07400689236 /* SingleThreadAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleThreadAdapter.cpp; sourceTree = "<group>"; };
+		1EE951B71C27F08000689236 /* SharedThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedThreadAdapter.h; sourceTree = "<group>"; };
+		1EE951B81C27F08000689236 /* SingleThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleThreadAdapter.h; sourceTree = "<group>"; };
+		1EE951B91C27F09700689236 /* IWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWork.h; sourceTree = "<group>"; };
+		1EE951BB1C27F31600689236 /* CThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadPool.h; sourceTree = "<group>"; };
+		1EFB42471A1B8D4F0073D79A /* libMessageCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMessageCenter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFF1FCC1B6F40C900DC1621 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EFB42441A1B8D4F0073D79A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EC009B91A260B4B0073ED47 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1EE951BB1C27F31600689236 /* CThreadPool.h */,
+				1EE951B91C27F09700689236 /* IWork.h */,
+				1EB50AA21BFDACEB00630201 /* RefBase.h */,
+				1EFF1FCC1B6F40C900DC1621 /* log.h */,
+				1EBDC6741A6A087D004C7354 /* CLinuxTime.h */,
+				1EC087C01A33E09F00741E8E /* CSemaphoreManager.h */,
+				1EC456B21A26B93B00ED7DD3 /* ICSemaphoreNamed.h */,
+				1EC009BA1A260B4B0073ED47 /* CHanderManager.h */,
+				1EC009BB1A260B4B0073ED47 /* CMutexFactory.h */,
+				1EC009BD1A260B4B0073ED47 /* CShareMemManager.h */,
+				1EC009BE1A260B4B0073ED47 /* CThreadFactory.h */,
+				1EC009BF1A260B4B0073ED47 /* defines.h */,
+				1EC009C01A260B4B0073ED47 /* ICMutex.h */,
+			);
+			name = include;
+			path = ../../../inc/commons;
+			sourceTree = "<group>";
+		};
+		1EC21E141A21ADCB000BD1F3 /* MessageCenter */ = {
+			isa = PBXGroup;
+			children = (
+				1EE951B31C27F07400689236 /* SharedThreadAdapter.cpp */,
+				1EE951B41C27F07400689236 /* SingleThreadAdapter.cpp */,
+				1EC21E191A21ADCB000BD1F3 /* MessageCenter.cpp */,
+				1EC21E1A1A21ADCB000BD1F3 /* MessageCenter.h */,
+				1EC21E1F1A21CD4E000BD1F3 /* MessageAdapter.cpp */,
+			);
+			name = MessageCenter;
+			path = ../../../src/MessageCenter;
+			sourceTree = "<group>";
+		};
+		1ED2FC591B71CBEF009AD070 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				1EE951B71C27F08000689236 /* SharedThreadAdapter.h */,
+				1EE951B81C27F08000689236 /* SingleThreadAdapter.h */,
+				1ED2FC5A1B71CBEF009AD070 /* MessageAdapter.h */,
+				1ED2FC5B1B71CBEF009AD070 /* MessageDefines.h */,
+			);
+			name = inc;
+			path = ../../../inc/MessageCenter;
+			sourceTree = "<group>";
+		};
+		1EFB423E1A1B8D4F0073D79A = {
+			isa = PBXGroup;
+			children = (
+				1ED2FC591B71CBEF009AD070 /* inc */,
+				1EC009B91A260B4B0073ED47 /* include */,
+				1EC21E141A21ADCB000BD1F3 /* MessageCenter */,
+				1EFB42481A1B8D4F0073D79A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EFB42481A1B8D4F0073D79A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EFB42471A1B8D4F0073D79A /* libMessageCenter.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EFB42461A1B8D4F0073D79A /* MessageCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EFB425B1A1B8D4F0073D79A /* Build configuration list for PBXNativeTarget "MessageCenter" */;
+			buildPhases = (
+				1EFB42431A1B8D4F0073D79A /* Sources */,
+				1EFB42441A1B8D4F0073D79A /* Frameworks */,
+				1EFB42451A1B8D4F0073D79A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessageCenter;
+			productName = MessageCenter;
+			productReference = 1EFB42471A1B8D4F0073D79A /* libMessageCenter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EFB423F1A1B8D4F0073D79A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "周贺伟";
+				TargetAttributes = {
+					1EFB42461A1B8D4F0073D79A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 1EFB42421A1B8D4F0073D79A /* Build configuration list for PBXProject "MessageCenter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1EFB423E1A1B8D4F0073D79A;
+			productRefGroup = 1EFB42481A1B8D4F0073D79A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EFB42461A1B8D4F0073D79A /* MessageCenter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EFB42431A1B8D4F0073D79A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC21E1D1A21ADCB000BD1F3 /* MessageCenter.cpp in Sources */,
+				1EC21E211A21CD4E000BD1F3 /* MessageAdapter.cpp in Sources */,
+				1EE951B51C27F07400689236 /* SharedThreadAdapter.cpp in Sources */,
+				1EE951B61C27F07400689236 /* SingleThreadAdapter.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1EFB42591A1B8D4F0073D79A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1EFB425A1A1B8D4F0073D79A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EFB425C1A1B8D4F0073D79A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++0x",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1EFB425D1A1B8D4F0073D79A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++0x",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EFB42421A1B8D4F0073D79A /* Build configuration list for PBXProject "MessageCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EFB42591A1B8D4F0073D79A /* Debug */,
+				1EFB425A1A1B8D4F0073D79A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1EFB425B1A1B8D4F0073D79A /* Build configuration list for PBXNativeTarget "MessageCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EFB425C1A1B8D4F0073D79A /* Debug */,
+				1EFB425D1A1B8D4F0073D79A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EFB423F1A1B8D4F0073D79A /* Project object */;
+}

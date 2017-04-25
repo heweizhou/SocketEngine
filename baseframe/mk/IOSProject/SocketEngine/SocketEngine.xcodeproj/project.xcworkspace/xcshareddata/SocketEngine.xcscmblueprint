@@ -1,0 +1,35 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8fea523e-cea6-9b49-982e-472c2bf01f26++1726",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "8fea523e-cea6-9b49-982e-472c2bf01f26++1726" : {
+
+    },
+    "8fea523e-cea6-9b49-982e-472c2bf01f26++1368" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8fea523e-cea6-9b49-982e-472c2bf01f26++1726" : 0,
+    "8fea523e-cea6-9b49-982e-472c2bf01f26++1368" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2E5D61CB-CAC8-449A-B8EA-741911CE9908",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8fea523e-cea6-9b49-982e-472c2bf01f26++1726" : "Atlantis_5.2\/",
+    "8fea523e-cea6-9b49-982e-472c2bf01f26++1368" : "Atlantis\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SocketEngine",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FaciShare\/baseframe\/mk\/IOSProject\/SocketEngine\/SocketEngine.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/vwsr100007.firstshare.cn:1688\/svn\/FS.iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8fea523e-cea6-9b49-982e-472c2bf01f26++1368"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/vwsr100007.firstshare.cn:1688\/svn\/FS.iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8fea523e-cea6-9b49-982e-472c2bf01f26++1726"
+    }
+  ]
+}
