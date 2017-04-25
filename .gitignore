@@ -1,0 +1,8 @@
+
+*.xcuserstate
+
+*.a
+
+engine/src/FSNetworkEngine/FSNetworkEngine.cpp
+
+engine/src/FSNetworkEngine/FSNetworkEngine.h
