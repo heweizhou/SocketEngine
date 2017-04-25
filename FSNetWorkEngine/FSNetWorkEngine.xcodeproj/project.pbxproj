@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E156C3F1CED64D500FFED56 /* Connection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1E156C3E1CED64D500FFED56 /* Connection.mm */; };
+		1E190A021CEC187800433389 /* NObjcCallBack.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1E1909FF1CEC187800433389 /* NObjcCallBack.mm */; };
+		1E9FE4E31D2DF16A004963CF /* BaseMsgPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9FE4E21D2DF16A004963CF /* BaseMsgPackage.m */; };
+		1EC7E4DF1CF6CFF2001DB0A6 /* libNetworkEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC7E4DE1CF6CFE3001DB0A6 /* libNetworkEngine.a */; };
+		1EDE7A1F1E767759009F9FC8 /* ConnectionDataDispather.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE7A1E1E767759009F9FC8 /* ConnectionDataDispather.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EC7E4DD1CF6CFE3001DB0A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FE1218E31BF1ED18007CAD8E;
+			remoteInfo = NetworkEngine;
+		};
+		3ED9D5561D17BD9B00646D17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FE1218E21BF1ED18007CAD8E;
+			remoteInfo = NetworkEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E1909E91CEC181000433389 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E156C3E1CED64D500FFED56 /* Connection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Connection.mm; sourceTree = "<group>"; };
+		1E1909EB1CEC181000433389 /* libFSNetWorkEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFSNetWorkEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1909F81CEC184000433389 /* FSNetEngineConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetEngineConstant.h; sourceTree = "<group>"; };
+		1E1909F91CEC184000433389 /* IFSCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSCallBack.h; sourceTree = "<group>"; };
+		1E1909FA1CEC184000433389 /* IFSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSNetworkEngine.h; sourceTree = "<group>"; };
+		1E1909FE1CEC187800433389 /* NObjcCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NObjcCallBack.h; sourceTree = "<group>"; };
+		1E1909FF1CEC187800433389 /* NObjcCallBack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NObjcCallBack.mm; sourceTree = "<group>"; };
+		1E190A001CEC187800433389 /* SocketDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketDefines.h; sourceTree = "<group>"; };
+		1E9FE4E11D2DF16A004963CF /* BaseMsgPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMsgPackage.h; sourceTree = "<group>"; };
+		1E9FE4E21D2DF16A004963CF /* BaseMsgPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMsgPackage.m; sourceTree = "<group>"; };
+		1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkEngine.xcodeproj; path = ../engine/mk/IOSProject/NetworkEngine/NetworkEngine.xcodeproj; sourceTree = "<group>"; };
+		1ED877A31E6EAF290038B590 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		1ED877A51E6EAF310038B590 /* NFCPSyncEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCPSyncEnums.h; sourceTree = "<group>"; };
+		1EDE7A1D1E767759009F9FC8 /* ConnectionDataDispather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDataDispather.h; sourceTree = "<group>"; };
+		1EDE7A1E1E767759009F9FC8 /* ConnectionDataDispather.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ConnectionDataDispather.mm; sourceTree = "<group>"; };
+		1EDE7A4B1E76B7E0009F9FC8 /* IDataRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDataRequest.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E1909E81CEC181000433389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC7E4DF1CF6CFF2001DB0A6 /* libNetworkEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E1909E21CEC181000433389 = {
+			isa = PBXGroup;
+			children = (
+				1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */,
+				1E1909ED1CEC181000433389 /* FSNetWorkEngine */,
+				1E1909EC1CEC181000433389 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E1909EC1CEC181000433389 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E1909EB1CEC181000433389 /* libFSNetWorkEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E1909ED1CEC181000433389 /* FSNetWorkEngine */ = {
+			isa = PBXGroup;
+			children = (
+				1ED877A51E6EAF310038B590 /* NFCPSyncEnums.h */,
+				1E9FE4E11D2DF16A004963CF /* BaseMsgPackage.h */,
+				1E9FE4E21D2DF16A004963CF /* BaseMsgPackage.m */,
+				1E156C3E1CED64D500FFED56 /* Connection.mm */,
+				1EAF30341D22191A0094DC66 /* inc */,
+				1E1909FB1CEC187800433389 /* SocketEngine */,
+			);
+			path = FSNetWorkEngine;
+			sourceTree = "<group>";
+		};
+		1E1909F71CEC184000433389 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				1E1909F81CEC184000433389 /* FSNetEngineConstant.h */,
+				1E1909F91CEC184000433389 /* IFSCallBack.h */,
+				1E1909FA1CEC184000433389 /* IFSNetworkEngine.h */,
+			);
+			name = inc;
+			path = ../../../engine/inc;
+			sourceTree = "<group>";
+		};
+		1E1909FB1CEC187800433389 /* SocketEngine */ = {
+			isa = PBXGroup;
+			children = (
+				1EDE7A1D1E767759009F9FC8 /* ConnectionDataDispather.h */,
+				1E1909FE1CEC187800433389 /* NObjcCallBack.h */,
+				1E190A001CEC187800433389 /* SocketDefines.h */,
+				1EDE7A1E1E767759009F9FC8 /* ConnectionDataDispather.mm */,
+				1E1909FF1CEC187800433389 /* NObjcCallBack.mm */,
+				1E1909F71CEC184000433389 /* inc */,
+			);
+			path = SocketEngine;
+			sourceTree = "<group>";
+		};
+		1EAF30341D22191A0094DC66 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				1ED877A31E6EAF290038B590 /* Connection.h */,
+				1EDE7A4B1E76B7E0009F9FC8 /* IDataRequest.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+		1EC7E4D71CF6CFE3001DB0A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EC7E4DE1CF6CFE3001DB0A6 /* libNetworkEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E1909EA1CEC181000433389 /* FSNetWorkEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1909F41CEC181000433389 /* Build configuration list for PBXNativeTarget "FSNetWorkEngine" */;
+			buildPhases = (
+				1E1909E71CEC181000433389 /* Sources */,
+				1E1909E81CEC181000433389 /* Frameworks */,
+				1E1909E91CEC181000433389 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3ED9D5571D17BD9B00646D17 /* PBXTargetDependency */,
+			);
+			name = FSNetWorkEngine;
+			productName = FSNetWorkEngine;
+			productReference = 1E1909EB1CEC181000433389 /* libFSNetWorkEngine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E1909E31CEC181000433389 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = fxiaoke;
+				TargetAttributes = {
+					1E1909EA1CEC181000433389 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 1E1909E61CEC181000433389 /* Build configuration list for PBXProject "FSNetWorkEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1E1909E21CEC181000433389;
+			productRefGroup = 1E1909EC1CEC181000433389 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1EC7E4D71CF6CFE3001DB0A6 /* Products */;
+					ProjectRef = 1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1E1909EA1CEC181000433389 /* FSNetWorkEngine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1EC7E4DE1CF6CFE3001DB0A6 /* libNetworkEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNetworkEngine.a;
+			remoteRef = 1EC7E4DD1CF6CFE3001DB0A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E1909E71CEC181000433389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E190A021CEC187800433389 /* NObjcCallBack.mm in Sources */,
+				1EDE7A1F1E767759009F9FC8 /* ConnectionDataDispather.mm in Sources */,
+				1E156C3F1CED64D500FFED56 /* Connection.mm in Sources */,
+				1E9FE4E31D2DF16A004963CF /* BaseMsgPackage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3ED9D5571D17BD9B00646D17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NetworkEngine;
+			targetProxy = 3ED9D5561D17BD9B00646D17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E1909F21CEC181000433389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1E1909F31CEC181000433389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E1909F51CEC181000433389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = ../../../Library/FSLog;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1E1909F61CEC181000433389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = ../../../Library/FSLog;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E1909E61CEC181000433389 /* Build configuration list for PBXProject "FSNetWorkEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1909F21CEC181000433389 /* Debug */,
+				1E1909F31CEC181000433389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E1909F41CEC181000433389 /* Build configuration list for PBXNativeTarget "FSNetWorkEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1909F51CEC181000433389 /* Debug */,
+				1E1909F61CEC181000433389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E1909E31CEC181000433389 /* Project object */;
+}
