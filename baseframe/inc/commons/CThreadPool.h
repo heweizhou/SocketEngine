@@ -15,6 +15,7 @@ namespace  _MY_NAME_SPACE_
     {
     public:
         static _VOID            start();
+        static _VOID            start(_INT threadCount);
         static _VOID            stop();
         static _BOOL            getStatus();
         static _VOID            AddWork(IWork* task, _BOOL isImmediately);

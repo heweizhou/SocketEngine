@@ -24,13 +24,13 @@ namespace  _MY_NAME_SPACE_
             ((CThreadWithQueue*)m_thread_obj)->AddWork(task, isImmediately);
         }
     }
-
-    _VOID CThreadPool::start()
+    
+    _VOID CThreadPool::start(_INT threadCount)
     {
         if (m_thread_obj == _NULL) {
             CThreadWithQueue* thread_queue = new CThreadWithQueue(DEFAULT_WORKQUEUE_SIZE);
             thread_queue->setDelayPerTask(0);
-            thread_queue->setMaxWorkThread(DEFAULT_WORKTHREAD_COUNT);
+            thread_queue->setMaxWorkThread(threadCount);
             m_thread_obj = thread_queue;
         }else{
             ((CThreadWithQueue*)m_thread_obj)->clearWorkQueue();
@@ -38,6 +38,11 @@ namespace  _MY_NAME_SPACE_
         
         
         ((CThreadWithQueue*)m_thread_obj)->start();
+    }
+    
+    _VOID CThreadPool::start()
+    {
+        CThreadPool::start(DEFAULT_WORKTHREAD_COUNT);
     }
 
     _VOID CThreadPool::stop()
