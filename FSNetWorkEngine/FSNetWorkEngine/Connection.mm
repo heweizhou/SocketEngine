@@ -27,6 +27,11 @@
 
 @implementation Connection
 
+-(id)init
+{
+    return [self initWithIp:nil port:0 timeout:30 type:IPV4];
+}
+
 - (id)initWithIp:(NSString *)ip port:(int)port timeout:(int)timeout type:(dominType)domin
 {
     self = [super init];
@@ -34,9 +39,22 @@
         self.fd = -1;
         self.port = port;
         self.ip = ip;
+        self.socket_type = domin;
         [self initTimer:timeout];
     }
     return self;
+}
+
+- (void)resetHostInfo:(NSString *)ip port:(int)port type:(dominType)domin
+{
+    self.ip = ip;
+    self.port = port;
+    self.socket_type = domin;
+}
+
+- (void)resetTimeout:(int)timeout
+{
+    [self initTimer:timeout];
 }
 
 -(void)initTimer:(int)interval
@@ -200,9 +218,9 @@
         case _socketSendSuccessed:
         {
             if (self.sendStatueDelegate) {
-                if ([self.sendStatueDelegate respondsToSelector:@selector(sendSuccess:)]) {
+                if ([self.sendStatueDelegate respondsToSelector:@selector(sendSuccess:bean:)]) {
                     BaseMsgPackage* package = (BaseMsgPackage*)param;
-                    [self.sendStatueDelegate sendSuccess:package.msg_param];
+                    [self.sendStatueDelegate sendSuccess:self bean:package.msg_param];
                 }
             }
             break;
@@ -210,9 +228,9 @@
         case _socketSendSuccessedFailed:
         {
             if (self.sendStatueDelegate) {
-                if ([self.sendStatueDelegate respondsToSelector:@selector(sendSuccess:)]) {
+                if ([self.sendStatueDelegate respondsToSelector:@selector(sendSuccess:bean:)]) {
                     BaseMsgPackage* package = (BaseMsgPackage*)param;
-                    [self.sendStatueDelegate sendFailed:package.msg_param];
+                    [self.sendStatueDelegate sendFailed:self bean:package.msg_param];
                 }
             }
             break;
@@ -220,9 +238,9 @@
         case _socketSendPackageInvalid:
         {
             if (self.sendStatueDelegate) {
-                if ([self.sendStatueDelegate respondsToSelector:@selector(sendSuccess:)]) {
+                if ([self.sendStatueDelegate respondsToSelector:@selector(sendSuccess:bean:)]) {
                     BaseMsgPackage* package = (BaseMsgPackage*)param;
-                    [self.sendStatueDelegate sendPackageInvalid:package.msg_param];
+                    [self.sendStatueDelegate sendPackageInvalid:self bean:package.msg_param];
                 }
             }
             break;

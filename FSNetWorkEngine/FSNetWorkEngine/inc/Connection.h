@@ -37,9 +37,9 @@ typedef NS_ENUM(NSUInteger, dominType) {
 
 @protocol SendStatusDeletate <NSObject>
 
-- (void)sendSuccess:(id<IDataRequest>)bean;
-- (void)sendFailed:(id<IDataRequest>)bean;
-- (void)sendPackageInvalid:(id<IDataRequest>)bean;
+- (void)sendSuccess:(Connection*)connect bean:(id<IDataRequest>)bean;
+- (void)sendFailed:(Connection*)connect bean:(id<IDataRequest>)bean;
+- (void)sendPackageInvalid:(Connection*)connect bean:(id<IDataRequest>)bean;
 
 @end
 
@@ -58,6 +58,10 @@ typedef NS_ENUM(NSUInteger, dominType) {
 @property (nonatomic, weak) id<SendStatusDeletate>          sendStatueDelegate;
 
 - (id)initWithIp:(NSString *)ip port:(int)port timeout:(int)timeout type:(dominType)domin;
+
+- (void)resetHostInfo:(NSString *)ip port:(int)port type:(dominType)domin;
+- (void)resetTimeout:(int)timeout;
+
 - (void)startConnect;
 - (void)disConnect;
 - (void)reConnect;
