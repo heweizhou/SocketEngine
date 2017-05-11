@@ -3,7 +3,7 @@
 //  FaciShare
 //
 //  Created by ly on 15/9/17.
-//  Copyright (c) 2015年 facishare. All rights reserved.
+//  Copyright (c) 2015年 周贺伟. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

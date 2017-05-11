@@ -3,7 +3,7 @@
 //  NetworkEngine
 //
 //  Created by YangYanfei on 15/11/20.
-//  Copyright © 2015年 fxiaoke. All rights reserved.
+//  Copyright © 2015年 周贺伟. All rights reserved.
 //
 
 #ifndef FSNetEngineConstant_h

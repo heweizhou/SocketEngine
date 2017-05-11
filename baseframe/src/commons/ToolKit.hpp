@@ -3,7 +3,7 @@
 //  commons_mac
 //
 //  Created by 周贺伟 on 2016/11/18.
-//  Copyright © 2016年 fxiaoke. All rights reserved.
+//  Copyright © 2016年 周贺伟. All rights reserved.
 //
 
 #ifndef ToolKit_hpp

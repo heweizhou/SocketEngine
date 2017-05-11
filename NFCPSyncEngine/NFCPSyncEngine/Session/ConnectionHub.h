@@ -3,7 +3,7 @@
 //  NFCPSyncEngine
 //
 //  Created by 周贺伟 on 2017/5/4.
-//  Copyright © 2017年 fxiaoke. All rights reserved.
+//  Copyright © 2017年 周贺伟. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

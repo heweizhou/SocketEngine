@@ -3,7 +3,7 @@
 //  NetworkEngine
 //
 //  Created by YangYanfei on 15/11/11.
-//  Copyright © 2015年 fxiaoke. All rights reserved.
+//  Copyright © 2015年 周贺伟. All rights reserved.
 //
 
 #ifndef ISocketEngine_h

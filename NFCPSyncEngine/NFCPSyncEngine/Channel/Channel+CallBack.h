@@ -3,7 +3,7 @@
 //  NFCPSyncEngine
 //
 //  Created by 周贺伟 on 2017/3/3.
-//  Copyright © 2017年 fxiaoke. All rights reserved.
+//  Copyright © 2017年 周贺伟. All rights reserved.
 //
 
 #ifndef Channel_CallBack_h

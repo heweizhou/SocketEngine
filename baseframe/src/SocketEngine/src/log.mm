@@ -3,7 +3,7 @@
 //  SocketEngine
 //
 //  Created by 周贺伟 on 16/3/15.
-//  Copyright © 2016年 fxiaoke. All rights reserved.
+//  Copyright © 2016年 周贺伟. All rights reserved.
 //
 
 #ifdef MY_DEBUG

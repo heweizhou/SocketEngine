@@ -2,8 +2,8 @@
 //  IAuthDelegate.h
 //  NFCPSyncEngine
 //
-//  Created by Lin on 16/6/6.
-//  Copyright © 2016年 fxiaoke. All rights reserved.
+//  Created by 周贺伟 on 16/6/6.
+//  Copyright © 2016年 周贺伟. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

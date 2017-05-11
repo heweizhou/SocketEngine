@@ -3,7 +3,7 @@
 //  SocketEngine
 //
 //  Created by 周贺伟 on 2017/3/10.
-//  Copyright © 2017年 fxiaoke. All rights reserved.
+//  Copyright © 2017年 周贺伟. All rights reserved.
 //
 
 #include "SocketFunctions.hpp"

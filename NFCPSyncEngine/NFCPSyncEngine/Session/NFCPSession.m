@@ -3,7 +3,7 @@
 //  NFCPSyncEngine
 //
 //  Created by Lin on 16/6/3.
-//  Copyright © 2016年 fxiaoke. All rights reserved.
+//  Copyright © 2016年 周贺伟. All rights reserved.
 //
 
 #import "NFCPSession.h"
