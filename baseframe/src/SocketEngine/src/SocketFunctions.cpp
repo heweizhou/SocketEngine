@@ -32,7 +32,7 @@ _UINT create_socket(_INT protocal, _INT domain)
     return socket(protocal, domain, 0);
 }
 
-_socket_connect_status connect_to_host(_UINT fd, _CONST _CHAR* ipAddress, _CONST _UINT port, _CONST _INT timeout_second)
+_socket_connect_status connect_to_host(_INT fd, _CONST _CHAR* ipAddress, _CONST _UINT port, _CONST _INT timeout_second)
 {
     
     //兼容V4 v6
@@ -147,7 +147,7 @@ _socket_connect_status connect_to_host(_UINT fd, _CONST _CHAR* ipAddress, _CONST
 }
 
 
-_BOOL is_connected(_UINT fd)
+_BOOL is_connected(_INT fd)
 {
     if (fd == 0) {
         return _FALSE;
@@ -162,7 +162,7 @@ _BOOL is_connected(_UINT fd)
     return _TRUE;
 }
 
-_LONG send_data(_UINT fd, _CONST _CHAR *binaryData,_LONG dataLength)
+_LONG send_data(_INT fd, _CONST _CHAR *binaryData,_LONG dataLength)
 {
 #ifdef MY_DEBUG
     _log("start send data!");
@@ -176,7 +176,7 @@ _LONG send_data(_UINT fd, _CONST _CHAR *binaryData,_LONG dataLength)
     
 }
 
-_LONG receive_data(_UINT fd, _CONST _CHAR *binaryData, _LONG &dataLength)
+_LONG receive_data(_INT fd, _CONST _CHAR *binaryData, _LONG &dataLength)
 {
     //    scope_lock<ICMutex> lk(m_mutex);
     _LONG ret = read((int)fd,(void*)binaryData, dataLength);
@@ -184,7 +184,7 @@ _LONG receive_data(_UINT fd, _CONST _CHAR *binaryData, _LONG &dataLength)
 }
 
 
-_BOOL disconnect_socket(_UINT fd)
+_BOOL disconnect_socket(_INT fd)
 {
     
     if (fd > 0 && close((int)fd) < 0) {

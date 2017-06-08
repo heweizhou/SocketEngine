@@ -27,14 +27,14 @@ _UINT create_socket(_INT protocal, _INT domain);
  @param port         端口
  @return 返回创建socket FD
  */
-_socket_connect_status connect_to_host(_UINT fd, _CONST _CHAR* ipAddress, _CONST _UINT port, _CONST _INT timeout_second);
+_socket_connect_status connect_to_host(_INT fd, _CONST _CHAR* ipAddress, _CONST _UINT port, _CONST _INT timeout_second);
 
 /**
  @brief 返回当前的socket是否connect
  @param socketFD     已经创建的socket fd
  @return true-链接， false-断开
  */
-_BOOL is_connected(_UINT fd);
+_BOOL is_connected(_INT fd);
 
 /**
  *	@brief	 发送数据
@@ -46,7 +46,7 @@ _BOOL is_connected(_UINT fd);
  如果错误为EINTR表示在写的时候出现了中断错误.
  如果为EPIPE表示网络连接出现了问题(对方已经关闭了连接).
  */
-_LONG send_data(_UINT fd, _CONST _CHAR *binaryData,_LONG dataLength);
+_LONG send_data(_INT fd, _CONST _CHAR *binaryData,_LONG dataLength);
 
 
 /**
@@ -55,7 +55,7 @@ _LONG send_data(_UINT fd, _CONST _CHAR *binaryData,_LONG dataLength);
  *  @param  dataLength 接收数据包长度
  *  @return read函数是负责从fd中读取内容.当读成功时,read返回实际所读的字节数,如果返回的值是0 表示已经读到文件的结束了,小于0表示出现了错误
  */
-_LONG receive_data(_UINT fd, _CONST _CHAR *binaryData, _LONG &dataLength);
+_LONG receive_data(_INT fd, _CONST _CHAR *binaryData, _LONG &dataLength);
 
 
 /**
@@ -63,6 +63,6 @@ _LONG receive_data(_UINT fd, _CONST _CHAR *binaryData, _LONG &dataLength);
  *  @param socketFD    销毁创建的socket fd
  *  @return true-关闭成功， false-关闭失败
  */
-_BOOL       disconnect_socket(_UINT fd);
+_BOOL       disconnect_socket(_INT fd);
 
 #endif /* SocketFunctions_hpp */

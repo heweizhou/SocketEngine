@@ -26,8 +26,8 @@ public:
     _VOID stop();
     _BOOL isRuning();
 public:
-    _VOID SocketList_Add(_UINT fd);
-    _VOID SocketList_Del(_UINT fd);
+    _VOID SocketList_Add(_INT fd);
+    _VOID SocketList_Del(_INT fd);
     _VOID SocketList_Clean();
 public:
     _INT  FillSet(fd_set* RSet, fd_set* WSet, fd_set* ESet);
@@ -35,8 +35,9 @@ public:
 private:
     SocketRecvManager();
     ~SocketRecvManager();
-    _VOID  dataBack(_UINT fd, _PVOID buffer, _ULONG bufferSize);
-    _VOID  onEvent(_UINT fd, _UINT eventCode);
+    _VOID  dataBack(_INT fd, _PVOID buffer, _ULONG bufferSize);
+    _VOID  onEvent(_INT fd, _UINT eventCode);
+    _VOID  private_SocketList_Del(_INT fd);
 public:
     static SocketRecvManager*   m_sInstance;
     static ICMutex*             m_sInstanceMutex;
@@ -45,7 +46,7 @@ private:
     _DataHubMessageKind                     m_kind;
     _TID                                    m_pid;
     _BOOL                                   m_bRun;
-    std::vector<_UINT>                      m_socketList;
+    std::vector<_INT>                       m_socketList;
     ICMutex*                                m_socketListMutex;
     
     

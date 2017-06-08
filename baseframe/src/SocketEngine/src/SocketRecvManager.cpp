@@ -80,37 +80,44 @@ _BOOL SocketRecvManager::isRuning()
     return m_bRun;
 }
 
-_VOID SocketRecvManager::dataBack(_UINT fd, _PVOID buffer, _ULONG bufferSize)
+_VOID SocketRecvManager::dataBack(_INT fd, _PVOID buffer, _ULONG bufferSize)
 {
     _HANDLE bundleHandler = createDataBackBundleByBuffer(m_kind, buffer, bufferSize, (_PVOID)(_LONG)fd, NULL, 0);
     postMessage(_SERVICE_DATAHUB, MESSAGE_DATAHUB_LOAD_COMPLETE, &bundleHandler, sizeof(bundleHandler));
 }
 
-_VOID SocketRecvManager::onEvent(_UINT fd, _UINT eventCode)
+_VOID SocketRecvManager::onEvent(_INT fd, _UINT eventCode)
 {
     _HANDLE bundleHandler = createEventInfoBundle(m_kind, eventCode, (_PVOID)(_LONG)fd, NULL, 0);
     postMessage(_SERVICE_DATAHUB, MESSAGE_DATAHUB_ON_EVENT, &bundleHandler, sizeof(bundleHandler));
 }
 
-_VOID SocketRecvManager::SocketList_Add(_UINT fd)
+_VOID SocketRecvManager::private_SocketList_Del(_INT fd)
 {
-    scope_lock<ICMutex> lk(m_socketListMutex);
-    m_socketList.push_back(fd);
-}
-
-_VOID SocketRecvManager::SocketList_Del(_UINT fd)
-{
-    scope_lock<ICMutex> lk(m_socketListMutex);
     auto it = std::find(m_socketList.begin(), m_socketList.end(), fd);
     if (it != m_socketList.end()) {
         m_socketList.erase(it);
     }
 }
 
+_VOID SocketRecvManager::SocketList_Add(_INT fd)
+{
+    scope_lock<ICMutex> lk(m_socketListMutex);
+    m_socketList.push_back(fd);
+}
+
+_VOID SocketRecvManager::SocketList_Del(_INT fd)
+{
+    scope_lock<ICMutex> lk(m_socketListMutex);
+    this->private_SocketList_Del(fd);
+}
+
+
+
 _VOID SocketRecvManager::SocketList_Clean()
 {
     scope_lock<ICMutex> lk(m_socketListMutex);
-    for (std::vector<_UINT>::iterator it = m_socketList.begin(); it != m_socketList.end(); ++it)
+    for (std::vector<_INT>::iterator it = m_socketList.begin(); it != m_socketList.end(); ++it)
     {
         close(*it);
     }
@@ -136,7 +143,7 @@ _INT SocketRecvManager::FillSet(fd_set* RSet, fd_set* WSet, fd_set* ESet)
     }
     
     _INT max = -1;
-    for (std::vector<_UINT>::iterator it = m_socketList.begin(); it != m_socketList.end(); ++it)
+    for (std::vector<_INT>::iterator it = m_socketList.begin(); it != m_socketList.end(); ++it)
     {
         //if valid socket descriptor then add to read list
         if(*it > 0)
@@ -169,7 +176,7 @@ _VOID SocketRecvManager::ProcessSelectEvent(fd_set* RSet, fd_set* WSet, fd_set* 
     unavaliable.reserve(20);
     
     m_socketListMutex->lock();
-    for (std::vector<_UINT>::iterator it = m_socketList.begin(); it != m_socketList.end(); ++it)
+    for (std::vector<_INT>::iterator it = m_socketList.begin(); it != m_socketList.end(); ++it)
     {
         _UINT fd = *it;
                 
@@ -187,7 +194,7 @@ _VOID SocketRecvManager::ProcessSelectEvent(fd_set* RSet, fd_set* WSet, fd_set* 
     
     for (std::vector<_UINT>::iterator it = unavaliable.begin(); it != unavaliable.end(); ++it)
     {
-        SocketList_Del(*it);
+        private_SocketList_Del(*it);
     }
     
     m_socketListMutex->unlock();
