@@ -20,6 +20,7 @@ public:
     virtual _VOID cancelWork() = 0;
 public:
     _VOID add2Pool(_BOOL isHighPri);
+    _VOID add2PoolWithAutoRelease(_BOOL isHighPri);
 };
 
 #endif

@@ -49,9 +49,14 @@ namespace _MY_NAME_SPACE_ {
     
     _VOID RefBase::release()
     {
+        if (m__isReleaseing) {
+            return ;
+        }
+        
         m__mutex->lock();
         
         if (m__isReleaseing) {
+            m__mutex->unlock();
             return ;
         }
         
@@ -68,4 +73,5 @@ namespace _MY_NAME_SPACE_ {
             delete  this;
         }
     }
+
 }

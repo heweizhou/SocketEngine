@@ -6,15 +6,11 @@
 //  Copyright © 2015年 周贺伟. All rights reserved.
 //
 
-#include <stdio.h>
 #include "FSNetworkEngine.h"
 #include "SocketEngineManager.h"
-#include "CMutexFactory.h"
-#include "scope_lock.hpp"
 #include "CThreadPool.h"
 #include "MessageAdapter.h"
 #include "CDataHubCtrl.h"
-#include "log.h"
 
 #include "CSocketConnectWork.hpp"
 #include "CSocketWork.hpp"
@@ -58,7 +54,7 @@ extern "C"
 
 _VOID startEngineComs()
 {
-    _MY_NAME_SPACE_::CThreadPool::start();
+    _MY_NAME_SPACE_::CThreadPool::start(3);
     startDataHub();
     SocketEngineManager::start_recv_thread(MSG_KIND_SOCKET_BACK);
 }
@@ -87,8 +83,7 @@ _BOOL FSNetworkEngine::async_connectToHost(_HANDLE socketFD, _CONST _CHAR* ipAdd
 {
     _string ip = ipAddress;
     SocketConnectWork* work = new SocketConnectWork(MSG_KIND_SOCKET_BACK, socketFD, ip, port, timeout_sec);
-    work->add2Pool(_TRUE);
-    SAFE_RELEASE(work);
+    work->add2PoolWithAutoRelease(_TRUE);
     return _TRUE;
 }
 
@@ -144,8 +139,7 @@ _LONG FSNetworkEngine::sendData(_HANDLE socketFD, _CONST _CHAR *binaryData, _LON
 _BOOL FSNetworkEngine::async_sendData(_HANDLE socketFD, _PVOID param, _ULONG param_len, _BOOL pri)
 {
     IWork* work = new SocketWork(MSG_KIND_SOCKET_BACK, socketFD, m_faciShareCallBack, param, param_len);
-    work->add2Pool(pri);
-    SAFE_RELEASE(work);
+    work->add2PoolWithAutoRelease(pri);
     
     return _TRUE;
 }
