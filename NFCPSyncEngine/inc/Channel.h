@@ -46,5 +46,6 @@
 
 //function switch
 -(BOOL)enableTaskManage;
+-(BOOL)isDefalutChannel;
 
 @end

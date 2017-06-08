@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1ECC0BA01C981FF500C2CF70 /* log.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC0B9F1C981FF500C2CF70 /* log.mm */; };
-		1ED17ADF1D658F380060A5AA /* SocketRecvManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ED17ADD1D658F380060A5AA /* SocketRecvManager.cpp */; };
-		1ED9A7991E72551500DC0204 /* SocketFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9A7971E72551500DC0204 /* SocketFunctions.cpp */; };
-		FE6970A11BF9ED5D00E34256 /* SocketEngineManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6970A01BF9ED5D00E34256 /* SocketEngineManager.cpp */; };
+		1E3CF44E1EE9386C00BA0AAA /* log.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF4441EE9386C00BA0AAA /* log.mm */; };
+		1E3CF44F1EE9386C00BA0AAA /* SocketEngine_IPV4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF4451EE9386C00BA0AAA /* SocketEngine_IPV4.cpp */; };
+		1E3CF4501EE9386C00BA0AAA /* SocketEngine_IPV6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF4471EE9386C00BA0AAA /* SocketEngine_IPV6.cpp */; };
+		1E3CF4511EE9386C00BA0AAA /* SocketEngineManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF4491EE9386C00BA0AAA /* SocketEngineManager.cpp */; };
+		1E3CF4521EE9386C00BA0AAA /* SocketFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF44A1EE9386C00BA0AAA /* SocketFunctions.cpp */; };
+		1E3CF4531EE9386C00BA0AAA /* SocketRecvManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF44C1EE9386C00BA0AAA /* SocketRecvManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,40 +28,48 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E2CC02B1DF1590D0094A088 /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequest.h; sourceTree = "<group>"; };
-		1E2CC02C1DF1590D0094A088 /* DataRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestProtocol.h; sourceTree = "<group>"; };
-		1ECC0B9D1C981F7900C2CF70 /* FsDDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FsDDLog.h; sourceTree = "<group>"; };
-		1ECC0B9E1C981F9700C2CF70 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
-		1ECC0B9F1C981FF500C2CF70 /* log.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = log.mm; sourceTree = "<group>"; };
-		1ED17ADD1D658F380060A5AA /* SocketRecvManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketRecvManager.cpp; sourceTree = "<group>"; };
-		1ED17ADE1D658F380060A5AA /* SocketRecvManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketRecvManager.h; sourceTree = "<group>"; };
-		1ED9A7971E72551500DC0204 /* SocketFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketFunctions.cpp; sourceTree = "<group>"; };
-		1ED9A7981E72551500DC0204 /* SocketFunctions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SocketFunctions.hpp; sourceTree = "<group>"; };
+		1E3CF4421EE9386C00BA0AAA /* FsDDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FsDDLog.h; sourceTree = "<group>"; };
+		1E3CF4431EE9386C00BA0AAA /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		1E3CF4441EE9386C00BA0AAA /* log.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = log.mm; sourceTree = "<group>"; };
+		1E3CF4451EE9386C00BA0AAA /* SocketEngine_IPV4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketEngine_IPV4.cpp; sourceTree = "<group>"; };
+		1E3CF4461EE9386C00BA0AAA /* SocketEngine_IPV4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketEngine_IPV4.h; sourceTree = "<group>"; };
+		1E3CF4471EE9386C00BA0AAA /* SocketEngine_IPV6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketEngine_IPV6.cpp; sourceTree = "<group>"; };
+		1E3CF4481EE9386C00BA0AAA /* SocketEngine_IPV6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketEngine_IPV6.h; sourceTree = "<group>"; };
+		1E3CF4491EE9386C00BA0AAA /* SocketEngineManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketEngineManager.cpp; sourceTree = "<group>"; };
+		1E3CF44A1EE9386C00BA0AAA /* SocketFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketFunctions.cpp; sourceTree = "<group>"; };
+		1E3CF44B1EE9386C00BA0AAA /* SocketFunctions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SocketFunctions.hpp; sourceTree = "<group>"; };
+		1E3CF44C1EE9386C00BA0AAA /* SocketRecvManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketRecvManager.cpp; sourceTree = "<group>"; };
+		1E3CF44D1EE9386C00BA0AAA /* SocketRecvManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketRecvManager.h; sourceTree = "<group>"; };
+		1E3CF4761EE938AE00BA0AAA /* CBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundle.h; sourceTree = "<group>"; };
+		1E3CF4771EE938AE00BA0AAA /* CBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundleManager.h; sourceTree = "<group>"; };
+		1E3CF4781EE938AE00BA0AAA /* CHanderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHanderManager.h; sourceTree = "<group>"; };
+		1E3CF4791EE938AE00BA0AAA /* CLinuxTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLinuxTime.h; sourceTree = "<group>"; };
+		1E3CF47A1EE938AE00BA0AAA /* CList_ZHW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CList_ZHW.h; sourceTree = "<group>"; };
+		1E3CF47B1EE938AE00BA0AAA /* CMutexFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMutexFactory.h; sourceTree = "<group>"; };
+		1E3CF47C1EE938AE00BA0AAA /* CSemaphoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSemaphoreManager.h; sourceTree = "<group>"; };
+		1E3CF47D1EE938AE00BA0AAA /* CShareMemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CShareMemManager.h; sourceTree = "<group>"; };
+		1E3CF47E1EE938AE00BA0AAA /* CSmartPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSmartPointer.h; sourceTree = "<group>"; };
+		1E3CF47F1EE938AE00BA0AAA /* CThreadFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadFactory.h; sourceTree = "<group>"; };
+		1E3CF4801EE938AE00BA0AAA /* CThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadPool.h; sourceTree = "<group>"; };
+		1E3CF4811EE938AE00BA0AAA /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		1E3CF4821EE938AE00BA0AAA /* ICMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMutex.h; sourceTree = "<group>"; };
+		1E3CF4831EE938AE00BA0AAA /* ICSemaphoreNamed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSemaphoreNamed.h; sourceTree = "<group>"; };
+		1E3CF4841EE938AE00BA0AAA /* ICSharedMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSharedMemory.h; sourceTree = "<group>"; };
+		1E3CF4851EE938AE00BA0AAA /* IWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWork.h; sourceTree = "<group>"; };
+		1E3CF4861EE938AE00BA0AAA /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		1E3CF4871EE938AE00BA0AAA /* RefBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefBase.h; sourceTree = "<group>"; };
+		1E3CF4881EE938AE00BA0AAA /* reuse_pool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reuse_pool.hpp; sourceTree = "<group>"; };
+		1E3CF4891EE938AF00BA0AAA /* scope_lock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = scope_lock.hpp; sourceTree = "<group>"; };
+		1E3CF48A1EE938AF00BA0AAA /* ThreadWithQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ThreadWithQueue.hpp; sourceTree = "<group>"; };
+		1E3CF48C1EE938AF00BA0AAA /* CDataHubCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataHubCtrl.h; sourceTree = "<group>"; };
+		1E3CF48D1EE938AF00BA0AAA /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequest.h; sourceTree = "<group>"; };
+		1E3CF48E1EE938AF00BA0AAA /* DataRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestProtocol.h; sourceTree = "<group>"; };
+		1E3CF4901EE938AF00BA0AAA /* MessageAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAdapter.h; sourceTree = "<group>"; };
+		1E3CF4911EE938AF00BA0AAA /* MessageDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDefines.h; sourceTree = "<group>"; };
+		1E3CF4921EE938AF00BA0AAA /* SharedThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedThreadAdapter.h; sourceTree = "<group>"; };
+		1E3CF4931EE938AF00BA0AAA /* SingleThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleThreadAdapter.h; sourceTree = "<group>"; };
+		1E3CF4961EE9390800BA0AAA /* SocketEngineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocketEngineManager.h; path = ../../../inc/SocketEngine/SocketEngineManager.h; sourceTree = "<group>"; };
 		FE69705E1BF9E80500E34256 /* libSocketEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSocketEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE6970731BF9E9BE00E34256 /* CBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundle.h; sourceTree = "<group>"; };
-		FE6970741BF9E9BE00E34256 /* CBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundleManager.h; sourceTree = "<group>"; };
-		FE6970761BF9E9BE00E34256 /* CHanderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHanderManager.h; sourceTree = "<group>"; };
-		FE6970781BF9E9BE00E34256 /* CLinuxTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLinuxTime.h; sourceTree = "<group>"; };
-		FE6970791BF9E9BE00E34256 /* CList_ZHW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CList_ZHW.h; sourceTree = "<group>"; };
-		FE69707A1BF9E9BE00E34256 /* CMutexFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMutexFactory.h; sourceTree = "<group>"; };
-		FE69707C1BF9E9BE00E34256 /* CSemaphoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSemaphoreManager.h; sourceTree = "<group>"; };
-		FE69707D1BF9E9BE00E34256 /* CShareMemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CShareMemManager.h; sourceTree = "<group>"; };
-		FE69707E1BF9E9BE00E34256 /* CSmartPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSmartPointer.h; sourceTree = "<group>"; };
-		FE69707F1BF9E9BE00E34256 /* CThreadFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadFactory.h; sourceTree = "<group>"; };
-		FE6970801BF9E9BE00E34256 /* CThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadPool.h; sourceTree = "<group>"; };
-		FE6970821BF9E9BE00E34256 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
-		FE6970831BF9E9BE00E34256 /* ICMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMutex.h; sourceTree = "<group>"; };
-		FE6970841BF9E9BE00E34256 /* ICSemaphoreNamed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSemaphoreNamed.h; sourceTree = "<group>"; };
-		FE6970851BF9E9BE00E34256 /* ICSharedMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSharedMemory.h; sourceTree = "<group>"; };
-		FE6970861BF9E9BE00E34256 /* IWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWork.h; sourceTree = "<group>"; };
-		FE6970871BF9E9BE00E34256 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
-		FE6970881BF9E9BE00E34256 /* RefBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefBase.h; sourceTree = "<group>"; };
-		FE6970891BF9E9BE00E34256 /* reuse_pool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reuse_pool.hpp; sourceTree = "<group>"; };
-		FE69708A1BF9E9BE00E34256 /* scope_lock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = scope_lock.hpp; sourceTree = "<group>"; };
-		FE69708C1BF9E9BE00E34256 /* MessageAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAdapter.h; sourceTree = "<group>"; };
-		FE69708D1BF9E9BE00E34256 /* MessageDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDefines.h; sourceTree = "<group>"; };
-		FE6970A01BF9ED5D00E34256 /* SocketEngineManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketEngineManager.cpp; sourceTree = "<group>"; };
-		FE6970A21BF9ED6E00E34256 /* SocketEngineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocketEngineManager.h; path = ../../../../inc/SocketEngine/SocketEngineManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,19 +83,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E2CC0291DF1590D0094A088 /* datahub */ = {
+		1E3CF4401EE9386C00BA0AAA /* SocketEngine */ = {
 			isa = PBXGroup;
 			children = (
-				1E2CC02B1DF1590D0094A088 /* DataRequest.h */,
-				1E2CC02C1DF1590D0094A088 /* DataRequestProtocol.h */,
+				1E3CF4741EE938AE00BA0AAA /* inc */,
+				1E3CF4411EE9386C00BA0AAA /* src */,
+				FE69705F1BF9E80500E34256 /* Products */,
+			);
+			name = SocketEngine;
+			path = ../../../src/SocketEngine;
+			sourceTree = "<group>";
+		};
+		1E3CF4411EE9386C00BA0AAA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1E3CF4961EE9390800BA0AAA /* SocketEngineManager.h */,
+				1E3CF4421EE9386C00BA0AAA /* FsDDLog.h */,
+				1E3CF4431EE9386C00BA0AAA /* log.h */,
+				1E3CF4441EE9386C00BA0AAA /* log.mm */,
+				1E3CF4451EE9386C00BA0AAA /* SocketEngine_IPV4.cpp */,
+				1E3CF4461EE9386C00BA0AAA /* SocketEngine_IPV4.h */,
+				1E3CF4471EE9386C00BA0AAA /* SocketEngine_IPV6.cpp */,
+				1E3CF4481EE9386C00BA0AAA /* SocketEngine_IPV6.h */,
+				1E3CF4491EE9386C00BA0AAA /* SocketEngineManager.cpp */,
+				1E3CF44A1EE9386C00BA0AAA /* SocketFunctions.cpp */,
+				1E3CF44B1EE9386C00BA0AAA /* SocketFunctions.hpp */,
+				1E3CF44C1EE9386C00BA0AAA /* SocketRecvManager.cpp */,
+				1E3CF44D1EE9386C00BA0AAA /* SocketRecvManager.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		1E3CF4741EE938AE00BA0AAA /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				1E3CF4751EE938AE00BA0AAA /* commons */,
+				1E3CF48B1EE938AF00BA0AAA /* datahub */,
+				1E3CF48F1EE938AF00BA0AAA /* MessageCenter */,
+			);
+			name = inc;
+			path = ../../inc;
+			sourceTree = "<group>";
+		};
+		1E3CF4751EE938AE00BA0AAA /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				1E3CF4761EE938AE00BA0AAA /* CBundle.h */,
+				1E3CF4771EE938AE00BA0AAA /* CBundleManager.h */,
+				1E3CF4781EE938AE00BA0AAA /* CHanderManager.h */,
+				1E3CF4791EE938AE00BA0AAA /* CLinuxTime.h */,
+				1E3CF47A1EE938AE00BA0AAA /* CList_ZHW.h */,
+				1E3CF47B1EE938AE00BA0AAA /* CMutexFactory.h */,
+				1E3CF47C1EE938AE00BA0AAA /* CSemaphoreManager.h */,
+				1E3CF47D1EE938AE00BA0AAA /* CShareMemManager.h */,
+				1E3CF47E1EE938AE00BA0AAA /* CSmartPointer.h */,
+				1E3CF47F1EE938AE00BA0AAA /* CThreadFactory.h */,
+				1E3CF4801EE938AE00BA0AAA /* CThreadPool.h */,
+				1E3CF4811EE938AE00BA0AAA /* defines.h */,
+				1E3CF4821EE938AE00BA0AAA /* ICMutex.h */,
+				1E3CF4831EE938AE00BA0AAA /* ICSemaphoreNamed.h */,
+				1E3CF4841EE938AE00BA0AAA /* ICSharedMemory.h */,
+				1E3CF4851EE938AE00BA0AAA /* IWork.h */,
+				1E3CF4861EE938AE00BA0AAA /* log.h */,
+				1E3CF4871EE938AE00BA0AAA /* RefBase.h */,
+				1E3CF4881EE938AE00BA0AAA /* reuse_pool.hpp */,
+				1E3CF4891EE938AF00BA0AAA /* scope_lock.hpp */,
+				1E3CF48A1EE938AF00BA0AAA /* ThreadWithQueue.hpp */,
+			);
+			path = commons;
+			sourceTree = "<group>";
+		};
+		1E3CF48B1EE938AF00BA0AAA /* datahub */ = {
+			isa = PBXGroup;
+			children = (
+				1E3CF48C1EE938AF00BA0AAA /* CDataHubCtrl.h */,
+				1E3CF48D1EE938AF00BA0AAA /* DataRequest.h */,
+				1E3CF48E1EE938AF00BA0AAA /* DataRequestProtocol.h */,
 			);
 			path = datahub;
+			sourceTree = "<group>";
+		};
+		1E3CF48F1EE938AF00BA0AAA /* MessageCenter */ = {
+			isa = PBXGroup;
+			children = (
+				1E3CF4901EE938AF00BA0AAA /* MessageAdapter.h */,
+				1E3CF4911EE938AF00BA0AAA /* MessageDefines.h */,
+				1E3CF4921EE938AF00BA0AAA /* SharedThreadAdapter.h */,
+				1E3CF4931EE938AF00BA0AAA /* SingleThreadAdapter.h */,
+			);
+			path = MessageCenter;
 			sourceTree = "<group>";
 		};
 		FE6970551BF9E80500E34256 = {
 			isa = PBXGroup;
 			children = (
-				FE6970601BF9E80500E34256 /* SocketEngine */,
+				1E3CF4401EE9386C00BA0AAA /* SocketEngine */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,81 +187,7 @@
 				FE69705E1BF9E80500E34256 /* libSocketEngine.a */,
 			);
 			name = Products;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		FE6970601BF9E80500E34256 /* SocketEngine */ = {
-			isa = PBXGroup;
-			children = (
-				FE69705F1BF9E80500E34256 /* Products */,
-				FE6970A21BF9ED6E00E34256 /* SocketEngineManager.h */,
-				FE69709F1BF9ED5D00E34256 /* src */,
-				FE6970701BF9E9BE00E34256 /* inc */,
-			);
-			path = SocketEngine;
-			sourceTree = "<group>";
-		};
-		FE6970701BF9E9BE00E34256 /* inc */ = {
-			isa = PBXGroup;
-			children = (
-				1E2CC0291DF1590D0094A088 /* datahub */,
-				FE6970711BF9E9BE00E34256 /* commons */,
-				FE69708B1BF9E9BE00E34256 /* MessageCenter */,
-			);
-			name = inc;
-			path = ../../../../inc;
-			sourceTree = "<group>";
-		};
-		FE6970711BF9E9BE00E34256 /* commons */ = {
-			isa = PBXGroup;
-			children = (
-				FE6970731BF9E9BE00E34256 /* CBundle.h */,
-				FE6970741BF9E9BE00E34256 /* CBundleManager.h */,
-				FE6970761BF9E9BE00E34256 /* CHanderManager.h */,
-				FE6970781BF9E9BE00E34256 /* CLinuxTime.h */,
-				FE6970791BF9E9BE00E34256 /* CList_ZHW.h */,
-				FE69707A1BF9E9BE00E34256 /* CMutexFactory.h */,
-				FE69707C1BF9E9BE00E34256 /* CSemaphoreManager.h */,
-				FE69707D1BF9E9BE00E34256 /* CShareMemManager.h */,
-				FE69707E1BF9E9BE00E34256 /* CSmartPointer.h */,
-				FE69707F1BF9E9BE00E34256 /* CThreadFactory.h */,
-				FE6970801BF9E9BE00E34256 /* CThreadPool.h */,
-				FE6970821BF9E9BE00E34256 /* defines.h */,
-				FE6970831BF9E9BE00E34256 /* ICMutex.h */,
-				FE6970841BF9E9BE00E34256 /* ICSemaphoreNamed.h */,
-				FE6970851BF9E9BE00E34256 /* ICSharedMemory.h */,
-				FE6970861BF9E9BE00E34256 /* IWork.h */,
-				FE6970871BF9E9BE00E34256 /* log.h */,
-				FE6970881BF9E9BE00E34256 /* RefBase.h */,
-				FE6970891BF9E9BE00E34256 /* reuse_pool.hpp */,
-				FE69708A1BF9E9BE00E34256 /* scope_lock.hpp */,
-			);
-			path = commons;
-			sourceTree = "<group>";
-		};
-		FE69708B1BF9E9BE00E34256 /* MessageCenter */ = {
-			isa = PBXGroup;
-			children = (
-				FE69708C1BF9E9BE00E34256 /* MessageAdapter.h */,
-				FE69708D1BF9E9BE00E34256 /* MessageDefines.h */,
-			);
-			path = MessageCenter;
-			sourceTree = "<group>";
-		};
-		FE69709F1BF9ED5D00E34256 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				1ECC0B9D1C981F7900C2CF70 /* FsDDLog.h */,
-				FE6970A01BF9ED5D00E34256 /* SocketEngineManager.cpp */,
-				1ECC0B9E1C981F9700C2CF70 /* log.h */,
-				1ECC0B9F1C981FF500C2CF70 /* log.mm */,
-				1ED17ADD1D658F380060A5AA /* SocketRecvManager.cpp */,
-				1ED17ADE1D658F380060A5AA /* SocketRecvManager.h */,
-				1ED9A7971E72551500DC0204 /* SocketFunctions.cpp */,
-				1ED9A7981E72551500DC0204 /* SocketFunctions.hpp */,
-			);
-			name = src;
-			path = ../../../../src/SocketEngine/src;
+			path = ../../mk/IOSProject/SocketEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,10 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED17ADF1D658F380060A5AA /* SocketRecvManager.cpp in Sources */,
-				1ED9A7991E72551500DC0204 /* SocketFunctions.cpp in Sources */,
-				FE6970A11BF9ED5D00E34256 /* SocketEngineManager.cpp in Sources */,
-				1ECC0BA01C981FF500C2CF70 /* log.mm in Sources */,
+				1E3CF4511EE9386C00BA0AAA /* SocketEngineManager.cpp in Sources */,
+				1E3CF44E1EE9386C00BA0AAA /* log.mm in Sources */,
+				1E3CF4521EE9386C00BA0AAA /* SocketFunctions.cpp in Sources */,
+				1E3CF4531EE9386C00BA0AAA /* SocketRecvManager.cpp in Sources */,
+				1E3CF4501EE9386C00BA0AAA /* SocketEngine_IPV6.cpp in Sources */,
+				1E3CF44F1EE9386C00BA0AAA /* SocketEngine_IPV4.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

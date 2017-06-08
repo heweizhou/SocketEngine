@@ -7,8 +7,6 @@
 //
 
 #import "ConnectionHub.h"
-#import "Connection.h"
-#import "TaskBean.h"
 
 @interface ConnectionHub () <ConnectionDelegate, ConnectionStatusDelegate, DataArrivalDelegate, SendStatusDeletate>
 {
@@ -180,8 +178,15 @@
     @synchronized (_conn) {
         if (!_conn) {
             _conn = connect;
+            @synchronized (_conns) {
+                [_conns enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    if (obj != connect) {
+                        [(Connection*)obj disConnect];
+                    }
+                }];
+            }
+            
         } else {
-            [connect disConnect];
             return ;
         }
     }
@@ -347,7 +352,7 @@
             return ;
         }
     }
-    
+        
     if (_delegate) {
         if ([_delegate respondsToSelector:@selector(onDataArrival:data:)]) {
             [_delegate onDataArrival:connect data:buffer];

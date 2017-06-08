@@ -147,8 +147,8 @@
 - (void)cancelAllTask
 {
     @synchronized (self.normal_task_timeout_dic){
-        [_normal_task_timeout_dic removeAllObjects];
         [self _onTaskCancel:[self.normal_task_timeout_dic allValues]];
+        [_normal_task_timeout_dic removeAllObjects];
     }
 }
 
@@ -317,6 +317,11 @@
 -(BOOL)enableTaskManage
 {
     return YES;
+}
+
+-(BOOL)isDefalutChannel
+{
+    return NO;
 }
 
 #pragma  -- mark channel private function to Session

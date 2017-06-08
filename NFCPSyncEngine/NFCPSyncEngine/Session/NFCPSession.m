@@ -167,6 +167,7 @@
 -(void)pause
 {
     _isAuthed = NO;
+    [_authChanel cancelAllTask];
     [_connectionsHub disConnect];
 }
 
@@ -214,6 +215,8 @@
 
 - (void)beforeConnection
 {
+    [_authChanel cancelAllTask];
+    
     if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusStart)]) {
         [_sessionStatusDelegate onSessionStatusStart];
     }
