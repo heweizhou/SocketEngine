@@ -12,6 +12,7 @@
 #include "MessageAdapter.h"
 #include "CSmartPointer.h"
 #include <unistd.h>
+#include <sys/socket.h>
 
 #define RECV_BUFFER  1024
 #define	max(a,b) ((a) > (b) ? (a) : (b))
@@ -203,7 +204,7 @@ _VOID SocketRecvManager::ProcessSelectEvent(fd_set* RSet, fd_set* WSet, fd_set* 
     {
         _UINT fd = *it;
         char recBuffer[RECV_BUFFER];
-        _LONG recvBytes = read((int)fd, recBuffer, RECV_BUFFER);
+        _LONG recvBytes = recv((int)fd, recBuffer, RECV_BUFFER, 0);
         
         if (recvBytes > 0) {
             dataBack(fd, recBuffer, recvBytes);

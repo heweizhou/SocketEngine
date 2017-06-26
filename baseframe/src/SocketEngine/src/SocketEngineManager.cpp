@@ -46,8 +46,6 @@ int socketErrorCode(int errorCode)
             break;
     }
     
-    printf("errorCode:%d\n", retErrorCode);
-    
     return retErrorCode;
 }
 
@@ -64,9 +62,20 @@ _VOID SocketEngineManager::stop_recv_thread()
     SocketRecvManager::getInstance()->stop();
 }
 
-_HANDLE SocketEngineManager::createSocket(_INT protocol, _INT type)
+_HANDLE SocketEngineManager::createSocket(socket_kind kind, _INT type)
 {
-    return create_socket(protocol, type);
+    switch (kind) {
+        case _INET:
+            return create_socket(type);
+            break;
+        case _LOCAL:
+            //todo
+            return -1;
+            break;
+        default:
+            return create_socket(type);
+            break;
+    }
 }
 
 _INT SocketEngineManager::connectToHost(_HANDLE socketFD, _CONST _CHAR* ipAddress, _CONST _UINT port, _CONST _INT timeout_sec)

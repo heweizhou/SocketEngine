@@ -20,7 +20,7 @@ typedef enum _SOCKET_CONNECT_STATUS{
 }_socket_connect_status;
 
 
-_UINT create_socket(_INT protocal, _INT domain);
+_UINT create_socket(_INT typetype);
 /**
  @brief 设置ip地址和端口完成socket连接
  @param ipAddress    ip地址

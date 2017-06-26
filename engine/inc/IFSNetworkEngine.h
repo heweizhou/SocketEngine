@@ -15,11 +15,11 @@ class  IFSNetworkEngine
 public:
     /**
      @brief 创建socket通信fd
-     @param domain 创建socket的协议类型。ex，AF_INET，AF_UNIX
+     @param domain 创建socket的协议类型。ex，AF_INET，AF_LOCAL
      @param protocal     socket数据类型      ex,SOCK_STREAM,SOCK_DGRAM,SOCK_RAW
      @return 返回创建socket FD----socket创建失败返回SocketBadConfigError
      */
-    virtual long createSocket(int domain, int protocal)=0;
+    virtual long createSocket(int kind, int type)=0;
     
     
     /**

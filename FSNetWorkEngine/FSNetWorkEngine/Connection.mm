@@ -29,7 +29,7 @@
 
 -(id)init
 {
-    return [self initWithIp:nil port:0 timeout:30 type:IPV4];
+    return [self initWithIp:nil port:0 timeout:30 type:INet];
 }
 
 - (id)initWithIp:(NSString *)ip port:(int)port timeout:(int)timeout type:(dominType)domin
@@ -78,11 +78,11 @@
 {
     
     switch (_socket_type) {
-        case IPV4:
+        case INet:
             self.fd = (int)getEngineInstance()->createSocket(AF_Inet, Socket_Stream);
             break;
-        case IPV6:
-            self.fd = (int)getEngineInstance()->createSocket(AF_Inet6, Socket_Stream);
+        case Local:
+            self.fd = (int)getEngineInstance()->createSocket(AF_Local, Socket_Stream);
             break;
         default:
             break;
@@ -261,6 +261,11 @@
         }
             break;
     }
+}
+
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"ip= %s; port = %d", [_ip UTF8String], _port];
 }
 
 @end

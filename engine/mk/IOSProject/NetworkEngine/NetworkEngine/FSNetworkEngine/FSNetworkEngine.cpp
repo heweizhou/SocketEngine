@@ -6,11 +6,15 @@
 //  Copyright © 2015年 周贺伟. All rights reserved.
 //
 
+#include <stdio.h>
 #include "FSNetworkEngine.h"
 #include "SocketEngineManager.h"
+#include "CMutexFactory.h"
+#include "scope_lock.hpp"
 #include "CThreadPool.h"
 #include "MessageAdapter.h"
 #include "CDataHubCtrl.h"
+#include "log.h"
 
 #include "CSocketConnectWork.hpp"
 #include "CSocketWork.hpp"
@@ -74,9 +78,9 @@ _VOID stopEngineComs()
     }
 }
 
-_HANDLE FSNetworkEngine::createSocket(_INT domain, _INT protocal)
+_HANDLE FSNetworkEngine::createSocket(_INT kind, _INT type)
 {
-    return SocketEngineManager::createSocket(domain, protocal);
+    return SocketEngineManager::createSocket((socket_kind)kind, type);
 }
 
 _BOOL FSNetworkEngine::async_connectToHost(_HANDLE socketFD, _CONST _CHAR* ipAddress, _CONST _UINT port, _LONG socketMsgKind, _INT timeout_sec)

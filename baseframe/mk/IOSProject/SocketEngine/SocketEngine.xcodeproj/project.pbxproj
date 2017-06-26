@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0C0FE31F00CEF600F84B25 /* SocketUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C0FE11F00CEF600F84B25 /* SocketUtility.cpp */; };
 		1E3CF44E1EE9386C00BA0AAA /* log.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF4441EE9386C00BA0AAA /* log.mm */; };
 		1E3CF44F1EE9386C00BA0AAA /* SocketEngine_IPV4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF4451EE9386C00BA0AAA /* SocketEngine_IPV4.cpp */; };
 		1E3CF4501EE9386C00BA0AAA /* SocketEngine_IPV6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF4471EE9386C00BA0AAA /* SocketEngine_IPV6.cpp */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E0C0FE11F00CEF600F84B25 /* SocketUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketUtility.cpp; sourceTree = "<group>"; };
+		1E0C0FE21F00CEF600F84B25 /* SocketUtility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SocketUtility.hpp; sourceTree = "<group>"; };
 		1E3CF4421EE9386C00BA0AAA /* FsDDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FsDDLog.h; sourceTree = "<group>"; };
 		1E3CF4431EE9386C00BA0AAA /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
 		1E3CF4441EE9386C00BA0AAA /* log.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = log.mm; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 		1E3CF4411EE9386C00BA0AAA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				1E0C0FE11F00CEF600F84B25 /* SocketUtility.cpp */,
+				1E0C0FE21F00CEF600F84B25 /* SocketUtility.hpp */,
 				1E3CF4961EE9390800BA0AAA /* SocketEngineManager.h */,
 				1E3CF4421EE9386C00BA0AAA /* FsDDLog.h */,
 				1E3CF4431EE9386C00BA0AAA /* log.h */,
@@ -251,6 +256,7 @@
 				1E3CF4521EE9386C00BA0AAA /* SocketFunctions.cpp in Sources */,
 				1E3CF4531EE9386C00BA0AAA /* SocketRecvManager.cpp in Sources */,
 				1E3CF4501EE9386C00BA0AAA /* SocketEngine_IPV6.cpp in Sources */,
+				1E0C0FE31F00CEF600F84B25 /* SocketUtility.cpp in Sources */,
 				1E3CF44F1EE9386C00BA0AAA /* SocketEngine_IPV4.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

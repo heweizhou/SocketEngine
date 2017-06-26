@@ -26,7 +26,7 @@ public:
      @param protocal     socket数据类型      ex,SOCK_STREAM,SOCK_DGRAM,SOCK_RAW
      @return 返回创建socket FD(socket创建失败返回INNER_EVENT_SOCKET_CREATE_FAILED)
      */
-    virtual _HANDLE createSocket(_INT domain, _INT protocal);
+    virtual _HANDLE createSocket(_INT kind, _INT type);
     
     
     /**

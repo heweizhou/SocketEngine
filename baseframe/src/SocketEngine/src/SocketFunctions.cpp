@@ -7,6 +7,7 @@
 //
 
 #include "SocketFunctions.hpp"
+#include "SocketUtility.hpp"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -27,42 +28,62 @@
 #define RECV_BUFFER 1024
 #define SOCKET_CONNECT_SOCKOPT_VALUE  1
 
-_UINT create_socket(_INT protocal, _INT domain)
+_UINT create_socket(_INT type)
 {
-    return socket(protocal, domain, 0);
+    
+    if (!CSocketUtility::isIpv4Net()) {
+        return socket(AF_INET6, type, 0);
+    }
+    return socket(AF_INET, type, 0);
 }
 
 _socket_connect_status connect_to_host(_INT fd, _CONST _CHAR* ipAddress, _CONST _UINT port, _CONST _INT timeout_second)
 {
     
     //兼容V4 v6
+    _CHAR ip[128];
+    socklen_t maxlen = 128;
     
-    void* svraddr = nullptr;
-    int svraddr_len;
+    _PVOID  svraddr = nullptr;
+    _INT    svraddr_len;
     
     struct sockaddr_in svraddr_4;
     struct sockaddr_in6 svraddr_6;
 
     //获取网络协议
     struct addrinfo *result;
-    getaddrinfo(ipAddress, NULL, NULL, &result);
-    const struct sockaddr *sa = result->ai_addr;
+    getaddrinfo(ipAddress, _NULL, _NULL, &result);
+    _CONST struct sockaddr *sa = result->ai_addr;
     switch(sa->sa_family)
     {
         case AF_INET://ipv4
             
             bzero(&svraddr_4, sizeof(svraddr_4));
             svraddr_4.sin_family = AF_INET;
-            inet_pton(AF_INET, ipAddress, &svraddr_4.sin_addr);
+            
+            if(inet_ntop(AF_INET, &(((struct sockaddr_in *)sa)->sin_addr), ip, maxlen) < 0){
+                perror(ip);
+                return _CONNECT_STATUS_FAILED;
+            }
+            
+            svraddr_4.sin_addr.s_addr = inet_addr(ip);
             svraddr_4.sin_port = htons(port);
             memset(&(svraddr_4.sin_zero), 0, 8);
             svraddr_len = sizeof(svraddr_4);
             svraddr = &svraddr_4;
             break;
         case AF_INET6://ipv6
+            
+            inet_ntop(AF_INET6, &(((struct sockaddr_in6 *)sa)->sin6_addr), ip, maxlen);
+            
             bzero(&svraddr_6, sizeof(svraddr_6));
             svraddr_6.sin6_family = AF_INET6;
-            inet_pton(AF_INET6, ipAddress, &svraddr_6.sin6_addr);
+            
+            if (inet_pton(AF_INET6, ip, &svraddr_6.sin6_addr) < 0 ) {
+                perror(ip);
+                return _CONNECT_STATUS_FAILED;
+            }
+            
             svraddr_6.sin6_port = htons(port);
             svraddr_len = sizeof(svraddr_6);
             svraddr = &svraddr_6;
@@ -168,7 +189,7 @@ _LONG send_data(_INT fd, _CONST _CHAR *binaryData,_LONG dataLength)
     _log("start send data!");
 #endif
     
-    _LONG ret = write((int)fd, binaryData, dataLength);
+    _LONG ret = send((int)fd, binaryData, dataLength, 0);
 #ifdef MY_DEBUG
     _log("send data compelete!");
 #endif
@@ -179,7 +200,7 @@ _LONG send_data(_INT fd, _CONST _CHAR *binaryData,_LONG dataLength)
 _LONG receive_data(_INT fd, _CONST _CHAR *binaryData, _LONG &dataLength)
 {
     //    scope_lock<ICMutex> lk(m_mutex);
-    _LONG ret = read((int)fd,(void*)binaryData, dataLength);
+    _LONG ret = recv((int)fd,(void*)binaryData, dataLength, 0);
     return ret;
 }
 

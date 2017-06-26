@@ -19,11 +19,11 @@ public:
     static _VOID stop_recv_thread();
     /**
      @brief 创建socket通信fd
-     @param protocol 创建socket的协议类型。ex，AF_INET，AF_UNIX
+     @param protocol 创建socket的协议类型。ex，_INET，_LOCAL
      @param type     socket数据类型      ex,SOCK_STREAM,SOCK_DGRAM,SOCK_RAW
      @return 返回创建socket FD
      */
-    static _HANDLE createSocket(_INT protocol, _INT type);
+    static _HANDLE createSocket(socket_kind kind, _INT type);
     
     
     /**

@@ -119,6 +119,13 @@ enum thread_priority
     HIGH
 };
 
+enum socket_kind
+{
+    _INET,
+    _LOCAL
+};
+
+
 typedef void            _VOID;
 typedef bool            _BOOL;
 typedef char            _CHAR;

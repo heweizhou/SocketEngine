@@ -14,8 +14,8 @@
  *	@brief	创建socket的domain(指定使用何种地址类型) 默认创建使用AF_INET,用于createSocket(int domain, int protocal)的domain参数输入
  */
 typedef enum{
-    AF_Inet        = 2,    //AF_INET Ipv4网络协议。
-    AF_Inet6       = 30    //AF_INET6 Ipv6网络协议。    其中AF 表示ADDRESS FAMILY 地址族
+    AF_Inet,
+    AF_Local
 }SocketDomain;
 
 

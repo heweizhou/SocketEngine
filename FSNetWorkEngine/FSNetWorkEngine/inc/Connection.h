@@ -11,8 +11,8 @@
 #import "IDataRequest.h"
 
 typedef NS_ENUM(NSUInteger, dominType) {
-    IPV4,
-    IPV6
+    INet,
+    Local
 };
 
 @class Connection;
