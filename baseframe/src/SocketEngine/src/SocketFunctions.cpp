@@ -61,8 +61,7 @@ _socket_connect_status connect_to_host(_INT fd, _CONST _CHAR* ipAddress, _CONST 
             bzero(&svraddr_4, sizeof(svraddr_4));
             svraddr_4.sin_family = AF_INET;
             
-            if(inet_ntop(AF_INET, &(((struct sockaddr_in *)sa)->sin_addr), ip, maxlen) < 0){
-                perror(ip);
+            if(inet_ntop(AF_INET, &(((struct sockaddr_in *)sa)->sin_addr), ip, maxlen) == _NULL){
                 return _CONNECT_STATUS_FAILED;
             }
             
@@ -74,7 +73,9 @@ _socket_connect_status connect_to_host(_INT fd, _CONST _CHAR* ipAddress, _CONST 
             break;
         case AF_INET6://ipv6
             
-            inet_ntop(AF_INET6, &(((struct sockaddr_in6 *)sa)->sin6_addr), ip, maxlen);
+            if(inet_ntop(AF_INET6, &(((struct sockaddr_in6 *)sa)->sin6_addr), ip, maxlen) == _NULL){
+                return _CONNECT_STATUS_FAILED;
+            }
             
             bzero(&svraddr_6, sizeof(svraddr_6));
             svraddr_6.sin6_family = AF_INET6;

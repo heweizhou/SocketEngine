@@ -58,7 +58,7 @@
         
         if ([info count] == 2) {
             
-            Connection* connection = [[Connection alloc] initWithIp:info[0] port:[info[1] intValue] timeout:_timeout type:IPV4];
+            Connection* connection = [[Connection alloc] initWithIp:info[0] port:[info[1] intValue] timeout:_timeout type:INet];
             connection.dataDelegate = self;
             connection.connectDelegate = self;
             connection.sendStatueDelegate = self;
