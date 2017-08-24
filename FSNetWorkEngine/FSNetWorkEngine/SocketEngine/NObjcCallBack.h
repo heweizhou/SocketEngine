@@ -68,7 +68,7 @@ public:
      */
     virtual void sockeErrorCallBack(int socketFD,SocketError errorType);
     
-    virtual bool socketSendRequestData(int socketFD, void* param, char** buffer, unsigned long& buffer_size);
+    virtual bool socketSendRequestData(void* param, long& handler);
     
 public:
     NObjcCallBack(std::string post_key);

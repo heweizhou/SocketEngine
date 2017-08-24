@@ -59,6 +59,36 @@ _PVOID  CBundle::getData( _string key, _ULONG& size )
     return _NULL;
 }
 
+_PVOID CBundle::getDataWithLock( _string key, _ULONG& size )
+{
+    scope_lock<ICMutex> lk(m_mutex);
+    return getData(key, size);
+}
+
+_BOOL CBundle::fillData( _string key, _PVOID destMem, _ULONG destMemMaxsize)
+{
+    _ULONG size = 0;
+    _PVOID srcMem = getData(key, size);
+    
+    if (!srcMem) {
+        return _FALSE;
+    }
+    
+    if (size > destMemMaxsize) {
+        return _FALSE;
+    }
+    
+    SAFE_COPY(destMem, destMemMaxsize, srcMem, size);
+    
+    return _TRUE;
+}
+
+_BOOL CBundle::fillDataWithLock( _string key, _PVOID destMem, _ULONG destMemMaxsize)
+{
+    scope_lock<ICMutex> lk(m_mutex);
+    return fillData(key, destMem, destMemMaxsize);
+}
+
 _VOID CBundle::lock()
 {
     m_mutex->lock();

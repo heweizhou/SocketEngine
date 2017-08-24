@@ -179,7 +179,7 @@ _VOID CDataHub::onMessage( _string& srcName, MessageType type, _PVOID paramBuffe
                 }
                 
                 _DataHubMessageKind msgKind = 0;
-                _UINT   code        = INNER_EVENT_DEFAULT;
+                _UINT   code        = 0;
                 _PVOID  reserve     = _NULL;
                 _ULONG  size        = 0;
                 

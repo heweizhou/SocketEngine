@@ -52,6 +52,7 @@
 		1E1909FE1CEC187800433389 /* NObjcCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NObjcCallBack.h; sourceTree = "<group>"; };
 		1E1909FF1CEC187800433389 /* NObjcCallBack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NObjcCallBack.mm; sourceTree = "<group>"; };
 		1E190A001CEC187800433389 /* SocketDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketDefines.h; sourceTree = "<group>"; };
+		1E3679C41F4EDE5D002E5378 /* NetWorkEngineTools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NetWorkEngineTools.hpp; sourceTree = "<group>"; };
 		1E9FE4E11D2DF16A004963CF /* BaseMsgPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMsgPackage.h; sourceTree = "<group>"; };
 		1E9FE4E21D2DF16A004963CF /* BaseMsgPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMsgPackage.m; sourceTree = "<group>"; };
 		1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkEngine.xcodeproj; path = ../engine/mk/IOSProject/NetworkEngine/NetworkEngine.xcodeproj; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		1E1909F71CEC184000433389 /* inc */ = {
 			isa = PBXGroup;
 			children = (
+				1E3679C41F4EDE5D002E5378 /* NetWorkEngineTools.hpp */,
 				1E1909F81CEC184000433389 /* FSNetEngineConstant.h */,
 				1E1909F91CEC184000433389 /* IFSCallBack.h */,
 				1E1909FA1CEC184000433389 /* IFSNetworkEngine.h */,

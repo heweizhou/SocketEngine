@@ -7,71 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E6FFF6F1BFB20F200796912 /* libcommons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6FFF621BFB20CF00796912 /* libcommons.a */; };
-		1E6FFF701BFB20F200796912 /* libMessageCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6FFF681BFB20D200796912 /* libMessageCenter.a */; };
-		1E6FFF711BFB20F200796912 /* libSocketEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6FFF6E1BFB20D600796912 /* libSocketEngine.a */; };
-		1EDE79EF1E763832009F9FC8 /* CSocketConnectWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE79ED1E763832009F9FC8 /* CSocketConnectWork.cpp */; };
-		1EDE7A1C1E764858009F9FC8 /* CSocketWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE7A1A1E764858009F9FC8 /* CSocketWork.cpp */; };
-		FE401C481DF3D0A000FA17CC /* libDataHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2CC0411DF15A9A0094A088 /* libDataHub.a */; };
-		FE81DCBF1BFAC1EF003A3A17 /* FSNetworkEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE81DCBD1BFAC1EF003A3A17 /* FSNetworkEngine.cpp */; };
+		1E1C9FFB1F147353006E8451 /* CSocketConnectWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FEB1F147353006E8451 /* CSocketConnectWork.cpp */; };
+		1E1C9FFC1F147353006E8451 /* CSocketWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FED1F147353006E8451 /* CSocketWork.cpp */; };
+		1E1C9FFD1F147353006E8451 /* FSNetworkEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FEF1F147353006E8451 /* FSNetworkEngine.cpp */; };
+		1E1C9FFE1F147353006E8451 /* NetWorkEngineTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF11F147353006E8451 /* NetWorkEngineTools.cpp */; };
+		1E1C9FFF1F147353006E8451 /* SocketFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF31F147353006E8451 /* SocketFunctions.cpp */; };
+		1E1CA0001F147353006E8451 /* SocketHandlerMapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF51F147353006E8451 /* SocketHandlerMapper.cpp */; };
+		1E1CA0011F147353006E8451 /* SocketRecvManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF71F147353006E8451 /* SocketRecvManager.cpp */; };
+		1E1CA0021F147353006E8451 /* SocketUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF91F147353006E8451 /* SocketUtility.cpp */; };
+		1E1CA03B1F14740A006E8451 /* libcommons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1CA02E1F1473F8006E8451 /* libcommons.a */; };
+		1E1CA03C1F14740A006E8451 /* libDataHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1CA0341F1473FB006E8451 /* libDataHub.a */; };
+		1E1CA03D1F14740A006E8451 /* libMessageCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1CA03A1F1473FE006E8451 /* libMessageCenter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E2CC0401DF15A9A0094A088 /* PBXContainerItemProxy */ = {
+		1E1CA02D1F1473F8006E8451 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1E2CC03C1DF15A9A0094A088 /* DataHub.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1EBC649F1DDD8E270094949E;
-			remoteInfo = DataHub;
-		};
-		1E6FFF611BFB20CF00796912 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E6FFF5D1BFB20CF00796912 /* commons.xcodeproj */;
+			containerPortal = 1E1CA0291F1473F8006E8451 /* commons.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1E757D061A24AC1E008E7889;
 			remoteInfo = commons;
 		};
-		1E6FFF671BFB20D200796912 /* PBXContainerItemProxy */ = {
+		1E1CA0331F1473FB006E8451 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1E6FFF631BFB20D200796912 /* MessageCenter.xcodeproj */;
+			containerPortal = 1E1CA02F1F1473FB006E8451 /* DataHub.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1EBC649F1DDD8E270094949E;
+			remoteInfo = DataHub;
+		};
+		1E1CA0391F1473FE006E8451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1CA0351F1473FE006E8451 /* MessageCenter.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1EFB42471A1B8D4F0073D79A;
 			remoteInfo = MessageCenter;
 		};
-		1E6FFF6D1BFB20D600796912 /* PBXContainerItemProxy */ = {
+		1E1CA03E1F14740F006E8451 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1E6FFF691BFB20D600796912 /* SocketEngine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FE69705E1BF9E80500E34256;
-			remoteInfo = SocketEngine;
-		};
-		1E6FFF721BFB20F700796912 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E6FFF691BFB20D600796912 /* SocketEngine.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FE69705D1BF9E80500E34256;
-			remoteInfo = SocketEngine;
-		};
-		1E6FFF741BFB20F700796912 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E6FFF631BFB20D200796912 /* MessageCenter.xcodeproj */;
+			containerPortal = 1E1CA0351F1473FE006E8451 /* MessageCenter.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 1EFB42461A1B8D4F0073D79A;
 			remoteInfo = MessageCenter;
 		};
-		1E6FFF761BFB20F700796912 /* PBXContainerItemProxy */ = {
+		1E1CA0401F14740F006E8451 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1E6FFF5D1BFB20CF00796912 /* commons.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E757D051A24AC1E008E7889;
-			remoteInfo = commons;
-		};
-		FE401C491DF3D0A400FA17CC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E2CC03C1DF15A9A0094A088 /* DataHub.xcodeproj */;
+			containerPortal = 1E1CA02F1F1473FB006E8451 /* DataHub.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 1EBC649E1DDD8E270094949E;
 			remoteInfo = DataHub;
+		};
+		1E1CA0421F14740F006E8451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1CA0291F1473F8006E8451 /* commons.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E757D051A24AC1E008E7889;
+			remoteInfo = commons;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -88,49 +78,59 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E2CC02F1DF1595F0094A088 /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequest.h; sourceTree = "<group>"; };
-		1E2CC0301DF1595F0094A088 /* DataRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestProtocol.h; sourceTree = "<group>"; };
-		1E2CC0321DF1596D0094A088 /* MessageAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAdapter.h; sourceTree = "<group>"; };
-		1E2CC0331DF1596D0094A088 /* MessageDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDefines.h; sourceTree = "<group>"; };
-		1E2CC0341DF1596D0094A088 /* SharedThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedThreadAdapter.h; sourceTree = "<group>"; };
-		1E2CC0351DF1596D0094A088 /* SingleThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleThreadAdapter.h; sourceTree = "<group>"; };
-		1E2CC03B1DF15A650094A088 /* CDataHubCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataHubCtrl.h; sourceTree = "<group>"; };
-		1E2CC03C1DF15A9A0094A088 /* DataHub.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DataHub.xcodeproj; path = ../../../../../baseframe/mk/IOSProject/datahub/DataHub.xcodeproj; sourceTree = "<group>"; };
-		1E6FFF5B1BFB1CFE00796912 /* SocketEngineManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketEngineManager.h; sourceTree = "<group>"; };
-		1E6FFF5D1BFB20CF00796912 /* commons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = commons.xcodeproj; path = ../../../../../baseframe/mk/IOSProject/commons/commons.xcodeproj; sourceTree = "<group>"; };
-		1E6FFF631BFB20D200796912 /* MessageCenter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageCenter.xcodeproj; path = ../../../../../baseframe/mk/IOSProject/MessageCenter/MessageCenter.xcodeproj; sourceTree = "<group>"; };
-		1E6FFF691BFB20D600796912 /* SocketEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SocketEngine.xcodeproj; path = ../../../../../baseframe/mk/IOSProject/SocketEngine/SocketEngine.xcodeproj; sourceTree = "<group>"; };
-		1EDE79ED1E763832009F9FC8 /* CSocketConnectWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSocketConnectWork.cpp; sourceTree = "<group>"; };
-		1EDE79EE1E763832009F9FC8 /* CSocketConnectWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSocketConnectWork.hpp; sourceTree = "<group>"; };
-		1EDE7A1A1E764858009F9FC8 /* CSocketWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSocketWork.cpp; sourceTree = "<group>"; };
-		1EDE7A1B1E764858009F9FC8 /* CSocketWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSocketWork.hpp; sourceTree = "<group>"; };
+		1E1C9FEB1F147353006E8451 /* CSocketConnectWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSocketConnectWork.cpp; sourceTree = "<group>"; };
+		1E1C9FEC1F147353006E8451 /* CSocketConnectWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSocketConnectWork.hpp; sourceTree = "<group>"; };
+		1E1C9FED1F147353006E8451 /* CSocketWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSocketWork.cpp; sourceTree = "<group>"; };
+		1E1C9FEE1F147353006E8451 /* CSocketWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSocketWork.hpp; sourceTree = "<group>"; };
+		1E1C9FEF1F147353006E8451 /* FSNetworkEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNetworkEngine.cpp; sourceTree = "<group>"; };
+		1E1C9FF01F147353006E8451 /* FSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetworkEngine.h; sourceTree = "<group>"; };
+		1E1C9FF11F147353006E8451 /* NetWorkEngineTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetWorkEngineTools.cpp; sourceTree = "<group>"; };
+		1E1C9FF21F147353006E8451 /* SocketDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketDefines.h; sourceTree = "<group>"; };
+		1E1C9FF31F147353006E8451 /* SocketFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketFunctions.cpp; sourceTree = "<group>"; };
+		1E1C9FF41F147353006E8451 /* SocketFunctions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SocketFunctions.hpp; sourceTree = "<group>"; };
+		1E1C9FF51F147353006E8451 /* SocketHandlerMapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketHandlerMapper.cpp; sourceTree = "<group>"; };
+		1E1C9FF61F147353006E8451 /* SocketHandlerMapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SocketHandlerMapper.hpp; sourceTree = "<group>"; };
+		1E1C9FF71F147353006E8451 /* SocketRecvManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketRecvManager.cpp; sourceTree = "<group>"; };
+		1E1C9FF81F147353006E8451 /* SocketRecvManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketRecvManager.h; sourceTree = "<group>"; };
+		1E1C9FF91F147353006E8451 /* SocketUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketUtility.cpp; sourceTree = "<group>"; };
+		1E1C9FFA1F147353006E8451 /* SocketUtility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SocketUtility.hpp; sourceTree = "<group>"; };
+		1E1CA0061F1473CA006E8451 /* FSNetEngineConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetEngineConstant.h; sourceTree = "<group>"; };
+		1E1CA0071F1473CA006E8451 /* IFSCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSCallBack.h; sourceTree = "<group>"; };
+		1E1CA0081F1473CA006E8451 /* IFSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSNetworkEngine.h; sourceTree = "<group>"; };
+		1E1CA0091F1473CA006E8451 /* NetWorkEngineTools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NetWorkEngineTools.hpp; sourceTree = "<group>"; };
+		1E1CA00B1F1473E0006E8451 /* CBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundle.h; sourceTree = "<group>"; };
+		1E1CA00C1F1473E0006E8451 /* CBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundleManager.h; sourceTree = "<group>"; };
+		1E1CA00D1F1473E0006E8451 /* CHanderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHanderManager.h; sourceTree = "<group>"; };
+		1E1CA00E1F1473E0006E8451 /* CLinuxTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLinuxTime.h; sourceTree = "<group>"; };
+		1E1CA00F1F1473E0006E8451 /* CList_ZHW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CList_ZHW.h; sourceTree = "<group>"; };
+		1E1CA0101F1473E0006E8451 /* CMutexFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMutexFactory.h; sourceTree = "<group>"; };
+		1E1CA0111F1473E0006E8451 /* CSemaphoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSemaphoreManager.h; sourceTree = "<group>"; };
+		1E1CA0121F1473E0006E8451 /* CShareMemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CShareMemManager.h; sourceTree = "<group>"; };
+		1E1CA0131F1473E0006E8451 /* CSmartPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSmartPointer.h; sourceTree = "<group>"; };
+		1E1CA0141F1473E0006E8451 /* CThreadFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadFactory.h; sourceTree = "<group>"; };
+		1E1CA0151F1473E0006E8451 /* CThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadPool.h; sourceTree = "<group>"; };
+		1E1CA0161F1473E0006E8451 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		1E1CA0171F1473E0006E8451 /* ICMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMutex.h; sourceTree = "<group>"; };
+		1E1CA0181F1473E0006E8451 /* ICSemaphoreNamed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSemaphoreNamed.h; sourceTree = "<group>"; };
+		1E1CA0191F1473E0006E8451 /* ICSharedMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSharedMemory.h; sourceTree = "<group>"; };
+		1E1CA01A1F1473E0006E8451 /* IWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWork.h; sourceTree = "<group>"; };
+		1E1CA01B1F1473E0006E8451 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		1E1CA01C1F1473E0006E8451 /* RefBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefBase.h; sourceTree = "<group>"; };
+		1E1CA01D1F1473E0006E8451 /* reuse_pool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reuse_pool.hpp; sourceTree = "<group>"; };
+		1E1CA01E1F1473E0006E8451 /* scope_lock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = scope_lock.hpp; sourceTree = "<group>"; };
+		1E1CA01F1F1473E0006E8451 /* ThreadWithQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ThreadWithQueue.hpp; sourceTree = "<group>"; };
+		1E1CA0211F1473E0006E8451 /* CDataHubCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataHubCtrl.h; sourceTree = "<group>"; };
+		1E1CA0221F1473E0006E8451 /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequest.h; sourceTree = "<group>"; };
+		1E1CA0231F1473E0006E8451 /* DataRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestProtocol.h; sourceTree = "<group>"; };
+		1E1CA0251F1473E0006E8451 /* MessageAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAdapter.h; sourceTree = "<group>"; };
+		1E1CA0261F1473E0006E8451 /* MessageDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDefines.h; sourceTree = "<group>"; };
+		1E1CA0271F1473E0006E8451 /* SharedThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedThreadAdapter.h; sourceTree = "<group>"; };
+		1E1CA0281F1473E0006E8451 /* SingleThreadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleThreadAdapter.h; sourceTree = "<group>"; };
+		1E1CA0291F1473F8006E8451 /* commons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = commons.xcodeproj; path = ../../../../baseframe/mk/IOSProject/commons/commons.xcodeproj; sourceTree = "<group>"; };
+		1E1CA02F1F1473FB006E8451 /* DataHub.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DataHub.xcodeproj; path = ../../../../baseframe/mk/IOSProject/datahub/DataHub.xcodeproj; sourceTree = "<group>"; };
+		1E1CA0351F1473FE006E8451 /* MessageCenter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageCenter.xcodeproj; path = ../../../../baseframe/mk/IOSProject/MessageCenter/MessageCenter.xcodeproj; sourceTree = "<group>"; };
 		FE1218E31BF1ED18007CAD8E /* libNetworkEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNetworkEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE401C461DF3D08900FA17CC /* libDataHub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataHub.a; path = "../../../../baseframe/lib/ios/DataHub/Debug-iphonesimulator/libDataHub.a"; sourceTree = "<group>"; };
-		FE81DCBD1BFAC1EF003A3A17 /* FSNetworkEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNetworkEngine.cpp; sourceTree = "<group>"; };
-		FE81DCBE1BFAC1EF003A3A17 /* FSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetworkEngine.h; sourceTree = "<group>"; };
-		FE8DF9A21BFEC30A004A91BB /* FSNetEngineConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FSNetEngineConstant.h; path = ../../../../inc/FSNetEngineConstant.h; sourceTree = "<group>"; };
-		FEF273E61BF97A9600395261 /* CBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundle.h; sourceTree = "<group>"; };
-		FEF273E71BF97A9600395261 /* CBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBundleManager.h; sourceTree = "<group>"; };
-		FEF273E91BF97A9600395261 /* CHanderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHanderManager.h; sourceTree = "<group>"; };
-		FEF273EB1BF97A9600395261 /* CLinuxTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLinuxTime.h; sourceTree = "<group>"; };
-		FEF273EC1BF97A9600395261 /* CList_ZHW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CList_ZHW.h; sourceTree = "<group>"; };
-		FEF273ED1BF97A9600395261 /* CMutexFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMutexFactory.h; sourceTree = "<group>"; };
-		FEF273EF1BF97A9600395261 /* CSemaphoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSemaphoreManager.h; sourceTree = "<group>"; };
-		FEF273F01BF97A9600395261 /* CShareMemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CShareMemManager.h; sourceTree = "<group>"; };
-		FEF273F11BF97A9600395261 /* CSmartPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSmartPointer.h; sourceTree = "<group>"; };
-		FEF273F21BF97A9600395261 /* CThreadFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadFactory.h; sourceTree = "<group>"; };
-		FEF273F31BF97A9600395261 /* CThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThreadPool.h; sourceTree = "<group>"; };
-		FEF273F51BF97A9600395261 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
-		FEF273F61BF97A9600395261 /* ICMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMutex.h; sourceTree = "<group>"; };
-		FEF273F71BF97A9600395261 /* ICSemaphoreNamed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSemaphoreNamed.h; sourceTree = "<group>"; };
-		FEF273F81BF97A9600395261 /* ICSharedMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSharedMemory.h; sourceTree = "<group>"; };
-		FEF273F91BF97A9600395261 /* IWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWork.h; sourceTree = "<group>"; };
-		FEF273FA1BF97A9600395261 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
-		FEF273FB1BF97A9600395261 /* RefBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefBase.h; sourceTree = "<group>"; };
-		FEF273FC1BF97A9600395261 /* reuse_pool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reuse_pool.hpp; sourceTree = "<group>"; };
-		FEF273FD1BF97A9600395261 /* scope_lock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = scope_lock.hpp; sourceTree = "<group>"; };
-		FEF69C8D1BF3368C00C515B8 /* IFSCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFSCallBack.h; path = ../../../../inc/IFSCallBack.h; sourceTree = "<group>"; };
-		FEF69C8F1BF3368C00C515B8 /* IFSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFSNetworkEngine.h; path = ../../../../inc/IFSNetworkEngine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,76 +138,143 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE401C481DF3D0A000FA17CC /* libDataHub.a in Frameworks */,
-				1E6FFF6F1BFB20F200796912 /* libcommons.a in Frameworks */,
-				1E6FFF701BFB20F200796912 /* libMessageCenter.a in Frameworks */,
-				1E6FFF711BFB20F200796912 /* libSocketEngine.a in Frameworks */,
+				1E1CA03B1F14740A006E8451 /* libcommons.a in Frameworks */,
+				1E1CA03C1F14740A006E8451 /* libDataHub.a in Frameworks */,
+				1E1CA03D1F14740A006E8451 /* libMessageCenter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E2CC02D1DF1595F0094A088 /* datahub */ = {
+		1E1C9FEA1F147353006E8451 /* FSNetworkEngine */ = {
 			isa = PBXGroup;
 			children = (
-				1E2CC03B1DF15A650094A088 /* CDataHubCtrl.h */,
-				1E2CC02F1DF1595F0094A088 /* DataRequest.h */,
-				1E2CC0301DF1595F0094A088 /* DataRequestProtocol.h */,
+				1E1C9FEB1F147353006E8451 /* CSocketConnectWork.cpp */,
+				1E1C9FEC1F147353006E8451 /* CSocketConnectWork.hpp */,
+				1E1C9FED1F147353006E8451 /* CSocketWork.cpp */,
+				1E1C9FEE1F147353006E8451 /* CSocketWork.hpp */,
+				1E1C9FEF1F147353006E8451 /* FSNetworkEngine.cpp */,
+				1E1C9FF01F147353006E8451 /* FSNetworkEngine.h */,
+				1E1C9FF11F147353006E8451 /* NetWorkEngineTools.cpp */,
+				1E1C9FF21F147353006E8451 /* SocketDefines.h */,
+				1E1C9FF31F147353006E8451 /* SocketFunctions.cpp */,
+				1E1C9FF41F147353006E8451 /* SocketFunctions.hpp */,
+				1E1C9FF51F147353006E8451 /* SocketHandlerMapper.cpp */,
+				1E1C9FF61F147353006E8451 /* SocketHandlerMapper.hpp */,
+				1E1C9FF71F147353006E8451 /* SocketRecvManager.cpp */,
+				1E1C9FF81F147353006E8451 /* SocketRecvManager.h */,
+				1E1C9FF91F147353006E8451 /* SocketUtility.cpp */,
+				1E1C9FFA1F147353006E8451 /* SocketUtility.hpp */,
 			);
-			path = datahub;
+			name = FSNetworkEngine;
+			path = ../../../src/FSNetworkEngine;
 			sourceTree = "<group>";
 		};
-		1E2CC0311DF1596D0094A088 /* MessageCenter */ = {
+		1E1CA0031F147363006E8451 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				1E2CC0321DF1596D0094A088 /* MessageAdapter.h */,
-				1E2CC0331DF1596D0094A088 /* MessageDefines.h */,
-				1E2CC0341DF1596D0094A088 /* SharedThreadAdapter.h */,
-				1E2CC0351DF1596D0094A088 /* SingleThreadAdapter.h */,
-			);
-			path = MessageCenter;
-			sourceTree = "<group>";
-		};
-		1E2CC03D1DF15A9A0094A088 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1E2CC0411DF15A9A0094A088 /* libDataHub.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1E6FFF5C1BFB20C200796912 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				1E2CC03C1DF15A9A0094A088 /* DataHub.xcodeproj */,
-				1E6FFF691BFB20D600796912 /* SocketEngine.xcodeproj */,
-				1E6FFF631BFB20D200796912 /* MessageCenter.xcodeproj */,
-				1E6FFF5D1BFB20CF00796912 /* commons.xcodeproj */,
+				1E1CA0351F1473FE006E8451 /* MessageCenter.xcodeproj */,
+				1E1CA02F1F1473FB006E8451 /* DataHub.xcodeproj */,
+				1E1CA0291F1473F8006E8451 /* commons.xcodeproj */,
 			);
 			name = libs;
 			sourceTree = "<group>";
 		};
-		1E6FFF5E1BFB20CF00796912 /* Products */ = {
+		1E1CA0041F147370006E8451 /* input_incs */ = {
 			isa = PBXGroup;
 			children = (
-				1E6FFF621BFB20CF00796912 /* libcommons.a */,
+				1E1CA00A1F1473E0006E8451 /* commons */,
+				1E1CA0201F1473E0006E8451 /* datahub */,
+				1E1CA0241F1473E0006E8451 /* MessageCenter */,
+			);
+			name = input_incs;
+			sourceTree = "<group>";
+		};
+		1E1CA0051F1473CA006E8451 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				1E1CA0061F1473CA006E8451 /* FSNetEngineConstant.h */,
+				1E1CA0071F1473CA006E8451 /* IFSCallBack.h */,
+				1E1CA0081F1473CA006E8451 /* IFSNetworkEngine.h */,
+				1E1CA0091F1473CA006E8451 /* NetWorkEngineTools.hpp */,
+			);
+			name = inc;
+			path = ../../../inc;
+			sourceTree = "<group>";
+		};
+		1E1CA00A1F1473E0006E8451 /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				1E1CA00B1F1473E0006E8451 /* CBundle.h */,
+				1E1CA00C1F1473E0006E8451 /* CBundleManager.h */,
+				1E1CA00D1F1473E0006E8451 /* CHanderManager.h */,
+				1E1CA00E1F1473E0006E8451 /* CLinuxTime.h */,
+				1E1CA00F1F1473E0006E8451 /* CList_ZHW.h */,
+				1E1CA0101F1473E0006E8451 /* CMutexFactory.h */,
+				1E1CA0111F1473E0006E8451 /* CSemaphoreManager.h */,
+				1E1CA0121F1473E0006E8451 /* CShareMemManager.h */,
+				1E1CA0131F1473E0006E8451 /* CSmartPointer.h */,
+				1E1CA0141F1473E0006E8451 /* CThreadFactory.h */,
+				1E1CA0151F1473E0006E8451 /* CThreadPool.h */,
+				1E1CA0161F1473E0006E8451 /* defines.h */,
+				1E1CA0171F1473E0006E8451 /* ICMutex.h */,
+				1E1CA0181F1473E0006E8451 /* ICSemaphoreNamed.h */,
+				1E1CA0191F1473E0006E8451 /* ICSharedMemory.h */,
+				1E1CA01A1F1473E0006E8451 /* IWork.h */,
+				1E1CA01B1F1473E0006E8451 /* log.h */,
+				1E1CA01C1F1473E0006E8451 /* RefBase.h */,
+				1E1CA01D1F1473E0006E8451 /* reuse_pool.hpp */,
+				1E1CA01E1F1473E0006E8451 /* scope_lock.hpp */,
+				1E1CA01F1F1473E0006E8451 /* ThreadWithQueue.hpp */,
+			);
+			name = commons;
+			path = ../../../../baseframe/inc/commons;
+			sourceTree = "<group>";
+		};
+		1E1CA0201F1473E0006E8451 /* datahub */ = {
+			isa = PBXGroup;
+			children = (
+				1E1CA0211F1473E0006E8451 /* CDataHubCtrl.h */,
+				1E1CA0221F1473E0006E8451 /* DataRequest.h */,
+				1E1CA0231F1473E0006E8451 /* DataRequestProtocol.h */,
+			);
+			name = datahub;
+			path = ../../../../baseframe/inc/datahub;
+			sourceTree = "<group>";
+		};
+		1E1CA0241F1473E0006E8451 /* MessageCenter */ = {
+			isa = PBXGroup;
+			children = (
+				1E1CA0251F1473E0006E8451 /* MessageAdapter.h */,
+				1E1CA0261F1473E0006E8451 /* MessageDefines.h */,
+				1E1CA0271F1473E0006E8451 /* SharedThreadAdapter.h */,
+				1E1CA0281F1473E0006E8451 /* SingleThreadAdapter.h */,
+			);
+			name = MessageCenter;
+			path = ../../../../baseframe/inc/MessageCenter;
+			sourceTree = "<group>";
+		};
+		1E1CA02A1F1473F8006E8451 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E1CA02E1F1473F8006E8451 /* libcommons.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1E6FFF641BFB20D200796912 /* Products */ = {
+		1E1CA0301F1473FB006E8451 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E6FFF681BFB20D200796912 /* libMessageCenter.a */,
+				1E1CA0341F1473FB006E8451 /* libDataHub.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1E6FFF6A1BFB20D600796912 /* Products */ = {
+		1E1CA0361F1473FE006E8451 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E6FFF6E1BFB20D600796912 /* libSocketEngine.a */,
+				1E1CA03A1F1473FE006E8451 /* libMessageCenter.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,7 +282,10 @@
 		FE1218DA1BF1ED18007CAD8E = {
 			isa = PBXGroup;
 			children = (
-				FE1218E51BF1ED18007CAD8E /* NetworkEngine */,
+				1E1CA0051F1473CA006E8451 /* inc */,
+				1E1CA0041F147370006E8451 /* input_incs */,
+				1E1CA0031F147363006E8451 /* libs */,
+				1E1C9FEA1F147353006E8451 /* FSNetworkEngine */,
 				FE1218E41BF1ED18007CAD8E /* Products */,
 				FE401C451DF3D08900FA17CC /* Frameworks */,
 			);
@@ -229,93 +299,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FE1218E51BF1ED18007CAD8E /* NetworkEngine */ = {
-			isa = PBXGroup;
-			children = (
-				FE8DF9A21BFEC30A004A91BB /* FSNetEngineConstant.h */,
-				FEF69C8F1BF3368C00C515B8 /* IFSNetworkEngine.h */,
-				FEF69C8D1BF3368C00C515B8 /* IFSCallBack.h */,
-				FEF273E31BF97A9600395261 /* inc */,
-				1E6FFF5C1BFB20C200796912 /* libs */,
-				FEF69C7C1BF2F3E000C515B8 /* src */,
-			);
-			path = NetworkEngine;
-			sourceTree = "<group>";
-		};
 		FE401C451DF3D08900FA17CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				FE401C461DF3D08900FA17CC /* libDataHub.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FE6970A31BF9ED9C00E34256 /* SocketEngine */ = {
-			isa = PBXGroup;
-			children = (
-				1E6FFF5B1BFB1CFE00796912 /* SocketEngineManager.h */,
-			);
-			path = SocketEngine;
-			sourceTree = "<group>";
-		};
-		FE81DCBC1BFAC1EF003A3A17 /* FSNetworkEngine */ = {
-			isa = PBXGroup;
-			children = (
-				FE81DCBD1BFAC1EF003A3A17 /* FSNetworkEngine.cpp */,
-				FE81DCBE1BFAC1EF003A3A17 /* FSNetworkEngine.h */,
-				1EDE79ED1E763832009F9FC8 /* CSocketConnectWork.cpp */,
-				1EDE79EE1E763832009F9FC8 /* CSocketConnectWork.hpp */,
-				1EDE7A1A1E764858009F9FC8 /* CSocketWork.cpp */,
-				1EDE7A1B1E764858009F9FC8 /* CSocketWork.hpp */,
-			);
-			path = FSNetworkEngine;
-			sourceTree = "<group>";
-		};
-		FEF273E31BF97A9600395261 /* inc */ = {
-			isa = PBXGroup;
-			children = (
-				1E2CC0311DF1596D0094A088 /* MessageCenter */,
-				1E2CC02D1DF1595F0094A088 /* datahub */,
-				FE6970A31BF9ED9C00E34256 /* SocketEngine */,
-				FEF273E41BF97A9600395261 /* commons */,
-			);
-			name = inc;
-			path = ../../../../../baseframe/inc;
-			sourceTree = "<group>";
-		};
-		FEF273E41BF97A9600395261 /* commons */ = {
-			isa = PBXGroup;
-			children = (
-				FEF273E61BF97A9600395261 /* CBundle.h */,
-				FEF273E71BF97A9600395261 /* CBundleManager.h */,
-				FEF273E91BF97A9600395261 /* CHanderManager.h */,
-				FEF273EB1BF97A9600395261 /* CLinuxTime.h */,
-				FEF273EC1BF97A9600395261 /* CList_ZHW.h */,
-				FEF273ED1BF97A9600395261 /* CMutexFactory.h */,
-				FEF273EF1BF97A9600395261 /* CSemaphoreManager.h */,
-				FEF273F01BF97A9600395261 /* CShareMemManager.h */,
-				FEF273F11BF97A9600395261 /* CSmartPointer.h */,
-				FEF273F21BF97A9600395261 /* CThreadFactory.h */,
-				FEF273F31BF97A9600395261 /* CThreadPool.h */,
-				FEF273F51BF97A9600395261 /* defines.h */,
-				FEF273F61BF97A9600395261 /* ICMutex.h */,
-				FEF273F71BF97A9600395261 /* ICSemaphoreNamed.h */,
-				FEF273F81BF97A9600395261 /* ICSharedMemory.h */,
-				FEF273F91BF97A9600395261 /* IWork.h */,
-				FEF273FA1BF97A9600395261 /* log.h */,
-				FEF273FB1BF97A9600395261 /* RefBase.h */,
-				FEF273FC1BF97A9600395261 /* reuse_pool.hpp */,
-				FEF273FD1BF97A9600395261 /* scope_lock.hpp */,
-			);
-			path = commons;
-			sourceTree = "<group>";
-		};
-		FEF69C7C1BF2F3E000C515B8 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				FE81DCBC1BFAC1EF003A3A17 /* FSNetworkEngine */,
-			);
-			name = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,10 +322,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				FE401C4A1DF3D0A400FA17CC /* PBXTargetDependency */,
-				1E6FFF731BFB20F700796912 /* PBXTargetDependency */,
-				1E6FFF751BFB20F700796912 /* PBXTargetDependency */,
-				1E6FFF771BFB20F700796912 /* PBXTargetDependency */,
+				1E1CA03F1F14740F006E8451 /* PBXTargetDependency */,
+				1E1CA0411F14740F006E8451 /* PBXTargetDependency */,
+				1E1CA0431F14740F006E8451 /* PBXTargetDependency */,
 			);
 			name = NetworkEngine;
 			productName = NetworkEngine;
@@ -369,20 +357,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 1E6FFF5E1BFB20CF00796912 /* Products */;
-					ProjectRef = 1E6FFF5D1BFB20CF00796912 /* commons.xcodeproj */;
+					ProductGroup = 1E1CA02A1F1473F8006E8451 /* Products */;
+					ProjectRef = 1E1CA0291F1473F8006E8451 /* commons.xcodeproj */;
 				},
 				{
-					ProductGroup = 1E2CC03D1DF15A9A0094A088 /* Products */;
-					ProjectRef = 1E2CC03C1DF15A9A0094A088 /* DataHub.xcodeproj */;
+					ProductGroup = 1E1CA0301F1473FB006E8451 /* Products */;
+					ProjectRef = 1E1CA02F1F1473FB006E8451 /* DataHub.xcodeproj */;
 				},
 				{
-					ProductGroup = 1E6FFF641BFB20D200796912 /* Products */;
-					ProjectRef = 1E6FFF631BFB20D200796912 /* MessageCenter.xcodeproj */;
-				},
-				{
-					ProductGroup = 1E6FFF6A1BFB20D600796912 /* Products */;
-					ProjectRef = 1E6FFF691BFB20D600796912 /* SocketEngine.xcodeproj */;
+					ProductGroup = 1E1CA0361F1473FE006E8451 /* Products */;
+					ProjectRef = 1E1CA0351F1473FE006E8451 /* MessageCenter.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -393,32 +377,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1E2CC0411DF15A9A0094A088 /* libDataHub.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libDataHub.a;
-			remoteRef = 1E2CC0401DF15A9A0094A088 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1E6FFF621BFB20CF00796912 /* libcommons.a */ = {
+		1E1CA02E1F1473F8006E8451 /* libcommons.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libcommons.a;
-			remoteRef = 1E6FFF611BFB20CF00796912 /* PBXContainerItemProxy */;
+			remoteRef = 1E1CA02D1F1473F8006E8451 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1E6FFF681BFB20D200796912 /* libMessageCenter.a */ = {
+		1E1CA0341F1473FB006E8451 /* libDataHub.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDataHub.a;
+			remoteRef = 1E1CA0331F1473FB006E8451 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1E1CA03A1F1473FE006E8451 /* libMessageCenter.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libMessageCenter.a;
-			remoteRef = 1E6FFF671BFB20D200796912 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1E6FFF6E1BFB20D600796912 /* libSocketEngine.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSocketEngine.a;
-			remoteRef = 1E6FFF6D1BFB20D600796912 /* PBXContainerItemProxy */;
+			remoteRef = 1E1CA0391F1473FE006E8451 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -444,34 +421,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EDE79EF1E763832009F9FC8 /* CSocketConnectWork.cpp in Sources */,
-				FE81DCBF1BFAC1EF003A3A17 /* FSNetworkEngine.cpp in Sources */,
-				1EDE7A1C1E764858009F9FC8 /* CSocketWork.cpp in Sources */,
+				1E1C9FFF1F147353006E8451 /* SocketFunctions.cpp in Sources */,
+				1E1C9FFE1F147353006E8451 /* NetWorkEngineTools.cpp in Sources */,
+				1E1C9FFB1F147353006E8451 /* CSocketConnectWork.cpp in Sources */,
+				1E1CA0011F147353006E8451 /* SocketRecvManager.cpp in Sources */,
+				1E1C9FFC1F147353006E8451 /* CSocketWork.cpp in Sources */,
+				1E1CA0001F147353006E8451 /* SocketHandlerMapper.cpp in Sources */,
+				1E1C9FFD1F147353006E8451 /* FSNetworkEngine.cpp in Sources */,
+				1E1CA0021F147353006E8451 /* SocketUtility.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1E6FFF731BFB20F700796912 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SocketEngine;
-			targetProxy = 1E6FFF721BFB20F700796912 /* PBXContainerItemProxy */;
-		};
-		1E6FFF751BFB20F700796912 /* PBXTargetDependency */ = {
+		1E1CA03F1F14740F006E8451 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MessageCenter;
-			targetProxy = 1E6FFF741BFB20F700796912 /* PBXContainerItemProxy */;
+			targetProxy = 1E1CA03E1F14740F006E8451 /* PBXContainerItemProxy */;
 		};
-		1E6FFF771BFB20F700796912 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = commons;
-			targetProxy = 1E6FFF761BFB20F700796912 /* PBXContainerItemProxy */;
-		};
-		FE401C4A1DF3D0A400FA17CC /* PBXTargetDependency */ = {
+		1E1CA0411F14740F006E8451 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DataHub;
-			targetProxy = FE401C491DF3D0A400FA17CC /* PBXContainerItemProxy */;
+			targetProxy = 1E1CA0401F14740F006E8451 /* PBXContainerItemProxy */;
+		};
+		1E1CA0431F14740F006E8451 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = commons;
+			targetProxy = 1E1CA0421F14740F006E8451 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

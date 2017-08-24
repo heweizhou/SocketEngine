@@ -3,7 +3,7 @@
 //  FSNetWorkEngine
 //
 //  Created by 周贺伟 on 16/5/19.
-//  Copyright © 2016年 周贺伟. All rights reserved.
+//  Copyright © 2016年 zhouhewei. All rights reserved.
 //
 
 #import "Connection.h"
@@ -21,7 +21,6 @@
 @property (nonatomic, copy) NSString*               ip;
 @property (nonatomic, assign) int                   fd;
 @property (nonatomic, assign) int                   port;
-@property (nonatomic, assign) dominType             socket_type;
 @property (nonatomic, assign) int                   timeout;
 @end
 
@@ -29,27 +28,25 @@
 
 -(id)init
 {
-    return [self initWithIp:nil port:0 timeout:30 type:INet];
+    return [self initWithIp:nil port:0 timeout:30];
 }
 
-- (id)initWithIp:(NSString *)ip port:(int)port timeout:(int)timeout type:(dominType)domin
+- (id)initWithIp:(NSString *)ip port:(int)port timeout:(int)timeout
 {
     self = [super init];
     if (self) {
         self.fd = -1;
         self.port = port;
         self.ip = ip;
-        self.socket_type = domin;
         [self initTimer:timeout];
     }
     return self;
 }
 
-- (void)resetHostInfo:(NSString *)ip port:(int)port type:(dominType)domin
+- (void)resetHostInfo:(NSString *)ip port:(int)port
 {
     self.ip = ip;
     self.port = port;
-    self.socket_type = domin;
 }
 
 - (void)resetTimeout:(int)timeout
@@ -76,18 +73,7 @@
 
 - (void)startConnect
 {
-    
-    switch (_socket_type) {
-        case INet:
-            self.fd = (int)getEngineInstance()->createSocket(AF_Inet, Socket_Stream);
-            break;
-        case Local:
-            self.fd = (int)getEngineInstance()->createSocket(AF_Local, Socket_Stream);
-            break;
-        default:
-            break;
-    }
-    
+    self.fd = (int)getEngineInstance()->createSocket();
     [self beforeConnection];
     [[ConnectionDataDispather getInstance] add_connection:self fd:self.fd];
     getEngineInstance()->async_connectToHost(self.fd, [self.ip UTF8String], self.port, 0, self.timeout);

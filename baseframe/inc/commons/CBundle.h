@@ -61,6 +61,9 @@ class CBundle
 public:
     _VOID   setData( _string key, _PVOID buffer, _ULONG size );
     _PVOID  getData( _string key, _ULONG& size );
+    _PVOID  getDataWithLock( _string key, _ULONG& size );
+    _BOOL   fillData( _string key, _PVOID destMem, _ULONG destMemMaxsize);
+    _BOOL   fillDataWithLock( _string key, _PVOID destMem, _ULONG destMemMaxsize);
     _VOID   lock();
     _VOID   unlock();
 public:

@@ -3,7 +3,7 @@
 //  NetworkEngine
 //
 //  Created by YangYanfei on 15/11/11.
-//  Copyright © 2015年 周贺伟. All rights reserved.
+//  Copyright © 2015年 zhouhewei. All rights reserved.
 //
 
 #ifndef IFaciShareCallBack_h
@@ -68,7 +68,7 @@ public:
      */
     virtual void sockeErrorCallBack(int socketFD, SocketError errorType) = 0;
     
-    virtual bool socketSendRequestData(int socketFD, void* param, char** buffer, unsigned long& buffer_size) = 0;
+    virtual bool socketSendRequestData(void* param, long& handler) = 0;
 
 
     virtual ~IFSCallBack(){}

@@ -3,7 +3,7 @@
 //  commons_mac
 //
 //  Created by 周贺伟 on 2016/11/23.
-//  Copyright © 2016年 周贺伟. All rights reserved.
+//  Copyright © 2016年 zhouhewei. All rights reserved.
 //
 
 #ifndef ThreadWithQueue_hpp

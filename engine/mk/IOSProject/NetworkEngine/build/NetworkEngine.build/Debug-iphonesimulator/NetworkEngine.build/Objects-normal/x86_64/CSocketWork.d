@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/engine/src/FSNetworkEngine/CSocketWork.cpp \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/engine/src/FSNetworkEngine/CSocketWork.hpp \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/IWork.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/RefBase.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/defines.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/ICMutex.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/scope_lock.hpp \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/engine/inc/IFSCallBack.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/engine/inc/FSNetEngineConstant.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/MessageCenter/MessageAdapter.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/MessageCenter/MessageDefines.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/CSemaphoreManager.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/ICSemaphoreNamed.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/CMutexFactory.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/datahub/DataRequestProtocol.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/CBundleManager.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/CBundle.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/CShareMemManager.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/baseframe/inc/commons/ICSharedMemory.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/engine/src/FSNetworkEngine/SocketDefines.h \
+  /Users/zhouhewei/Documents/svn/FS.iOS/Common/FSSocketEngine/engine/src/FSNetworkEngine/SocketFunctions.hpp
