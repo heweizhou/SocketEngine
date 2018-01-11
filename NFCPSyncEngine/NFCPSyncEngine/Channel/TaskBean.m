@@ -7,7 +7,6 @@
 //
 
 #import "TaskBean.h"
-#import "TaskBean+Private.h"
 #import "IDataRequest.h"
 
 @interface MsgID : NSObject
@@ -29,7 +28,6 @@
 
 @interface TaskBean()<IDataRequest>
 {
-    int64_t         _tag;
     id              _channel;
 }
 @end
@@ -59,14 +57,9 @@
 #pragma --mark private function
 -(void)initialisation
 {
-    _data = [[NSMutableData alloc] init];
+//    _data = [[NSMutableData alloc] init];
     _channel = nil;
     _timeout = 60;
-}
-
--(int64_t)getTag
-{
-    return _tag;
 }
 
 -(id)getChannel
@@ -81,13 +74,29 @@
 
 -(NSData*)generateBinaryData
 {
-    return [self createPackage];
+    NSMutableData* binData = [[self createPackage] mutableCopy];
+    return [self addTag2Binary:binData];;
+}
+
+-(NSData*)addTag2Binary:(NSData*)data
+{
+    return nil;
 }
 
 -(NSData*)createPackage
 {
     //do nothing
     return nil;
+}
+
+-(BOOL)decryptBodyData
+{
+    return NO;
+}
+
+-(BOOL)encryptBodyData
+{
+    return NO;
 }
 
 - (NSString *)description

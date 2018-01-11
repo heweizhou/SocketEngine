@@ -55,12 +55,12 @@
 		1E3679C41F4EDE5D002E5378 /* NetWorkEngineTools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NetWorkEngineTools.hpp; sourceTree = "<group>"; };
 		1E9FE4E11D2DF16A004963CF /* BaseMsgPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMsgPackage.h; sourceTree = "<group>"; };
 		1E9FE4E21D2DF16A004963CF /* BaseMsgPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMsgPackage.m; sourceTree = "<group>"; };
+		1EA9279020071F18007D3D42 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		1EA9279120071F18007D3D42 /* IDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDataRequest.h; sourceTree = "<group>"; };
 		1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkEngine.xcodeproj; path = ../engine/mk/IOSProject/NetworkEngine/NetworkEngine.xcodeproj; sourceTree = "<group>"; };
-		1ED877A31E6EAF290038B590 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		1ED877A51E6EAF310038B590 /* NFCPSyncEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCPSyncEnums.h; sourceTree = "<group>"; };
 		1EDE7A1D1E767759009F9FC8 /* ConnectionDataDispather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDataDispather.h; sourceTree = "<group>"; };
 		1EDE7A1E1E767759009F9FC8 /* ConnectionDataDispather.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ConnectionDataDispather.mm; sourceTree = "<group>"; };
-		1EDE7A4B1E76B7E0009F9FC8 /* IDataRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDataRequest.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +95,11 @@
 		1E1909ED1CEC181000433389 /* FSNetWorkEngine */ = {
 			isa = PBXGroup;
 			children = (
+				1EA9278F20071F18007D3D42 /* inc */,
 				1ED877A51E6EAF310038B590 /* NFCPSyncEnums.h */,
 				1E9FE4E11D2DF16A004963CF /* BaseMsgPackage.h */,
 				1E9FE4E21D2DF16A004963CF /* BaseMsgPackage.m */,
 				1E156C3E1CED64D500FFED56 /* Connection.mm */,
-				1EAF30341D22191A0094DC66 /* inc */,
 				1E1909FB1CEC187800433389 /* SocketEngine */,
 			);
 			path = FSNetWorkEngine;
@@ -130,14 +130,14 @@
 			path = SocketEngine;
 			sourceTree = "<group>";
 		};
-		1EAF30341D22191A0094DC66 /* inc */ = {
+		1EA9278F20071F18007D3D42 /* inc */ = {
 			isa = PBXGroup;
 			children = (
-				1ED877A31E6EAF290038B590 /* Connection.h */,
-				1EDE7A4B1E76B7E0009F9FC8 /* IDataRequest.h */,
+				1EA9279020071F18007D3D42 /* Connection.h */,
+				1EA9279120071F18007D3D42 /* IDataRequest.h */,
 			);
 			path = inc;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1EC7E4D71CF6CFE3001DB0A6 /* Products */ = {
 			isa = PBXGroup;

@@ -11,8 +11,6 @@
 
 
 @interface TaskBean(Private)
--(int64_t)getTag;
-
 -(id)getChannel;
 -(void)setChannel:(id)Channel;
 @end

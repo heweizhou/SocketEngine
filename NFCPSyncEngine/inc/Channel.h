@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "TaskBean.h"
-#import "NFCPDefines.h"
 
 @class Channel;
 @protocol ChannelTaskDelegate <NSObject>
@@ -46,6 +45,6 @@
 
 //function switch
 -(BOOL)enableTaskManage;
--(BOOL)isDefalutChannel;
+- (TaskBean*)getTaskRefByTag:(int64_t)tag;
 
 @end

@@ -381,11 +381,7 @@
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				GCC_C_LANGUAGE_STANDARD = gnu89;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/zhouhewei/Documents/svn/lbs-st_2-0-0_BRANCH/src/commons/jpeg-turbo/lib",
-					"/Users/zhouhewei/Documents/svn/panougc/render-engine/src/commons/jpeg-turbo/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -406,11 +402,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu89;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/zhouhewei/Documents/svn/lbs-st_2-0-0_BRANCH/src/commons/jpeg-turbo/lib",
-					"/Users/zhouhewei/Documents/svn/panougc/render-engine/src/commons/jpeg-turbo/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-std=c++0x",

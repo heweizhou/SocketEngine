@@ -16,7 +16,6 @@
 - (void)sendFailed:(TaskBean*)bean;
 - (void)sendPackageInvalid:(TaskBean*)bean;
 - (void)processMsg:(id)msg bean:(TaskBean*)bean;
-- (TaskBean*)getTaskRefByTag:(int64_t)tag;
 
 - (BOOL)isHavePenddingTask;
 - (void)onChannelInit;

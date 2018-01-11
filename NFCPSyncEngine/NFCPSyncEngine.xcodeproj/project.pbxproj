@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E3E87421EC4024C00352EED /* NFCPQueueUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3E87411EC4024C00352EED /* NFCPQueueUtils.m */; };
-		1EBFA8F71EBACF250060668E /* ConnectionHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBFA8F61EBACF250060668E /* ConnectionHub.m */; };
-		1ECFFE121E69625D002EF940 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECFFE111E69625D002EF940 /* Channel.m */; };
-		1EDE7A6B1E76BA31009F9FC8 /* TaskBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE7A6A1E76BA31009F9FC8 /* TaskBean.m */; };
+		1EA9277620071B93007D3D42 /* TaskBean+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9276920071B93007D3D42 /* TaskBean+Private.h */; };
+		1EA9277720071B93007D3D42 /* TaskBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9276A20071B93007D3D42 /* TaskBean.m */; };
+		1EA9277820071B93007D3D42 /* Channel+Sender.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9276B20071B93007D3D42 /* Channel+Sender.h */; };
+		1EA9277920071B93007D3D42 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9276C20071B93007D3D42 /* Channel.m */; };
+		1EA9277A20071B93007D3D42 /* Channel+CallBack.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9276D20071B93007D3D42 /* Channel+CallBack.h */; };
+		1EA9277B20071B93007D3D42 /* NFCPQueueUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9276F20071B93007D3D42 /* NFCPQueueUtils.m */; };
+		1EA9277C20071B93007D3D42 /* ConnectionHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9277020071B93007D3D42 /* ConnectionHub.h */; };
+		1EA9277D20071B93007D3D42 /* NFCPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9277120071B93007D3D42 /* NFCPSession.m */; };
+		1EA9277F20071B93007D3D42 /* ConnectionHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9277320071B93007D3D42 /* ConnectionHub.m */; };
+		1EA9278020071B93007D3D42 /* NFCPQueueUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9277420071B93007D3D42 /* NFCPQueueUtils.h */; };
+		1EA9278120071B93007D3D42 /* NFCPResponseMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9277520071B93007D3D42 /* NFCPResponseMessage.m */; };
+		1EA9278620071BF0007D3D42 /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278320071BF0007D3D42 /* Channel.h */; };
+		1EA9278720071BF0007D3D42 /* NFCPResponseMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278420071BF0007D3D42 /* NFCPResponseMessage.h */; };
+		1EA9278820071BF0007D3D42 /* TaskBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278520071BF0007D3D42 /* TaskBean.h */; };
+		1EA9278A20071C9D007D3D42 /* NFCPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278920071C9D007D3D42 /* NFCPSession.h */; };
+		1EA9278D20071F0C007D3D42 /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278B20071F0C007D3D42 /* Connection.h */; };
+		1EA9278E20071F0C007D3D42 /* IDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278C20071F0C007D3D42 /* IDataRequest.h */; };
 		1EEC9C0B1CF7DCBF00DA3D32 /* libFSNetWorkEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEC9C0A1CF7DCAD00DA3D32 /* libFSNetWorkEngine.a */; };
-		3E7F95F21D1CDF6100A7963A /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F95F11D1CDF6100A7963A /* libstdc++.6.0.9.tbd */; };
-		3E7F95F41D1CDF6700A7963A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F95F31D1CDF6700A7963A /* libsqlite3.0.tbd */; };
-		3E7F95F81D1CE31300A7963A /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F95F71D1CE31300A7963A /* libz.1.2.5.tbd */; };
-		3ED968EE1CFC96A7005184CD /* libNFCPSyncEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC7E4EB1CF6D1DC001DB0A6 /* libNFCPSyncEngine.a */; };
-		FEA5EF9F1D214EB8009748C1 /* NFCPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA5EF9E1D214EB8009748C1 /* NFCPSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,54 +42,32 @@
 			remoteGlobalIDString = 1E1909EA1CEC181000433389;
 			remoteInfo = FSNetWorkEngine;
 		};
-		3ED968EF1CFC96A7005184CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EC7E4E31CF6D1DC001DB0A6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1EC7E4EA1CF6D1DC001DB0A6;
-			remoteInfo = NFCPSyncEngine;
-		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1EC7E4E91CF6D1DC001DB0A6 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		1E1665EA1E8CF8B200463906 /* TaskBean+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaskBean+Private.h"; sourceTree = "<group>"; };
-		1E3E873D1EC3FF9100352EED /* IAuthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAuthDelegate.h; sourceTree = "<group>"; };
-		1E3E873E1EC3FF9100352EED /* INFCPAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INFCPAuth.h; sourceTree = "<group>"; };
-		1E3E87401EC4024C00352EED /* NFCPQueueUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCPQueueUtils.h; sourceTree = "<group>"; };
-		1E3E87411EC4024C00352EED /* NFCPQueueUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCPQueueUtils.m; sourceTree = "<group>"; };
-		1EBFA8F51EBACF250060668E /* ConnectionHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionHub.h; path = Session/ConnectionHub.h; sourceTree = "<group>"; };
-		1EBFA8F61EBACF250060668E /* ConnectionHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionHub.m; path = Session/ConnectionHub.m; sourceTree = "<group>"; };
+		1EA9276920071B93007D3D42 /* TaskBean+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TaskBean+Private.h"; sourceTree = "<group>"; };
+		1EA9276A20071B93007D3D42 /* TaskBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskBean.m; sourceTree = "<group>"; };
+		1EA9276B20071B93007D3D42 /* Channel+Sender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Channel+Sender.h"; sourceTree = "<group>"; };
+		1EA9276C20071B93007D3D42 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
+		1EA9276D20071B93007D3D42 /* Channel+CallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Channel+CallBack.h"; sourceTree = "<group>"; };
+		1EA9276F20071B93007D3D42 /* NFCPQueueUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCPQueueUtils.m; sourceTree = "<group>"; };
+		1EA9277020071B93007D3D42 /* ConnectionHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHub.h; sourceTree = "<group>"; };
+		1EA9277120071B93007D3D42 /* NFCPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCPSession.m; sourceTree = "<group>"; };
+		1EA9277320071B93007D3D42 /* ConnectionHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHub.m; sourceTree = "<group>"; };
+		1EA9277420071B93007D3D42 /* NFCPQueueUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCPQueueUtils.h; sourceTree = "<group>"; };
+		1EA9277520071B93007D3D42 /* NFCPResponseMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCPResponseMessage.m; sourceTree = "<group>"; };
+		1EA9278320071BF0007D3D42 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		1EA9278420071BF0007D3D42 /* NFCPResponseMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCPResponseMessage.h; sourceTree = "<group>"; };
+		1EA9278520071BF0007D3D42 /* TaskBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskBean.h; sourceTree = "<group>"; };
+		1EA9278920071C9D007D3D42 /* NFCPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCPSession.h; sourceTree = "<group>"; };
+		1EA9278B20071F0C007D3D42 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = ../../inc/Connection.h; sourceTree = "<group>"; };
+		1EA9278C20071F0C007D3D42 /* IDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDataRequest.h; path = ../../inc/IDataRequest.h; sourceTree = "<group>"; };
 		1EC7E4EB1CF6D1DC001DB0A6 /* libNFCPSyncEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNFCPSyncEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1ECFFE111E69625D002EF940 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
-		1ECFFE2F1E698655002EF940 /* Channel+CallBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Channel+CallBack.h"; sourceTree = "<group>"; };
-		1ED8779C1E6E99970038B590 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
-		1ED877A21E6EAC040038B590 /* NFCPDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFCPDefines.h; sourceTree = "<group>"; };
-		1EDE7A4C1E76B9A3009F9FC8 /* TaskBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskBean.h; sourceTree = "<group>"; };
-		1EDE7A6A1E76BA31009F9FC8 /* TaskBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskBean.m; sourceTree = "<group>"; };
-		1EDE7A6C1E76BA77009F9FC8 /* IMessageDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageDispatch.h; sourceTree = "<group>"; };
-		1EDE7A6E1E76BAB8009F9FC8 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
-		1EDE7A6F1E76BAB8009F9FC8 /* IDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDataRequest.h; sourceTree = "<group>"; };
-		1EEC47431E6D6A5500411460 /* Channel+Sender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Channel+Sender.h"; sourceTree = "<group>"; };
 		1EEC9C011CF7DCAD00DA3D32 /* FSNetWorkEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FSNetWorkEngine.xcodeproj; path = ../FSNetWorkEngine/FSNetWorkEngine.xcodeproj; sourceTree = "<group>"; };
 		3E7F95F11D1CDF6100A7963A /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		3E7F95F31D1CDF6700A7963A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		3E7F95F51D1CE26A00A7963A /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 		3E7F95F71D1CE31300A7963A /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
-		3ED968E91CFC96A7005184CD /* NFCPSyncEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFCPSyncEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEA5EF9D1D214EB8009748C1 /* NFCPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NFCPSession.h; path = Session/NFCPSession.h; sourceTree = "<group>"; };
-		FEA5EF9E1D214EB8009748C1 /* NFCPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NFCPSession.m; path = Session/NFCPSession.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,37 +79,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3ED968E61CFC96A7005184CD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E7F95F81D1CE31300A7963A /* libz.1.2.5.tbd in Frameworks */,
-				3E7F95F41D1CDF6700A7963A /* libsqlite3.0.tbd in Frameworks */,
-				3E7F95F21D1CDF6100A7963A /* libstdc++.6.0.9.tbd in Frameworks */,
-				3ED968EE1CFC96A7005184CD /* libNFCPSyncEngine.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E3E873F1EC4024C00352EED /* Utils */ = {
+		1EA9276820071B93007D3D42 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
-				1E3E87401EC4024C00352EED /* NFCPQueueUtils.h */,
-				1E3E87411EC4024C00352EED /* NFCPQueueUtils.m */,
+				1EA9276920071B93007D3D42 /* TaskBean+Private.h */,
+				1EA9276A20071B93007D3D42 /* TaskBean.m */,
+				1EA9276B20071B93007D3D42 /* Channel+Sender.h */,
+				1EA9276C20071B93007D3D42 /* Channel.m */,
+				1EA9276D20071B93007D3D42 /* Channel+CallBack.h */,
 			);
-			path = Utils;
+			path = Channel;
 			sourceTree = "<group>";
 		};
-		1EC00EF01D7FF1CC00D48BE6 /* inc */ = {
+		1EA9276E20071B93007D3D42 /* Session */ = {
 			isa = PBXGroup;
 			children = (
-				1E3E873D1EC3FF9100352EED /* IAuthDelegate.h */,
-				1E3E873E1EC3FF9100352EED /* INFCPAuth.h */,
-				1EDE7A4C1E76B9A3009F9FC8 /* TaskBean.h */,
-				1ED8779C1E6E99970038B590 /* Channel.h */,
-				1ED877A21E6EAC040038B590 /* NFCPDefines.h */,
+				1EA9276F20071B93007D3D42 /* NFCPQueueUtils.m */,
+				1EA9277020071B93007D3D42 /* ConnectionHub.h */,
+				1EA9277120071B93007D3D42 /* NFCPSession.m */,
+				1EA9277320071B93007D3D42 /* ConnectionHub.m */,
+				1EA9277420071B93007D3D42 /* NFCPQueueUtils.h */,
+				1EA9277520071B93007D3D42 /* NFCPResponseMessage.m */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		1EA9278220071BF0007D3D42 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				1EA9278920071C9D007D3D42 /* NFCPSession.h */,
+				1EA9278320071BF0007D3D42 /* Channel.h */,
+				1EA9278420071BF0007D3D42 /* NFCPResponseMessage.h */,
+				1EA9278520071BF0007D3D42 /* TaskBean.h */,
 			);
 			path = inc;
 			sourceTree = SOURCE_ROOT;
@@ -142,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				1EC7E4EB1CF6D1DC001DB0A6 /* libNFCPSyncEngine.a */,
-				3ED968E91CFC96A7005184CD /* NFCPSyncEngineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,33 +139,19 @@
 		1EC7E4ED1CF6D1DC001DB0A6 /* NFCPSyncEngine */ = {
 			isa = PBXGroup;
 			children = (
-				1E3E873F1EC4024C00352EED /* Utils */,
+				1EA9278220071BF0007D3D42 /* inc */,
+				1EA9276820071B93007D3D42 /* Channel */,
+				1EA9276E20071B93007D3D42 /* Session */,
 				1EDE7A6D1E76BAB8009F9FC8 /* FSNetWorkInc */,
-				1EC00EF01D7FF1CC00D48BE6 /* inc */,
-				1EC7E5131CF6D2F3001DB0A6 /* Channel */,
-				3E8D07EF1D012CFE000D61F2 /* Session */,
 			);
 			path = NFCPSyncEngine;
-			sourceTree = "<group>";
-		};
-		1EC7E5131CF6D2F3001DB0A6 /* Channel */ = {
-			isa = PBXGroup;
-			children = (
-				1EDE7A6C1E76BA77009F9FC8 /* IMessageDispatch.h */,
-				1EDE7A6A1E76BA31009F9FC8 /* TaskBean.m */,
-				1ECFFE111E69625D002EF940 /* Channel.m */,
-				1ECFFE2F1E698655002EF940 /* Channel+CallBack.h */,
-				1EEC47431E6D6A5500411460 /* Channel+Sender.h */,
-				1E1665EA1E8CF8B200463906 /* TaskBean+Private.h */,
-			);
-			path = Channel;
 			sourceTree = "<group>";
 		};
 		1EDE7A6D1E76BAB8009F9FC8 /* FSNetWorkInc */ = {
 			isa = PBXGroup;
 			children = (
-				1EDE7A6E1E76BAB8009F9FC8 /* Connection.h */,
-				1EDE7A6F1E76BAB8009F9FC8 /* IDataRequest.h */,
+				1EA9278B20071F0C007D3D42 /* Connection.h */,
+				1EA9278C20071F0C007D3D42 /* IDataRequest.h */,
 			);
 			name = FSNetWorkInc;
 			path = ../../FSNetWorkEngine/FSNetWorkEngine/inc;
@@ -188,17 +163,6 @@
 				1EEC9C0A1CF7DCAD00DA3D32 /* libFSNetWorkEngine.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3E8D07EF1D012CFE000D61F2 /* Session */ = {
-			isa = PBXGroup;
-			children = (
-				FEA5EF9D1D214EB8009748C1 /* NFCPSession.h */,
-				FEA5EF9E1D214EB8009748C1 /* NFCPSession.m */,
-				1EBFA8F51EBACF250060668E /* ConnectionHub.h */,
-				1EBFA8F61EBACF250060668E /* ConnectionHub.m */,
-			);
-			name = Session;
 			sourceTree = "<group>";
 		};
 		883056C91D35095600B0EE2E /* Frameworks */ = {
@@ -214,6 +178,27 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A3CD4C70B0305A602C24862F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EA9278020071B93007D3D42 /* NFCPQueueUtils.h in Headers */,
+				1EA9277620071B93007D3D42 /* TaskBean+Private.h in Headers */,
+				1EA9277820071B93007D3D42 /* Channel+Sender.h in Headers */,
+				1EA9277A20071B93007D3D42 /* Channel+CallBack.h in Headers */,
+				1EA9278D20071F0C007D3D42 /* Connection.h in Headers */,
+				1EA9278720071BF0007D3D42 /* NFCPResponseMessage.h in Headers */,
+				1EA9278820071BF0007D3D42 /* TaskBean.h in Headers */,
+				1EA9278A20071C9D007D3D42 /* NFCPSession.h in Headers */,
+				1EA9278620071BF0007D3D42 /* Channel.h in Headers */,
+				1EA9278E20071F0C007D3D42 /* IDataRequest.h in Headers */,
+				1EA9277C20071B93007D3D42 /* ConnectionHub.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		1EC7E4EA1CF6D1DC001DB0A6 /* NFCPSyncEngine */ = {
 			isa = PBXNativeTarget;
@@ -221,7 +206,7 @@
 			buildPhases = (
 				1EC7E4E81CF6D1DC001DB0A6 /* Frameworks */,
 				1EC7E4E71CF6D1DC001DB0A6 /* Sources */,
-				1EC7E4E91CF6D1DC001DB0A6 /* CopyFiles */,
+				A3CD4C70B0305A602C24862F /* Headers */,
 			);
 			buildRules = (
 			);
@@ -232,24 +217,6 @@
 			productName = NFCPSyncEngine;
 			productReference = 1EC7E4EB1CF6D1DC001DB0A6 /* libNFCPSyncEngine.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		3ED968E81CFC96A7005184CD /* NFCPSyncEngineTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3ED968F31CFC96A7005184CD /* Build configuration list for PBXNativeTarget "NFCPSyncEngineTests" */;
-			buildPhases = (
-				3ED968E51CFC96A7005184CD /* Sources */,
-				3ED968E61CFC96A7005184CD /* Frameworks */,
-				3ED968E71CFC96A7005184CD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3ED968F01CFC96A7005184CD /* PBXTargetDependency */,
-			);
-			name = NFCPSyncEngineTests;
-			productName = NFCPSyncEngineTests;
-			productReference = 3ED968E91CFC96A7005184CD /* NFCPSyncEngineTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -262,9 +229,6 @@
 				TargetAttributes = {
 					1EC7E4EA1CF6D1DC001DB0A6 = {
 						CreatedOnToolsVersion = 7.3.1;
-					};
-					3ED968E81CFC96A7005184CD = {
-						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -287,7 +251,6 @@
 			projectRoot = "";
 			targets = (
 				1EC7E4EA1CF6D1DC001DB0A6 /* NFCPSyncEngine */,
-				3ED968E81CFC96A7005184CD /* NFCPSyncEngineTests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,33 +265,17 @@
 		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXResourcesBuildPhase section */
-		3ED968E71CFC96A7005184CD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		1EC7E4E71CF6D1DC001DB0A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ECFFE121E69625D002EF940 /* Channel.m in Sources */,
-				1EDE7A6B1E76BA31009F9FC8 /* TaskBean.m in Sources */,
-				1EBFA8F71EBACF250060668E /* ConnectionHub.m in Sources */,
-				FEA5EF9F1D214EB8009748C1 /* NFCPSession.m in Sources */,
-				1E3E87421EC4024C00352EED /* NFCPQueueUtils.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3ED968E51CFC96A7005184CD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1EA9277720071B93007D3D42 /* TaskBean.m in Sources */,
+				1EA9277B20071B93007D3D42 /* NFCPQueueUtils.m in Sources */,
+				1EA9277F20071B93007D3D42 /* ConnectionHub.m in Sources */,
+				1EA9278120071B93007D3D42 /* NFCPResponseMessage.m in Sources */,
+				1EA9277920071B93007D3D42 /* Channel.m in Sources */,
+				1EA9277D20071B93007D3D42 /* NFCPSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,11 +286,6 @@
 			isa = PBXTargetDependency;
 			name = FSNetWorkEngine;
 			targetProxy = 1EEC9C0C1CF7DCC200DA3D32 /* PBXContainerItemProxy */;
-		};
-		3ED968F01CFC96A7005184CD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1EC7E4EA1CF6D1DC001DB0A6 /* NFCPSyncEngine */;
-			targetProxy = 3ED968EF1CFC96A7005184CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -434,12 +376,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libstdc++";
-				FRAMEWORK_SEARCH_PATHS = ../../../Library/FSLog;
-				HEADER_SEARCH_PATHS = ../../../Library/FSUtilityKit/inc;
+				FRAMEWORK_SEARCH_PATHS = "../../../Library/FSLog/Framework_$(CONFIGURATION)";
+				HEADER_SEARCH_PATHS = (
+					../../../Library/FSUtilityKit/inc,
+					../../../Library/ThirdParts/inc,
+					../../../Library/FSLog/inc,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Debug;
 		};
@@ -447,53 +394,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libstdc++";
-				FRAMEWORK_SEARCH_PATHS = ../../../Library/FSLog;
-				HEADER_SEARCH_PATHS = ../../../Library/FSUtilityKit/inc;
+				FRAMEWORK_SEARCH_PATHS = "../../../Library/FSLog/Framework_$(CONFIGURATION)";
+				HEADER_SEARCH_PATHS = (
+					../../../Library/FSUtilityKit/inc,
+					../../../Library/ThirdParts/inc,
+					../../../Library/FSLog/inc,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		3ED968F11CFC96A7005184CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = (
-					"../Library/OCMock/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OCMock",
-					"$(TARGET_BUILD_DIR)/include/NFCPSyncEngine",
-					"$(TARGET_BUILD_DIR)/include/FSNetWorkEngine",
-				);
-				INFOPLIST_FILE = NFCPSyncEngineTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"../Library/OCMock/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					"../Library/ThridParts/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.facishare.NFCPSyncEngineTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		3ED968F21CFC96A7005184CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = (
-					"../Library/OCMock/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OCMock",
-					"$(TARGET_BUILD_DIR)/include/NFCPSyncEngine",
-				);
-				INFOPLIST_FILE = NFCPSyncEngineTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"../Library/OCMock/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					"../Library/ThridParts/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.facishare.NFCPSyncEngineTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Release;
 		};
@@ -514,15 +425,6 @@
 			buildConfigurations = (
 				1EC7E4F51CF6D1DC001DB0A6 /* Debug */,
 				1EC7E4F61CF6D1DC001DB0A6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3ED968F31CFC96A7005184CD /* Build configuration list for PBXNativeTarget "NFCPSyncEngineTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3ED968F11CFC96A7005184CD /* Debug */,
-				3ED968F21CFC96A7005184CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,15 +7,12 @@
 		<key>MessageCenter.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>58</integer>
+			<integer>90</integer>
 		</dict>
-	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1EFB42461A1B8D4F0073D79A</key>
+		<key>MessageCenter.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>orderHint</key>
+			<integer>101</integer>
 		</dict>
 	</dict>
 </dict>

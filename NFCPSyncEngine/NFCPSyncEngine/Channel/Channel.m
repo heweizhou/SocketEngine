@@ -26,7 +26,7 @@
     if (self) {
         self.bean = bean;
         self.timeout = bean.timeout;
-        self.tag = [bean getTag];
+        self.tag = bean.tag;
     }
     
     return self;
@@ -231,7 +231,7 @@
         return ;
     }
     
-    NSString* key = [[NSString alloc] initWithFormat:@"%lld", [bean getTag]];
+    NSString* key = [[NSString alloc] initWithFormat:@"%lld", bean.tag];
     BeanPackage* beanPackage = [[BeanPackage alloc] initWithBean:bean];
     @synchronized (self.normal_task_timeout_dic){
         [_normal_task_timeout_dic setObject:beanPackage forKey:key];
@@ -241,7 +241,7 @@
 -(void)removeTaskBean:(TaskBean*)bean
 {
     if (bean) {
-        NSString* key = [[NSString alloc] initWithFormat:@"%lld", [bean getTag]];
+        NSString* key = [[NSString alloc] initWithFormat:@"%lld", bean.tag];
         @synchronized (self.normal_task_timeout_dic) {
             [_normal_task_timeout_dic removeObjectForKey:key];
         }
@@ -319,13 +319,7 @@
     return YES;
 }
 
--(BOOL)isDefalutChannel
-{
-    return NO;
-}
-
 #pragma  -- mark channel private function to Session
-
 - (void)sendSuccess:(TaskBean*)bean
 {
     if (self) {

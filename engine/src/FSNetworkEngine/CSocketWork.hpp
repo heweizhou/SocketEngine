@@ -3,7 +3,7 @@
 //  NetworkEngine
 //
 //  Created by 周贺伟 on 2017/3/13.
-//  Copyright © 2017年 zhouhewei. All rights reserved.
+//  Copyright © 2017年 周贺伟. All rights reserved.
 //
 
 #ifndef CSocketWork_hpp

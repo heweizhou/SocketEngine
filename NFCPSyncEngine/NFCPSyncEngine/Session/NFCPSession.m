@@ -2,29 +2,24 @@
 //  NFCPSession.m
 //  NFCPSyncEngine
 //
-//  Created by Lin on 16/6/3.
+//  Created by 周贺伟 on 16/6/3.
 //  Copyright © 2016年 周贺伟. All rights reserved.
 //
 
 #import "NFCPSession.h"
 #import "ConnectionHub.h"
-#import "TaskBean.h"
-#import "IAuthDelegate.h"
+#import "NFCPQueueUtils.h"
+
 #import "Channel+CallBack.h"
 #import "Channel+Sender.h"
 #import "TaskBean+Private.h"
-#import "NFCPQueueUtils.h"
 
 #define CHANNEL_NOTIFY_QUEUE_NAME @"channel.notify.queue"
 
-@interface NFCPSession ()<IAuthDelegate, ConnectionHubDelegate, ChannelSendDelegate>
+@interface NFCPSession ()<ConnectionHubDelegate, ChannelSendDelegate>
 {
     NSMutableArray<Channel*>*   _dataChannels;
-    
-    BOOL                        _isAuthed;
     Channel*                    _authChanel;
-    id<INFCPAuth>               _auth;
-    
     ConnectionHub*              _connectionsHub;
 }
 @end
@@ -38,16 +33,10 @@
 
 -(instancetype)initWithHosts:(NSArray*)hosts timeout:(int)timeout
 {
-    return [self initWithHosts:hosts timeout:timeout auth:nil];
-}
-
--(instancetype)initWithHosts:(NSArray*)hosts timeout:(int)timeout auth:(id<INFCPAuth>)auth
-{
     self = [super init];
     if (self != nil) {
         
         [self sessionEnvInit:timeout hosts:hosts];
-        [self setAuth:auth];
     }
     return self;
 }
@@ -56,8 +45,6 @@
 
 -(void)sessionEnvInit:(int)timeout hosts:(NSArray*)hosts
 {
-    _isAuthed = NO;
-    
     _connectionsHub = [[ConnectionHub alloc] initWithHosts:hosts timeout:timeout];
     _connectionsHub.delegate = self;
     
@@ -69,19 +56,22 @@
 {
     _authChanel = [[Channel alloc] init];
     _dataChannels = [[NSMutableArray<Channel*> alloc] init];
-    [self registerChannel:_authChanel];
 }
 
 -(void)registerChannel:(Channel*)channel
 {
     @synchronized (_dataChannels) {
-        [channel setSendDelegate:self];
-        [_dataChannels addObject:channel];
-        if (_isAuthed) {
-            dispatch_async([[NFCPQueueUtils sharedInstance] getGlobalQueue:CHANNEL_NOTIFY_QUEUE_NAME], ^{
-                [channel onChannelInit];
-            });
+        if (![_dataChannels containsObject:channel]) {
+            [_dataChannels addObject:channel];
         }
+    }
+    
+    [self enableChannel:channel];
+    
+    if ([_connectionsHub isConnectionAvaliable]) {
+        dispatch_async([[NFCPQueueUtils sharedInstance] getGlobalQueue:CHANNEL_NOTIFY_QUEUE_NAME], ^{
+            [channel onChannelInit];
+        });
     }
 }
 
@@ -89,7 +79,7 @@
 {
     @synchronized (_dataChannels) {
         if ([_dataChannels containsObject:channel]) {
-            [channel setSendDelegate:nil];
+            [self disableChannel:channel];
             [_dataChannels removeObject:channel];
             return YES;
         }
@@ -101,8 +91,8 @@
 
 -(void)sessionInitAction
 {
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusInit)]) {
-        [_sessionStatusDelegate onSessionStatusInit];
+    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusInit:)]) {
+        [_sessionStatusDelegate onSessionStatusInit:self];
     }
 }
 
@@ -137,17 +127,6 @@
     [_connectionsHub setHosts:hosts];
 }
 
--(void)setAuth:(id<INFCPAuth>)auth
-{
-    if (auth == nil) {
-        _auth = nil;
-        return ;
-    }
-    
-    [auth setAuthDelegate:self];
-    _auth = auth;
-}
-
 -(void)setTimeout:(int)timeout
 {
     [_connectionsHub setTiemout:timeout];
@@ -166,7 +145,6 @@
 
 -(void)pause
 {
-    _isAuthed = NO;
     [_authChanel cancelAllTask];
     [_connectionsHub disConnect];
 }
@@ -180,18 +158,15 @@
 
 - (BOOL)beforeTaskSend:(Channel*)channel bean:(TaskBean*)bean
 {
-    if (channel == _authChanel) {
+    if ([_connectionsHub isConnectionAvaliable]) {
         return YES;
     }
     
-    if (_isAuthed) {
-        return YES;
-    }
     
-    if (self.sessionStatusDelegate) {
-        if ([self.sessionStatusDelegate respondsToSelector:@selector(onSessionConnectionNeedRebuild)]) {
-            [self.sessionStatusDelegate onSessionConnectionNeedRebuild];
-        }
+    if ([self.sessionStatusDelegate respondsToSelector:@selector(onSessionStatusNeedRebuild:)]) {
+        [self disableChannels:_dataChannels];
+        [self disableChannel:_authChanel];
+        [self.sessionStatusDelegate onSessionStatusNeedRebuild:self];
     }
     
     return NO;
@@ -199,6 +174,10 @@
 
 - (BOOL)sendTask:(Channel*)channel bean:(TaskBean*)bean HighPriority:(BOOL)HP
 {
+    if ([_sessionActionDelegate respondsToSelector:@selector(onSessionActionSendTask:bean:)]) {
+        [_sessionActionDelegate onSessionActionSendTask:channel bean:bean];
+    }
+    
     return [_connectionsHub send:(id<IDataRequest>)bean HighPriority:HP];
 }
 
@@ -217,52 +196,64 @@
 {
     [_authChanel cancelAllTask];
     
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusStart)]) {
-        [_sessionStatusDelegate onSessionStatusStart];
+    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusStart:)]) {
+        [_sessionStatusDelegate onSessionStatusStart:self];
     }
-
 }
 
 #pragma --mark ConnectionStatusDelegate delegate
 
 - (void)socketDidClosed:(Connection*)connect
 {
-    _isAuthed = NO;
-    
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusCloesd)]) {
-        [_sessionStatusDelegate onSessionStatusCloesd];
+    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusCloesd:)]) {
+        [_sessionStatusDelegate onSessionStatusCloesd:self];
     }
 }
 
 - (void)socketConnectSuccessed:(Connection*)connect
 {
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusSuccessed)]) {
-        [_sessionStatusDelegate onSessionStatusSuccessed];
-    }
-    
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusStartAuth)]) {
-        [_sessionStatusDelegate onSessionStatusStartAuth];
-    }
-    
-    if (_auth) {
-        [_auth startAuthWithChannel:_authChanel];
-    } else {
-        _isAuthed = YES;
+    if (![_sessionActionDelegate respondsToSelector:@selector(onSessionActionIsAuthNeeded:)]) {
         [self notifyChannelInitSync];
+        if ([_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusSuccessed:)]) {
+            [_sessionStatusDelegate onSessionStatusSuccessed:self];
+        }
+        return ;
     }
+    
+    if (![_sessionActionDelegate respondsToSelector:@selector(onSessionActionAuthWithChannel:dataChannels:session:)]){
+        assert(0);
+        [self notifyChannelInitSync];
+        if ([_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusSuccessed:)]) {
+            [_sessionStatusDelegate onSessionStatusSuccessed:self];
+        }
+        return ;
+    }
+    
+    
+    if ([_sessionActionDelegate onSessionActionIsAuthNeeded:self]){
+        
+        [self disableChannels:_dataChannels];
+        [self enableChannel:_authChanel];
+        [_sessionActionDelegate onSessionActionAuthWithChannel:_authChanel dataChannels:[_dataChannels copy] session:self];
+    }
+    
+    if ([_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusSuccessed:)]) {
+        [_sessionStatusDelegate onSessionStatusSuccessed:self];
+    }
+    
 }
 
 - (void)socketConnectFailed:(Connection*)connect
 {
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusFailed)]) {
-        [_sessionStatusDelegate onSessionStatusFailed];
+    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusFailed:)]) {
+        [_sessionStatusDelegate onSessionStatusFailed:self];
     }
 }
 
 - (void)socketConnectTimeout:(Connection*)connect
 {
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusTimeout)]) {
-        [_sessionStatusDelegate onSessionStatusTimeout];
+    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusTimeout:)]) {
+        [_sessionStatusDelegate onSessionStatusTimeout:self];
     }
 }
 
@@ -272,8 +263,8 @@
 
 - (void)sockeErrorCallBack:(Connection*)connect errorCode:(int)code
 {
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusError:)]) {
-        [_sessionStatusDelegate onSessionStatusError:code];
+    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusError:session:)]) {
+        [_sessionStatusDelegate onSessionStatusError:code session:self];
     }
 }
 
@@ -301,77 +292,35 @@
     }
 }
 
--(void)ResponseAbandoned:(Channel*)channel
+- (void)disableChannels:(NSArray<Channel*>*)channels
 {
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onResponseAbandoned:)]) {
-        [_sessionStatusDelegate onResponseAbandoned:channel];
+    @synchronized (channels) {
+        [channels enumerateObjectsUsingBlock:^(Channel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [self disableChannel:obj];
+        }];
     }
 }
 
-#pragma --mark IAuthDelegate delegate
-
--(void)onLinkSetup:(Channel*) channel parameters:(NSDictionary*) parameters
+- (void)enableChannels:(NSArray<Channel*>*)channels
 {
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionLinkSetup:parameters:)]) {
-        [_sessionStatusDelegate onSessionLinkSetup:channel parameters:parameters];
+    @synchronized (channels) {
+        [channels enumerateObjectsUsingBlock:^(Channel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [self enableChannel:obj];
+        }];
     }
 }
 
--(void)onLinkSetupSuccessed:(Channel*) channel parameters:(NSDictionary*) parameters
+- (void)disableChannel:(Channel*)channel
 {
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionLinkSetupSuccessed:parameters:)]) {
-        [_sessionStatusDelegate onSessionLinkSetupSuccessed:channel parameters:parameters];
-    }
+    [channel setSendDelegate:nil];
 }
 
--(void)onLinkSetupFailed:(Channel*) channel parameters:(NSDictionary*) parameters
+- (void)enableChannel:(Channel*)channel
 {
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionLinkSetupFailed:parameters:)]) {
-        [_sessionStatusDelegate onSessionLinkSetupFailed:channel parameters:parameters];
-    }
-}
-
--(void)onLinkSetupTimeout:(Channel*) channel parameters:(NSDictionary*) parameters
-{
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionLinkSetupTimeout:parameters:)]) {
-        [_sessionStatusDelegate onSessionLinkSetupTimeout:channel parameters:parameters];
-    }
-}
-
--(void)onAuthSetup:(Channel*) channel parameters:(NSDictionary*) parameters
-{
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionAuthSetup:parameters:)]) {
-        [_sessionStatusDelegate onSessionAuthSetup:channel parameters:parameters];
-    }
-}
-
--(void)onAuthSuccessed:(Channel*) channel parameters:(NSDictionary*) parameters
-{
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusAuthSuccessed:parameters:)]) {
-        [_sessionStatusDelegate onSessionStatusAuthSuccessed:channel parameters:parameters];
-    }
-    
-    _isAuthed = YES;
-    
-    [self notifyChannelInitSync];// ready to delete
-}
-
--(void)onAuthFailed:(Channel*) channel parameters:(NSDictionary*) parameters
-{
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusAuthFailed:parameters:)]) {
-        [_sessionStatusDelegate onSessionStatusAuthFailed:channel parameters:parameters];
-    }
-}
-
--(void)onAuthTimeout:(Channel*) channel parameters:(NSDictionary*) parameters
-{
-    if (_sessionStatusDelegate && [_sessionStatusDelegate respondsToSelector:@selector(onSessionStatusAuthTimeout:parameters:)]) {
-        [_sessionStatusDelegate onSessionStatusAuthTimeout:channel parameters:parameters];
-    }
+    [channel setSendDelegate:self];
 }
 
 #pragma --mark SendStatusDelegate delegate
-
 - (void)sendSuccess:(TaskBean*)bean
 {
     [[bean getChannel] sendSuccess:(id<IDataRequest>)bean];
@@ -379,7 +328,7 @@
 
 - (void)sendFailed:(TaskBean*)bean
 {
-    [self sockeErrorCallBack:nil errorCode:FSSocketOtherError];
+    [self sockeErrorCallBack:nil errorCode:-100004];
     [[bean getChannel] sendFailed:(id<IDataRequest>)bean];
 }
 
@@ -392,12 +341,39 @@
 
 - (void)onDataArrival:(Connection*)connect data:(NSData*)buffer
 {
-    //to do
-    //dispath the message from socket to channel
-    assert(0);
-    /*
-     - (BOOL)onProcessMsg:(TaskBean*)bean channel:(Channel*)channel withMsg:(id)msg
-    */
+    if ([_sessionActionDelegate respondsToSelector:@selector(onSessionActionResponseData:)]) {
+        NSArray<NFCPResponseMessage*>* responseMsg = [_sessionActionDelegate onSessionActionResponseData:buffer];
+        for (NFCPResponseMessage* msg in responseMsg) {
+            [self ChannelDispather:msg];
+        }
+    }
+}
+
+- (void)ChannelDispather:(NFCPResponseMessage*)messsage
+{
+    int64_t tag = [messsage getMeesageTag];
+    __block TaskBean* bean = nil;
+    @synchronized (_dataChannels) {
+        [_dataChannels enumerateObjectsUsingBlock:^(Channel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            bean = [obj getTaskRefByTag:tag];
+            if (bean) {
+                *stop = YES;
+                [obj processMsg:messsage bean:bean];
+
+            }
+        }];
+    }
+    
+    if (bean) {
+        return ;
+    }
+    
+    //认证通道
+    bean = [_authChanel getTaskRefByTag:tag];
+    if (bean) {
+        [_authChanel processMsg:messsage bean:bean];
+        return ;
+    }
 }
 
 @end

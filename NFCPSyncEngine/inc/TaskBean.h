@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+typedef char BYTE;
 @interface TaskBean : NSObject
+@property(nonatomic, assign, readonly)  int64_t            tag;
 @property(nonatomic, assign)            int                timeout;
-@property(nonatomic, strong)            NSMutableData*     data;
+@property(nonatomic, assign)            NSInteger          packageCount;
+@property(nonatomic, assign)            NSInteger          totalPackage;
 @property(nonatomic, strong)            id                 userData;
 
 -(instancetype)init;
 -(instancetype)initWithTag:(int64_t)tag;
+-(NSData*)addTag2Binary:(NSMutableData*)data;
 -(NSData*)createPackage;
-
 @end

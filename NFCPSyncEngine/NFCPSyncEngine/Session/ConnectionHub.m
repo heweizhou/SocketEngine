@@ -58,7 +58,7 @@
         
         if ([info count] == 2) {
             
-            Connection* connection = [[Connection alloc] initWithIp:info[0] port:[info[1] intValue] timeout:_timeout type:INet];
+            Connection* connection = [[Connection alloc] initWithIp:info[0] port:[info[1] intValue] timeout:_timeout];
             connection.dataDelegate = self;
             connection.connectDelegate = self;
             connection.sendStatueDelegate = self;
@@ -144,6 +144,13 @@
         }
     }
     return NO;
+}
+
+- (BOOL)isConnectionAvaliable
+{
+    @synchronized(_conn){
+        return _conn != nil;
+    }
 }
 
 - (BOOL)cancelAllTask

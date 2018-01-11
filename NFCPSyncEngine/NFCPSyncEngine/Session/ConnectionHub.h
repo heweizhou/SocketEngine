@@ -47,4 +47,6 @@
 - (void)setHosts:(NSArray*)hosts;
 - (void)setTiemout:(int)timeout;
 
+- (BOOL)isConnectionAvaliable;
+
 @end

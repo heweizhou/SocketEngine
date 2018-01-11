@@ -3,7 +3,7 @@
 //  DataHub
 //
 //  Created by 周贺伟 on 2016/12/2.
-//  Copyright © 2016年 zhouhewei. All rights reserved.
+//  Copyright © 2016年 周贺伟. All rights reserved.
 //
 
 #ifndef CDataHubCtrl_h
