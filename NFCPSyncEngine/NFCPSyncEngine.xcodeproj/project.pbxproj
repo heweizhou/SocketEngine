@@ -22,24 +22,17 @@
 		1EA9278720071BF0007D3D42 /* NFCPResponseMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278420071BF0007D3D42 /* NFCPResponseMessage.h */; };
 		1EA9278820071BF0007D3D42 /* TaskBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278520071BF0007D3D42 /* TaskBean.h */; };
 		1EA9278A20071C9D007D3D42 /* NFCPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278920071C9D007D3D42 /* NFCPSession.h */; };
-		1EA9278D20071F0C007D3D42 /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278B20071F0C007D3D42 /* Connection.h */; };
-		1EA9278E20071F0C007D3D42 /* IDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA9278C20071F0C007D3D42 /* IDataRequest.h */; };
-		1EEC9C0B1CF7DCBF00DA3D32 /* libFSNetWorkEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEC9C0A1CF7DCAD00DA3D32 /* libFSNetWorkEngine.a */; };
+		1ECDF65720085DE400435572 /* IDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ECDF65520085DE400435572 /* IDataRequest.h */; };
+		1ECDF65820085DE400435572 /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ECDF65620085DE400435572 /* Connection.h */; };
+		1ECDF66920085E6900435572 /* libFSNetWorkEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDF64A20085D3C00435572 /* libFSNetWorkEngine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1EEC9C091CF7DCAD00DA3D32 /* PBXContainerItemProxy */ = {
+		1ECDF64920085D3C00435572 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1EEC9C011CF7DCAD00DA3D32 /* FSNetWorkEngine.xcodeproj */;
+			containerPortal = 1ECDF64420085D3C00435572 /* FSNetWorkEngine.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1E1909EB1CEC181000433389;
-			remoteInfo = FSNetWorkEngine;
-		};
-		1EEC9C0C1CF7DCC200DA3D32 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EEC9C011CF7DCAD00DA3D32 /* FSNetWorkEngine.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E1909EA1CEC181000433389;
 			remoteInfo = FSNetWorkEngine;
 		};
 /* End PBXContainerItemProxy section */
@@ -60,10 +53,10 @@
 		1EA9278420071BF0007D3D42 /* NFCPResponseMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCPResponseMessage.h; sourceTree = "<group>"; };
 		1EA9278520071BF0007D3D42 /* TaskBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskBean.h; sourceTree = "<group>"; };
 		1EA9278920071C9D007D3D42 /* NFCPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCPSession.h; sourceTree = "<group>"; };
-		1EA9278B20071F0C007D3D42 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = ../../inc/Connection.h; sourceTree = "<group>"; };
-		1EA9278C20071F0C007D3D42 /* IDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDataRequest.h; path = ../../inc/IDataRequest.h; sourceTree = "<group>"; };
 		1EC7E4EB1CF6D1DC001DB0A6 /* libNFCPSyncEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNFCPSyncEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EEC9C011CF7DCAD00DA3D32 /* FSNetWorkEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FSNetWorkEngine.xcodeproj; path = ../FSNetWorkEngine/FSNetWorkEngine.xcodeproj; sourceTree = "<group>"; };
+		1ECDF64420085D3C00435572 /* FSNetWorkEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FSNetWorkEngine.xcodeproj; path = FSNetWorkEngine/FSNetWorkEngine.xcodeproj; sourceTree = "<group>"; };
+		1ECDF65520085DE400435572 /* IDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDataRequest.h; path = FSNetWorkEngine/inc/IDataRequest.h; sourceTree = SOURCE_ROOT; };
+		1ECDF65620085DE400435572 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = FSNetWorkEngine/inc/Connection.h; sourceTree = SOURCE_ROOT; };
 		3E7F95F11D1CDF6100A7963A /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		3E7F95F31D1CDF6700A7963A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		3E7F95F51D1CE26A00A7963A /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
@@ -75,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EEC9C0B1CF7DCBF00DA3D32 /* libFSNetWorkEngine.a in Frameworks */,
+				1ECDF66920085E6900435572 /* libFSNetWorkEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +114,8 @@
 		1EC7E4E21CF6D1DC001DB0A6 = {
 			isa = PBXGroup;
 			children = (
+				1ECDF64420085D3C00435572 /* FSNetWorkEngine.xcodeproj */,
 				883056C91D35095600B0EE2E /* Frameworks */,
-				1EEC9C011CF7DCAD00DA3D32 /* FSNetWorkEngine.xcodeproj */,
 				1EC7E4ED1CF6D1DC001DB0A6 /* NFCPSyncEngine */,
 				1EC7E4EC1CF6D1DC001DB0A6 /* Products */,
 			);
@@ -139,30 +132,29 @@
 		1EC7E4ED1CF6D1DC001DB0A6 /* NFCPSyncEngine */ = {
 			isa = PBXGroup;
 			children = (
+				1ECDF65420085DC600435572 /* NetWrokEngineInc */,
 				1EA9278220071BF0007D3D42 /* inc */,
 				1EA9276820071B93007D3D42 /* Channel */,
 				1EA9276E20071B93007D3D42 /* Session */,
-				1EDE7A6D1E76BAB8009F9FC8 /* FSNetWorkInc */,
 			);
 			path = NFCPSyncEngine;
 			sourceTree = "<group>";
 		};
-		1EDE7A6D1E76BAB8009F9FC8 /* FSNetWorkInc */ = {
+		1ECDF64520085D3C00435572 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EA9278B20071F0C007D3D42 /* Connection.h */,
-				1EA9278C20071F0C007D3D42 /* IDataRequest.h */,
-			);
-			name = FSNetWorkInc;
-			path = ../../FSNetWorkEngine/FSNetWorkEngine/inc;
-			sourceTree = "<group>";
-		};
-		1EEC9C021CF7DCAD00DA3D32 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1EEC9C0A1CF7DCAD00DA3D32 /* libFSNetWorkEngine.a */,
+				1ECDF64A20085D3C00435572 /* libFSNetWorkEngine.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1ECDF65420085DC600435572 /* NetWrokEngineInc */ = {
+			isa = PBXGroup;
+			children = (
+				1ECDF65620085DE400435572 /* Connection.h */,
+				1ECDF65520085DE400435572 /* IDataRequest.h */,
+			);
+			name = NetWrokEngineInc;
 			sourceTree = "<group>";
 		};
 		883056C91D35095600B0EE2E /* Frameworks */ = {
@@ -187,13 +179,13 @@
 				1EA9277620071B93007D3D42 /* TaskBean+Private.h in Headers */,
 				1EA9277820071B93007D3D42 /* Channel+Sender.h in Headers */,
 				1EA9277A20071B93007D3D42 /* Channel+CallBack.h in Headers */,
-				1EA9278D20071F0C007D3D42 /* Connection.h in Headers */,
 				1EA9278720071BF0007D3D42 /* NFCPResponseMessage.h in Headers */,
 				1EA9278820071BF0007D3D42 /* TaskBean.h in Headers */,
+				1ECDF65720085DE400435572 /* IDataRequest.h in Headers */,
 				1EA9278A20071C9D007D3D42 /* NFCPSession.h in Headers */,
 				1EA9278620071BF0007D3D42 /* Channel.h in Headers */,
-				1EA9278E20071F0C007D3D42 /* IDataRequest.h in Headers */,
 				1EA9277C20071B93007D3D42 /* ConnectionHub.h in Headers */,
+				1ECDF65820085DE400435572 /* Connection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +203,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1EEC9C0D1CF7DCC200DA3D32 /* PBXTargetDependency */,
 			);
 			name = NFCPSyncEngine;
 			productName = NFCPSyncEngine;
@@ -244,8 +235,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 1EEC9C021CF7DCAD00DA3D32 /* Products */;
-					ProjectRef = 1EEC9C011CF7DCAD00DA3D32 /* FSNetWorkEngine.xcodeproj */;
+					ProductGroup = 1ECDF64520085D3C00435572 /* Products */;
+					ProjectRef = 1ECDF64420085D3C00435572 /* FSNetWorkEngine.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -256,11 +247,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1EEC9C0A1CF7DCAD00DA3D32 /* libFSNetWorkEngine.a */ = {
+		1ECDF64A20085D3C00435572 /* libFSNetWorkEngine.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libFSNetWorkEngine.a;
-			remoteRef = 1EEC9C091CF7DCAD00DA3D32 /* PBXContainerItemProxy */;
+			remoteRef = 1ECDF64920085D3C00435572 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -280,14 +271,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1EEC9C0D1CF7DCC200DA3D32 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FSNetWorkEngine;
-			targetProxy = 1EEC9C0C1CF7DCC200DA3D32 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1EC7E4F21CF6D1DC001DB0A6 /* Debug */ = {

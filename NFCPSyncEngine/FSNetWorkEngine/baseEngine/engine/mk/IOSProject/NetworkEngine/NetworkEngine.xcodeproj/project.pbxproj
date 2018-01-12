@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E1C9FFB1F147353006E8451 /* CSocketConnectWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FEB1F147353006E8451 /* CSocketConnectWork.cpp */; };
 		1E1C9FFC1F147353006E8451 /* CSocketWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FED1F147353006E8451 /* CSocketWork.cpp */; };
-		1E1C9FFD1F147353006E8451 /* FSNetworkEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FEF1F147353006E8451 /* FSNetworkEngine.cpp */; };
 		1E1C9FFE1F147353006E8451 /* NetWorkEngineTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF11F147353006E8451 /* NetWorkEngineTools.cpp */; };
 		1E1C9FFF1F147353006E8451 /* SocketFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF31F147353006E8451 /* SocketFunctions.cpp */; };
 		1E1CA0001F147353006E8451 /* SocketHandlerMapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF51F147353006E8451 /* SocketHandlerMapper.cpp */; };
@@ -18,6 +17,7 @@
 		1E1CA03B1F14740A006E8451 /* libcommons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1CA02E1F1473F8006E8451 /* libcommons.a */; };
 		1E1CA03C1F14740A006E8451 /* libDataHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1CA0341F1473FB006E8451 /* libDataHub.a */; };
 		1E1CA03D1F14740A006E8451 /* libMessageCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1CA03A1F1473FE006E8451 /* libMessageCenter.a */; };
+		1ECDF66C20085F9300435572 /* FSNetworkEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDF66A20085F9300435572 /* FSNetworkEngine.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,8 +82,6 @@
 		1E1C9FEC1F147353006E8451 /* CSocketConnectWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSocketConnectWork.hpp; sourceTree = "<group>"; };
 		1E1C9FED1F147353006E8451 /* CSocketWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSocketWork.cpp; sourceTree = "<group>"; };
 		1E1C9FEE1F147353006E8451 /* CSocketWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSocketWork.hpp; sourceTree = "<group>"; };
-		1E1C9FEF1F147353006E8451 /* FSNetworkEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNetworkEngine.cpp; sourceTree = "<group>"; };
-		1E1C9FF01F147353006E8451 /* FSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetworkEngine.h; sourceTree = "<group>"; };
 		1E1C9FF11F147353006E8451 /* NetWorkEngineTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetWorkEngineTools.cpp; sourceTree = "<group>"; };
 		1E1C9FF21F147353006E8451 /* SocketDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketDefines.h; sourceTree = "<group>"; };
 		1E1C9FF31F147353006E8451 /* SocketFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketFunctions.cpp; sourceTree = "<group>"; };
@@ -129,6 +127,8 @@
 		1E1CA0291F1473F8006E8451 /* commons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = commons.xcodeproj; path = ../../../../baseframe/mk/IOSProject/commons/commons.xcodeproj; sourceTree = "<group>"; };
 		1E1CA02F1F1473FB006E8451 /* DataHub.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DataHub.xcodeproj; path = ../../../../baseframe/mk/IOSProject/datahub/DataHub.xcodeproj; sourceTree = "<group>"; };
 		1E1CA0351F1473FE006E8451 /* MessageCenter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageCenter.xcodeproj; path = ../../../../baseframe/mk/IOSProject/MessageCenter/MessageCenter.xcodeproj; sourceTree = "<group>"; };
+		1ECDF66A20085F9300435572 /* FSNetworkEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNetworkEngine.cpp; sourceTree = "<group>"; };
+		1ECDF66B20085F9300435572 /* FSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetworkEngine.h; sourceTree = "<group>"; };
 		FE1218E31BF1ED18007CAD8E /* libNetworkEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNetworkEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE401C461DF3D08900FA17CC /* libDataHub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataHub.a; path = "../../../../baseframe/lib/ios/DataHub/Debug-iphonesimulator/libDataHub.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,12 +150,12 @@
 		1E1C9FEA1F147353006E8451 /* FSNetworkEngine */ = {
 			isa = PBXGroup;
 			children = (
+				1ECDF66A20085F9300435572 /* FSNetworkEngine.cpp */,
+				1ECDF66B20085F9300435572 /* FSNetworkEngine.h */,
 				1E1C9FEB1F147353006E8451 /* CSocketConnectWork.cpp */,
 				1E1C9FEC1F147353006E8451 /* CSocketConnectWork.hpp */,
 				1E1C9FED1F147353006E8451 /* CSocketWork.cpp */,
 				1E1C9FEE1F147353006E8451 /* CSocketWork.hpp */,
-				1E1C9FEF1F147353006E8451 /* FSNetworkEngine.cpp */,
-				1E1C9FF01F147353006E8451 /* FSNetworkEngine.h */,
 				1E1C9FF11F147353006E8451 /* NetWorkEngineTools.cpp */,
 				1E1C9FF21F147353006E8451 /* SocketDefines.h */,
 				1E1C9FF31F147353006E8451 /* SocketFunctions.cpp */,
@@ -426,8 +426,8 @@
 				1E1C9FFB1F147353006E8451 /* CSocketConnectWork.cpp in Sources */,
 				1E1CA0011F147353006E8451 /* SocketRecvManager.cpp in Sources */,
 				1E1C9FFC1F147353006E8451 /* CSocketWork.cpp in Sources */,
+				1ECDF66C20085F9300435572 /* FSNetworkEngine.cpp in Sources */,
 				1E1CA0001F147353006E8451 /* SocketHandlerMapper.cpp in Sources */,
-				1E1C9FFD1F147353006E8451 /* FSNetworkEngine.cpp in Sources */,
 				1E1CA0021F147353006E8451 /* SocketUtility.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

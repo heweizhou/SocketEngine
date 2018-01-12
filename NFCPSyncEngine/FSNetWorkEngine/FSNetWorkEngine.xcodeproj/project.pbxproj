@@ -10,23 +10,16 @@
 		1E156C3F1CED64D500FFED56 /* Connection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1E156C3E1CED64D500FFED56 /* Connection.mm */; };
 		1E190A021CEC187800433389 /* NObjcCallBack.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1E1909FF1CEC187800433389 /* NObjcCallBack.mm */; };
 		1E9FE4E31D2DF16A004963CF /* BaseMsgPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9FE4E21D2DF16A004963CF /* BaseMsgPackage.m */; };
-		1EC7E4DF1CF6CFF2001DB0A6 /* libNetworkEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC7E4DE1CF6CFE3001DB0A6 /* libNetworkEngine.a */; };
+		1ECDF66820085E5600435572 /* libNetworkEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDF66120085E0C00435572 /* libNetworkEngine.a */; };
 		1EDE7A1F1E767759009F9FC8 /* ConnectionDataDispather.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE7A1E1E767759009F9FC8 /* ConnectionDataDispather.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1EC7E4DD1CF6CFE3001DB0A6 /* PBXContainerItemProxy */ = {
+		1ECDF66020085E0C00435572 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */;
+			containerPortal = 1ECDF65920085E0C00435572 /* NetworkEngine.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FE1218E31BF1ED18007CAD8E;
-			remoteInfo = NetworkEngine;
-		};
-		3ED9D5561D17BD9B00646D17 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FE1218E21BF1ED18007CAD8E;
 			remoteInfo = NetworkEngine;
 		};
 /* End PBXContainerItemProxy section */
@@ -46,18 +39,18 @@
 /* Begin PBXFileReference section */
 		1E156C3E1CED64D500FFED56 /* Connection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Connection.mm; sourceTree = "<group>"; };
 		1E1909EB1CEC181000433389 /* libFSNetWorkEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFSNetWorkEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E1909F81CEC184000433389 /* FSNetEngineConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetEngineConstant.h; sourceTree = "<group>"; };
-		1E1909F91CEC184000433389 /* IFSCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSCallBack.h; sourceTree = "<group>"; };
-		1E1909FA1CEC184000433389 /* IFSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSNetworkEngine.h; sourceTree = "<group>"; };
 		1E1909FE1CEC187800433389 /* NObjcCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NObjcCallBack.h; sourceTree = "<group>"; };
 		1E1909FF1CEC187800433389 /* NObjcCallBack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NObjcCallBack.mm; sourceTree = "<group>"; };
 		1E190A001CEC187800433389 /* SocketDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketDefines.h; sourceTree = "<group>"; };
-		1E3679C41F4EDE5D002E5378 /* NetWorkEngineTools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NetWorkEngineTools.hpp; sourceTree = "<group>"; };
 		1E9FE4E11D2DF16A004963CF /* BaseMsgPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMsgPackage.h; sourceTree = "<group>"; };
 		1E9FE4E21D2DF16A004963CF /* BaseMsgPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMsgPackage.m; sourceTree = "<group>"; };
 		1EA9279020071F18007D3D42 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		1EA9279120071F18007D3D42 /* IDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDataRequest.h; sourceTree = "<group>"; };
-		1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkEngine.xcodeproj; path = ../engine/mk/IOSProject/NetworkEngine/NetworkEngine.xcodeproj; sourceTree = "<group>"; };
+		1ECDF65920085E0C00435572 /* NetworkEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkEngine.xcodeproj; path = baseEngine/engine/mk/IOSProject/NetworkEngine/NetworkEngine.xcodeproj; sourceTree = "<group>"; };
+		1ECDF66320085E3D00435572 /* IFSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSNetworkEngine.h; sourceTree = "<group>"; };
+		1ECDF66420085E3D00435572 /* IFSCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSCallBack.h; sourceTree = "<group>"; };
+		1ECDF66520085E3D00435572 /* FSNetEngineConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetEngineConstant.h; sourceTree = "<group>"; };
+		1ECDF66620085E3D00435572 /* NetWorkEngineTools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NetWorkEngineTools.hpp; sourceTree = "<group>"; };
 		1ED877A51E6EAF310038B590 /* NFCPSyncEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCPSyncEnums.h; sourceTree = "<group>"; };
 		1EDE7A1D1E767759009F9FC8 /* ConnectionDataDispather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDataDispather.h; sourceTree = "<group>"; };
 		1EDE7A1E1E767759009F9FC8 /* ConnectionDataDispather.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ConnectionDataDispather.mm; sourceTree = "<group>"; };
@@ -68,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EC7E4DF1CF6CFF2001DB0A6 /* libNetworkEngine.a in Frameworks */,
+				1ECDF66820085E5600435572 /* libNetworkEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +71,10 @@
 		1E1909E21CEC181000433389 = {
 			isa = PBXGroup;
 			children = (
-				1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */,
+				1ECDF65920085E0C00435572 /* NetworkEngine.xcodeproj */,
 				1E1909ED1CEC181000433389 /* FSNetWorkEngine */,
 				1E1909EC1CEC181000433389 /* Products */,
+				1ECDF66720085E5600435572 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,27 +99,15 @@
 			path = FSNetWorkEngine;
 			sourceTree = "<group>";
 		};
-		1E1909F71CEC184000433389 /* inc */ = {
-			isa = PBXGroup;
-			children = (
-				1E3679C41F4EDE5D002E5378 /* NetWorkEngineTools.hpp */,
-				1E1909F81CEC184000433389 /* FSNetEngineConstant.h */,
-				1E1909F91CEC184000433389 /* IFSCallBack.h */,
-				1E1909FA1CEC184000433389 /* IFSNetworkEngine.h */,
-			);
-			name = inc;
-			path = ../../../engine/inc;
-			sourceTree = "<group>";
-		};
 		1E1909FB1CEC187800433389 /* SocketEngine */ = {
 			isa = PBXGroup;
 			children = (
+				1ECDF66220085E3D00435572 /* inc */,
 				1EDE7A1D1E767759009F9FC8 /* ConnectionDataDispather.h */,
 				1E1909FE1CEC187800433389 /* NObjcCallBack.h */,
 				1E190A001CEC187800433389 /* SocketDefines.h */,
 				1EDE7A1E1E767759009F9FC8 /* ConnectionDataDispather.mm */,
 				1E1909FF1CEC187800433389 /* NObjcCallBack.mm */,
-				1E1909F71CEC184000433389 /* inc */,
 			);
 			path = SocketEngine;
 			sourceTree = "<group>";
@@ -139,12 +121,31 @@
 			path = inc;
 			sourceTree = SOURCE_ROOT;
 		};
-		1EC7E4D71CF6CFE3001DB0A6 /* Products */ = {
+		1ECDF65A20085E0C00435572 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EC7E4DE1CF6CFE3001DB0A6 /* libNetworkEngine.a */,
+				1ECDF66120085E0C00435572 /* libNetworkEngine.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1ECDF66220085E3D00435572 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				1ECDF66320085E3D00435572 /* IFSNetworkEngine.h */,
+				1ECDF66420085E3D00435572 /* IFSCallBack.h */,
+				1ECDF66520085E3D00435572 /* FSNetEngineConstant.h */,
+				1ECDF66620085E3D00435572 /* NetWorkEngineTools.hpp */,
+			);
+			name = inc;
+			path = baseEngine/engine/inc;
+			sourceTree = SOURCE_ROOT;
+		};
+		1ECDF66720085E5600435572 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +162,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3ED9D5571D17BD9B00646D17 /* PBXTargetDependency */,
 			);
 			name = FSNetWorkEngine;
 			productName = FSNetWorkEngine;
@@ -194,8 +194,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 1EC7E4D71CF6CFE3001DB0A6 /* Products */;
-					ProjectRef = 1EC7E4D61CF6CFE3001DB0A6 /* NetworkEngine.xcodeproj */;
+					ProductGroup = 1ECDF65A20085E0C00435572 /* Products */;
+					ProjectRef = 1ECDF65920085E0C00435572 /* NetworkEngine.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -206,11 +206,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1EC7E4DE1CF6CFE3001DB0A6 /* libNetworkEngine.a */ = {
+		1ECDF66120085E0C00435572 /* libNetworkEngine.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libNetworkEngine.a;
-			remoteRef = 1EC7E4DD1CF6CFE3001DB0A6 /* PBXContainerItemProxy */;
+			remoteRef = 1ECDF66020085E0C00435572 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -228,14 +228,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3ED9D5571D17BD9B00646D17 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NetworkEngine;
-			targetProxy = 3ED9D5561D17BD9B00646D17 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1E1909F21CEC181000433389 /* Debug */ = {
