@@ -75,10 +75,10 @@
 -(NSData*)generateBinaryData
 {
     NSMutableData* binData = [[self createPackage] mutableCopy];
-    return [self addTag2Binary:binData];;
+    return [self addTag:_tag toBinary:binData];
 }
 
--(NSData*)addTag2Binary:(NSData*)data
+-(NSData*)addTag:(int64_t)tag toBinary:(NSMutableData*)data;
 {
     return nil;
 }

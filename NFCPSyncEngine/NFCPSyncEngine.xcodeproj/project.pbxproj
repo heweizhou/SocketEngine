@@ -25,6 +25,13 @@
 		1ECDF65720085DE400435572 /* IDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ECDF65520085DE400435572 /* IDataRequest.h */; };
 		1ECDF65820085DE400435572 /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ECDF65620085DE400435572 /* Connection.h */; };
 		1ECDF66920085E6900435572 /* libFSNetWorkEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDF64A20085D3C00435572 /* libFSNetWorkEngine.a */; };
+		1ECDF6C1200899B100435572 /* TaskBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9276A20071B93007D3D42 /* TaskBean.m */; };
+		1ECDF6C2200899B100435572 /* NFCPQueueUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9276F20071B93007D3D42 /* NFCPQueueUtils.m */; };
+		1ECDF6C3200899B100435572 /* ConnectionHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9277320071B93007D3D42 /* ConnectionHub.m */; };
+		1ECDF6C4200899B100435572 /* NFCPResponseMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9277520071B93007D3D42 /* NFCPResponseMessage.m */; };
+		1ECDF6C5200899B100435572 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9276C20071B93007D3D42 /* Channel.m */; };
+		1ECDF6C6200899B100435572 /* NFCPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9277120071B93007D3D42 /* NFCPSession.m */; };
+		1ECDF73D20089A8600435572 /* libFSNetWorkEngineMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDF6D9200899B200435572 /* libFSNetWorkEngineMac.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,27 @@
 			proxyType = 2;
 			remoteGlobalIDString = 1E1909EB1CEC181000433389;
 			remoteInfo = FSNetWorkEngine;
+		};
+		1ECDF6A32008967900435572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ECDF64420085D3C00435572 /* FSNetWorkEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E1909EA1CEC181000433389;
+			remoteInfo = FSNetWorkEngine;
+		};
+		1ECDF6D8200899B200435572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ECDF64420085D3C00435572 /* FSNetWorkEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1ECDF6BA2008999C00435572;
+			remoteInfo = FSNetWorkEngineMac;
+		};
+		1ECDF73E20089A8D00435572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ECDF64420085D3C00435572 /* FSNetWorkEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ECDF6AE2008999C00435572;
+			remoteInfo = FSNetWorkEngineMac;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,6 +85,7 @@
 		1ECDF64420085D3C00435572 /* FSNetWorkEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FSNetWorkEngine.xcodeproj; path = FSNetWorkEngine/FSNetWorkEngine.xcodeproj; sourceTree = "<group>"; };
 		1ECDF65520085DE400435572 /* IDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDataRequest.h; path = FSNetWorkEngine/inc/IDataRequest.h; sourceTree = SOURCE_ROOT; };
 		1ECDF65620085DE400435572 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = FSNetWorkEngine/inc/Connection.h; sourceTree = SOURCE_ROOT; };
+		1ECDF6D6200899B100435572 /* libNFCPSyncEngineMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNFCPSyncEngineMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7F95F11D1CDF6100A7963A /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		3E7F95F31D1CDF6700A7963A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		3E7F95F51D1CE26A00A7963A /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
@@ -69,6 +98,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ECDF66920085E6900435572 /* libFSNetWorkEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ECDF6BE200899B100435572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ECDF73D20089A8600435572 /* libFSNetWorkEngineMac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				1EC7E4EB1CF6D1DC001DB0A6 /* libNFCPSyncEngine.a */,
+				1ECDF6D6200899B100435572 /* libNFCPSyncEngineMac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				1ECDF64A20085D3C00435572 /* libFSNetWorkEngine.a */,
+				1ECDF6D9200899B200435572 /* libFSNetWorkEngineMac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,10 +242,28 @@
 			buildRules = (
 			);
 			dependencies = (
+				1ECDF6A42008967900435572 /* PBXTargetDependency */,
 			);
 			name = NFCPSyncEngine;
 			productName = NFCPSyncEngine;
 			productReference = 1EC7E4EB1CF6D1DC001DB0A6 /* libNFCPSyncEngine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1ECDF6BB200899B100435572 /* NFCPSyncEngineMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ECDF6D3200899B100435572 /* Build configuration list for PBXNativeTarget "NFCPSyncEngineMac" */;
+			buildPhases = (
+				1ECDF6BE200899B100435572 /* Frameworks */,
+				1ECDF6C0200899B100435572 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ECDF73F20089A8D00435572 /* PBXTargetDependency */,
+			);
+			name = NFCPSyncEngineMac;
+			productName = NFCPSyncEngine;
+			productReference = 1ECDF6D6200899B100435572 /* libNFCPSyncEngineMac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -242,6 +299,7 @@
 			projectRoot = "";
 			targets = (
 				1EC7E4EA1CF6D1DC001DB0A6 /* NFCPSyncEngine */,
+				1ECDF6BB200899B100435572 /* NFCPSyncEngineMac */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +310,13 @@
 			fileType = archive.ar;
 			path = libFSNetWorkEngine.a;
 			remoteRef = 1ECDF64920085D3C00435572 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1ECDF6D9200899B200435572 /* libFSNetWorkEngineMac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFSNetWorkEngineMac.a;
+			remoteRef = 1ECDF6D8200899B200435572 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -270,7 +335,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ECDF6C0200899B100435572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ECDF6C1200899B100435572 /* TaskBean.m in Sources */,
+				1ECDF6C2200899B100435572 /* NFCPQueueUtils.m in Sources */,
+				1ECDF6C3200899B100435572 /* ConnectionHub.m in Sources */,
+				1ECDF6C4200899B100435572 /* NFCPResponseMessage.m in Sources */,
+				1ECDF6C5200899B100435572 /* Channel.m in Sources */,
+				1ECDF6C6200899B100435572 /* NFCPSession.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1ECDF6A42008967900435572 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FSNetWorkEngine;
+			targetProxy = 1ECDF6A32008967900435572 /* PBXContainerItemProxy */;
+		};
+		1ECDF73F20089A8D00435572 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FSNetWorkEngineMac;
+			targetProxy = 1ECDF73E20089A8D00435572 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1EC7E4F21CF6D1DC001DB0A6 /* Debug */ = {
@@ -278,8 +369,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -296,7 +387,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -310,7 +401,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -322,8 +414,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -340,7 +432,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -348,7 +440,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -358,7 +451,7 @@
 		1EC7E4F51CF6D1DC001DB0A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				FRAMEWORK_SEARCH_PATHS = "../../../Library/FSLog/Framework_$(CONFIGURATION)";
 				HEADER_SEARCH_PATHS = (
 					../../../Library/FSUtilityKit/inc,
@@ -368,6 +461,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
@@ -376,7 +470,7 @@
 		1EC7E4F61CF6D1DC001DB0A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				FRAMEWORK_SEARCH_PATHS = "../../../Library/FSLog/Framework_$(CONFIGURATION)";
 				HEADER_SEARCH_PATHS = (
 					../../../Library/FSUtilityKit/inc,
@@ -386,6 +480,51 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
+			};
+			name = Release;
+		};
+		1ECDF6D4200899B100435572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = "../../../Library/FSLog/Framework_$(CONFIGURATION)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../Library/FSUtilityKit/inc,
+					../../../Library/ThirdParts/inc,
+					../../../Library/FSLog/inc,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
+			};
+			name = Debug;
+		};
+		1ECDF6D5200899B100435572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = "../../../Library/FSLog/Framework_$(CONFIGURATION)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../Library/FSUtilityKit/inc,
+					../../../Library/ThirdParts/inc,
+					../../../Library/FSLog/inc,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
@@ -408,6 +547,15 @@
 			buildConfigurations = (
 				1EC7E4F51CF6D1DC001DB0A6 /* Debug */,
 				1EC7E4F61CF6D1DC001DB0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ECDF6D3200899B100435572 /* Build configuration list for PBXNativeTarget "NFCPSyncEngineMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ECDF6D4200899B100435572 /* Debug */,
+				1ECDF6D5200899B100435572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

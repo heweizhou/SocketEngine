@@ -9,10 +9,21 @@
 /* Begin PBXBuildFile section */
 		1E2CC0201DF156380094A088 /* CDataHub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC01D1DF156380094A088 /* CDataHub.cpp */; };
 		1E2CC0221DF156380094A088 /* DataRequestProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC01F1DF156380094A088 /* DataRequestProtocol.cpp */; };
+		1ECDF702200899E900435572 /* DataRequestProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC01F1DF156380094A088 /* DataRequestProtocol.cpp */; };
+		1ECDF703200899E900435572 /* CDataHub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC01D1DF156380094A088 /* CDataHub.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1EBC649D1DDD8E270094949E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ECDF705200899E900435572 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -55,10 +66,18 @@
 		1E2CC0391DF15A060094A088 /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataRequest.h; path = ../../../inc/datahub/DataRequest.h; sourceTree = "<group>"; };
 		1E2CC03A1DF15A060094A088 /* DataRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataRequestProtocol.h; path = ../../../inc/datahub/DataRequestProtocol.h; sourceTree = "<group>"; };
 		1EBC649F1DDD8E270094949E /* libDataHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDataHub.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ECDF709200899E900435572 /* libDataHubMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDataHubMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1EBC649C1DDD8E270094949E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ECDF704200899E900435572 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -143,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				1EBC649F1DDD8E270094949E /* libDataHub.a */,
+				1ECDF709200899E900435572 /* libDataHubMac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +185,23 @@
 			name = DataHub;
 			productName = DataHub;
 			productReference = 1EBC649F1DDD8E270094949E /* libDataHub.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1ECDF700200899E900435572 /* DataHubMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ECDF706200899E900435572 /* Build configuration list for PBXNativeTarget "DataHubMac" */;
+			buildPhases = (
+				1ECDF701200899E900435572 /* Sources */,
+				1ECDF704200899E900435572 /* Frameworks */,
+				1ECDF705200899E900435572 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataHubMac;
+			productName = DataHub;
+			productReference = 1ECDF709200899E900435572 /* libDataHubMac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -195,6 +232,7 @@
 			projectRoot = "";
 			targets = (
 				1EBC649E1DDD8E270094949E /* DataHub */,
+				1ECDF700200899E900435572 /* DataHubMac */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +247,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ECDF701200899E900435572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ECDF702200899E900435572 /* DataRequestProtocol.cpp in Sources */,
+				1ECDF703200899E900435572 /* CDataHub.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -217,8 +264,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -238,7 +285,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -253,6 +300,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -264,8 +312,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -285,7 +333,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -294,6 +342,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -303,8 +352,10 @@
 		1EBC64A91DDD8E270094949E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,11 +366,45 @@
 		1EBC64AA1DDD8E270094949E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1ECDF707200899E900435572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1ECDF708200899E900435572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -341,6 +426,15 @@
 			buildConfigurations = (
 				1EBC64A91DDD8E270094949E /* Debug */,
 				1EBC64AA1DDD8E270094949E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ECDF706200899E900435572 /* Build configuration list for PBXNativeTarget "DataHubMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ECDF707200899E900435572 /* Debug */,
+				1ECDF708200899E900435572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

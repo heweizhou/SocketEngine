@@ -25,11 +25,39 @@
 		1EC087BE1A33D52200741E8E /* CSemaphoreManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC087BC1A33D52200741E8E /* CSemaphoreManager.cpp */; };
 		1EC456CE1A26FAEF00ED7DD3 /* CBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC456CC1A26FAEF00ED7DD3 /* CBundle.cpp */; };
 		1EC456D21A27061000ED7DD3 /* CBundleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC456D01A27061000ED7DD3 /* CBundleManager.cpp */; };
+		1ECDF70C200899EC00435572 /* IWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE79E81E763562009F9FC8 /* IWork.cpp */; };
+		1ECDF70D200899EC00435572 /* CMutexFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC01B2D1A257759001DB302 /* CMutexFactory.cpp */; };
+		1ECDF70E200899EC00435572 /* CLinuxSemaphoreNamed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC009DB1A260F920073ED47 /* CLinuxSemaphoreNamed.cpp */; };
+		1ECDF70F200899EC00435572 /* CThreadFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC01B311A257759001DB302 /* CThreadFactory.cpp */; };
+		1ECDF710200899EC00435572 /* IOSPlantformFunction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF4E501A2EF7D400EE09A4 /* IOSPlantformFunction.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1ECDF711200899EC00435572 /* CList_ZHW.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE62891AA804320027D37D /* CList_ZHW.cpp */; };
+		1ECDF712200899EC00435572 /* CLinuxTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EBDC6701A6A04EB004C7354 /* CLinuxTime.cpp */; };
+		1ECDF713200899EC00435572 /* CHanderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC01B511A25B30F001DB302 /* CHanderManager.cpp */; };
+		1ECDF714200899EC00435572 /* ThreadWithQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E8872521DF15C8700D64665 /* ThreadWithQueue.cpp */; };
+		1ECDF715200899EC00435572 /* CThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC01B3B1A257759001DB302 /* CThreadPool.cpp */; };
+		1ECDF716200899EC00435572 /* CBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC456CC1A26FAEF00ED7DD3 /* CBundle.cpp */; };
+		1ECDF717200899EC00435572 /* RefBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE193C1A2F4371009E9389 /* RefBase.cpp */; };
+		1ECDF718200899EC00435572 /* CSharedMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC01B491A257B62001DB302 /* CSharedMemory.cpp */; };
+		1ECDF719200899EC00435572 /* CShareMemManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC01B4E1A25A99E001DB302 /* CShareMemManager.cpp */; };
+		1ECDF71A200899EC00435572 /* CLinuxMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC01B291A257759001DB302 /* CLinuxMutex.cpp */; };
+		1ECDF71B200899EC00435572 /* CSemaphoreManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC087BC1A33D52200741E8E /* CSemaphoreManager.cpp */; };
+		1ECDF71C200899EC00435572 /* ToolKit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CBFCF1DF1548F0094A088 /* ToolKit.cpp */; };
+		1ECDF71D200899EC00435572 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EA08B8B1B607C5B0085E412 /* log.cpp */; };
+		1ECDF71E200899EC00435572 /* CBundleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC456D01A27061000ED7DD3 /* CBundleManager.cpp */; };
 		1EDE79E91E763562009F9FC8 /* IWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE79E81E763562009F9FC8 /* IWork.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1E757D041A24AC1E008E7889 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SRCROOT)/../../../inc/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ECDF720200899EC00435572 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(SRCROOT)/../../../inc/$(PRODUCT_NAME)";
@@ -91,6 +119,7 @@
 		1ECC96B91B1D53BC00B4155A /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jpeglib.h; sourceTree = "<group>"; };
 		1ECC96BA1B1D53BC00B4155A /* turbojpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turbojpeg.h; sourceTree = "<group>"; };
 		1ECC96BC1B1D541300B4155A /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libturbojpeg.a; sourceTree = "<group>"; };
+		1ECDF724200899EC00435572 /* libcommonsMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcommonsMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDE79E81E763562009F9FC8 /* IWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IWork.cpp; sourceTree = "<group>"; };
 		1EF4D94D1A30307300E2B2A4 /* CSmartPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSmartPointer.h; sourceTree = "<group>"; };
 		1EF4D94E1A303AC300E2B2A4 /* ICSharedMemory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICSharedMemory.h; sourceTree = "<group>"; };
@@ -98,6 +127,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		1E757D031A24AC1E008E7889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ECDF71F200899EC00435572 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -119,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				1E757D061A24AC1E008E7889 /* libcommons.a */,
+				1ECDF724200899EC00435572 /* libcommonsMac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,6 +273,23 @@
 			productReference = 1E757D061A24AC1E008E7889 /* libcommons.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		1ECDF70A200899EC00435572 /* commonsMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ECDF721200899EC00435572 /* Build configuration list for PBXNativeTarget "commonsMac" */;
+			buildPhases = (
+				1ECDF70B200899EC00435572 /* Sources */,
+				1ECDF71F200899EC00435572 /* Frameworks */,
+				1ECDF720200899EC00435572 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = commonsMac;
+			productName = commons;
+			productReference = 1ECDF724200899EC00435572 /* libcommonsMac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -263,6 +317,7 @@
 			projectRoot = "";
 			targets = (
 				1E757D051A24AC1E008E7889 /* commons */,
+				1ECDF70A200899EC00435572 /* commonsMac */,
 			);
 		};
 /* End PBXProject section */
@@ -294,6 +349,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ECDF70B200899EC00435572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ECDF70C200899EC00435572 /* IWork.cpp in Sources */,
+				1ECDF70D200899EC00435572 /* CMutexFactory.cpp in Sources */,
+				1ECDF70E200899EC00435572 /* CLinuxSemaphoreNamed.cpp in Sources */,
+				1ECDF70F200899EC00435572 /* CThreadFactory.cpp in Sources */,
+				1ECDF710200899EC00435572 /* IOSPlantformFunction.mm in Sources */,
+				1ECDF711200899EC00435572 /* CList_ZHW.cpp in Sources */,
+				1ECDF712200899EC00435572 /* CLinuxTime.cpp in Sources */,
+				1ECDF713200899EC00435572 /* CHanderManager.cpp in Sources */,
+				1ECDF714200899EC00435572 /* ThreadWithQueue.cpp in Sources */,
+				1ECDF715200899EC00435572 /* CThreadPool.cpp in Sources */,
+				1ECDF716200899EC00435572 /* CBundle.cpp in Sources */,
+				1ECDF717200899EC00435572 /* RefBase.cpp in Sources */,
+				1ECDF718200899EC00435572 /* CSharedMemory.cpp in Sources */,
+				1ECDF719200899EC00435572 /* CShareMemManager.cpp in Sources */,
+				1ECDF71A200899EC00435572 /* CLinuxMutex.cpp in Sources */,
+				1ECDF71B200899EC00435572 /* CSemaphoreManager.cpp in Sources */,
+				1ECDF71C200899EC00435572 /* ToolKit.cpp in Sources */,
+				1ECDF71D200899EC00435572 /* log.cpp in Sources */,
+				1ECDF71E200899EC00435572 /* CBundleManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -301,8 +382,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -317,7 +398,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -331,7 +412,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -342,8 +424,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -358,7 +440,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -366,7 +448,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -376,10 +459,11 @@
 		1E757D1B1A24AC1E008E7889 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				GCC_C_LANGUAGE_STANDARD = gnu89;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
@@ -396,10 +480,11 @@
 		1E757D1C1A24AC1E008E7889 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				GCC_C_LANGUAGE_STANDARD = gnu89;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -409,6 +494,52 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1ECDF722200899EC00435572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++0x",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1ECDF723200899EC00435572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++0x",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -430,6 +561,15 @@
 			buildConfigurations = (
 				1E757D1B1A24AC1E008E7889 /* Debug */,
 				1E757D1C1A24AC1E008E7889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ECDF721200899EC00435572 /* Build configuration list for PBXNativeTarget "commonsMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ECDF722200899EC00435572 /* Debug */,
+				1ECDF723200899EC00435572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

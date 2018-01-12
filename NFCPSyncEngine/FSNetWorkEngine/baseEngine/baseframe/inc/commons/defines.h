@@ -27,17 +27,17 @@
 #define  _MY_NAME_SPACE_   fx_common
 
 #ifdef __GXX_EXPERIMENTAL_CXX0X__
-//#if(__cplusplus == 201103L)
-//#include <unordered_map>
-//#include <unordered_set>
-//#define  MAP unordered_map
-//#define  SET unordered_set
-//#else
+#if(__cplusplus == 201103L)
+#include <unordered_map>
+#include <unordered_set>
+#define  MAP std::unordered_map
+#define  SET std::unordered_set
+#else
 #include <tr1/unordered_map>
 #include <tr1/unordered_set>
 #define  MAP std::tr1::unordered_map
 #define  SET std::tr1::unordered_set
-//#endif
+#endif
 #else
 #include <map>
 #include <set>

@@ -18,6 +18,17 @@
 		1E1CA03C1F14740A006E8451 /* libDataHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1CA0341F1473FB006E8451 /* libDataHub.a */; };
 		1E1CA03D1F14740A006E8451 /* libMessageCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1CA03A1F1473FE006E8451 /* libMessageCenter.a */; };
 		1ECDF66C20085F9300435572 /* FSNetworkEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDF66A20085F9300435572 /* FSNetworkEngine.cpp */; };
+		1ECDF6E2200899CA00435572 /* SocketFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF31F147353006E8451 /* SocketFunctions.cpp */; };
+		1ECDF6E3200899CA00435572 /* NetWorkEngineTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF11F147353006E8451 /* NetWorkEngineTools.cpp */; };
+		1ECDF6E4200899CA00435572 /* CSocketConnectWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FEB1F147353006E8451 /* CSocketConnectWork.cpp */; };
+		1ECDF6E5200899CA00435572 /* SocketRecvManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF71F147353006E8451 /* SocketRecvManager.cpp */; };
+		1ECDF6E6200899CA00435572 /* CSocketWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FED1F147353006E8451 /* CSocketWork.cpp */; };
+		1ECDF6E7200899CA00435572 /* FSNetworkEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDF66A20085F9300435572 /* FSNetworkEngine.cpp */; };
+		1ECDF6E8200899CA00435572 /* SocketHandlerMapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF51F147353006E8451 /* SocketHandlerMapper.cpp */; };
+		1ECDF6E9200899CA00435572 /* SocketUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C9FF91F147353006E8451 /* SocketUtility.cpp */; };
+		1ECDF72E20089A3400435572 /* libcommonsMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDF72720089A2200435572 /* libcommonsMac.a */; };
+		1ECDF72F20089A3400435572 /* libDataHubMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDF72A20089A2200435572 /* libDataHubMac.a */; };
+		1ECDF73020089A3400435572 /* libMessageCenterMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDF72D20089A2200435572 /* libMessageCenterMac.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +74,60 @@
 			remoteGlobalIDString = 1E757D051A24AC1E008E7889;
 			remoteInfo = commons;
 		};
+		1ECDF72620089A2200435572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1CA0291F1473F8006E8451 /* commons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1ECDF724200899EC00435572;
+			remoteInfo = commonsMac;
+		};
+		1ECDF72920089A2200435572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1CA02F1F1473FB006E8451 /* DataHub.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1ECDF709200899E900435572;
+			remoteInfo = DataHubMac;
+		};
+		1ECDF72C20089A2200435572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1CA0351F1473FE006E8451 /* MessageCenter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1ECDF6FF200899E400435572;
+			remoteInfo = MessageCenterMac;
+		};
+		1ECDF73120089A4500435572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1CA0351F1473FE006E8451 /* MessageCenter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ECDF6F4200899E400435572;
+			remoteInfo = MessageCenterMac;
+		};
+		1ECDF73320089A4500435572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1CA02F1F1473FB006E8451 /* DataHub.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ECDF700200899E900435572;
+			remoteInfo = DataHubMac;
+		};
+		1ECDF73520089A4500435572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1CA0291F1473F8006E8451 /* commons.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ECDF70A200899EC00435572;
+			remoteInfo = commonsMac;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1ECDF6EE200899CA00435572 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE1218E11BF1ED18007CAD8E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,11 +191,22 @@
 		1E1CA0351F1473FE006E8451 /* MessageCenter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageCenter.xcodeproj; path = ../../../../baseframe/mk/IOSProject/MessageCenter/MessageCenter.xcodeproj; sourceTree = "<group>"; };
 		1ECDF66A20085F9300435572 /* FSNetworkEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNetworkEngine.cpp; sourceTree = "<group>"; };
 		1ECDF66B20085F9300435572 /* FSNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetworkEngine.h; sourceTree = "<group>"; };
+		1ECDF6F3200899CA00435572 /* libNetworkEngineMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNetworkEngineMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1218E31BF1ED18007CAD8E /* libNetworkEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNetworkEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE401C461DF3D08900FA17CC /* libDataHub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataHub.a; path = "../../../../baseframe/lib/ios/DataHub/Debug-iphonesimulator/libDataHub.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1ECDF6EA200899CA00435572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ECDF72E20089A3400435572 /* libcommonsMac.a in Frameworks */,
+				1ECDF72F20089A3400435572 /* libDataHubMac.a in Frameworks */,
+				1ECDF73020089A3400435572 /* libMessageCenterMac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE1218E01BF1ED18007CAD8E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1CA02E1F1473F8006E8451 /* libcommons.a */,
+				1ECDF72720089A2200435572 /* libcommonsMac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1CA0341F1473FB006E8451 /* libDataHub.a */,
+				1ECDF72A20089A2200435572 /* libDataHubMac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1CA03A1F1473FE006E8451 /* libMessageCenter.a */,
+				1ECDF72D20089A2200435572 /* libMessageCenterMac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				FE1218E31BF1ED18007CAD8E /* libNetworkEngine.a */,
+				1ECDF6F3200899CA00435572 /* libNetworkEngineMac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,6 +387,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1ECDF6DA200899CA00435572 /* NetworkEngineMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ECDF6F0200899CA00435572 /* Build configuration list for PBXNativeTarget "NetworkEngineMac" */;
+			buildPhases = (
+				1ECDF6E1200899CA00435572 /* Sources */,
+				1ECDF6EA200899CA00435572 /* Frameworks */,
+				1ECDF6EE200899CA00435572 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ECDF73220089A4500435572 /* PBXTargetDependency */,
+				1ECDF73420089A4500435572 /* PBXTargetDependency */,
+				1ECDF73620089A4500435572 /* PBXTargetDependency */,
+			);
+			name = NetworkEngineMac;
+			productName = NetworkEngine;
+			productReference = 1ECDF6F3200899CA00435572 /* libNetworkEngineMac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		FE1218E21BF1ED18007CAD8E /* NetworkEngine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE1218EC1BF1ED18007CAD8E /* Build configuration list for PBXNativeTarget "NetworkEngine" */;
@@ -317,7 +414,6 @@
 				FE1218DF1BF1ED18007CAD8E /* Sources */,
 				FE1218E01BF1ED18007CAD8E /* Frameworks */,
 				FE1218E11BF1ED18007CAD8E /* CopyFiles */,
-				08AE55F31C4499390025CCA4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -372,6 +468,7 @@
 			projectRoot = "";
 			targets = (
 				FE1218E21BF1ED18007CAD8E /* NetworkEngine */,
+				1ECDF6DA200899CA00435572 /* NetworkEngineMac */,
 			);
 		};
 /* End PBXProject section */
@@ -398,25 +495,45 @@
 			remoteRef = 1E1CA0391F1473FE006E8451 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		1ECDF72720089A2200435572 /* libcommonsMac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcommonsMac.a;
+			remoteRef = 1ECDF72620089A2200435572 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1ECDF72A20089A2200435572 /* libDataHubMac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDataHubMac.a;
+			remoteRef = 1ECDF72920089A2200435572 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1ECDF72D20089A2200435572 /* libMessageCenterMac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMessageCenterMac.a;
+			remoteRef = 1ECDF72C20089A2200435572 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		08AE55F31C4499390025CCA4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
+/* Begin PBXSourcesBuildPhase section */
+		1ECDF6E1200899CA00435572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
+				1ECDF6E2200899CA00435572 /* SocketFunctions.cpp in Sources */,
+				1ECDF6E3200899CA00435572 /* NetWorkEngineTools.cpp in Sources */,
+				1ECDF6E4200899CA00435572 /* CSocketConnectWork.cpp in Sources */,
+				1ECDF6E5200899CA00435572 /* SocketRecvManager.cpp in Sources */,
+				1ECDF6E6200899CA00435572 /* CSocketWork.cpp in Sources */,
+				1ECDF6E7200899CA00435572 /* FSNetworkEngine.cpp in Sources */,
+				1ECDF6E8200899CA00435572 /* SocketHandlerMapper.cpp in Sources */,
+				1ECDF6E9200899CA00435572 /* SocketUtility.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#编译lib并移动到工程目录\n#PROJECT_DIR=${PROJECT_DIR}\n#TARGET=${TARGET_BUILD_DIR}\n\n#rm -fr \"${PROJECT_DIR}/../../../../Library/NetworkEngine/*\"\n#cp -R \"${TARGET}\" \"${PROJECT_DIR}/../../../../Library/NetworkEngine\"";
 		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		FE1218DF1BF1ED18007CAD8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,15 +567,71 @@
 			name = commons;
 			targetProxy = 1E1CA0421F14740F006E8451 /* PBXContainerItemProxy */;
 		};
+		1ECDF73220089A4500435572 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MessageCenterMac;
+			targetProxy = 1ECDF73120089A4500435572 /* PBXContainerItemProxy */;
+		};
+		1ECDF73420089A4500435572 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DataHubMac;
+			targetProxy = 1ECDF73320089A4500435572 /* PBXContainerItemProxy */;
+		};
+		1ECDF73620089A4500435572 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = commonsMac;
+			targetProxy = 1ECDF73520089A4500435572 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1ECDF6F1200899CA00435572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++0x",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1ECDF6F2200899CA00435572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++0x",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		FE1218EA1BF1ED18007CAD8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -475,7 +648,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -489,7 +662,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -500,8 +674,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -518,7 +692,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -526,7 +700,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -536,8 +711,10 @@
 		FE1218ED1BF1ED18007CAD8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -553,8 +730,10 @@
 		FE1218EE1BF1ED18007CAD8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../../lib/ios/$(TARGET_NAME)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -569,6 +748,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1ECDF6F0200899CA00435572 /* Build configuration list for PBXNativeTarget "NetworkEngineMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ECDF6F1200899CA00435572 /* Debug */,
+				1ECDF6F2200899CA00435572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FE1218DE1BF1ED18007CAD8E /* Build configuration list for PBXProject "NetworkEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
