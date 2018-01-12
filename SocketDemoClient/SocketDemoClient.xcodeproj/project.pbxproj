@@ -12,6 +12,9 @@
 		1ECDF69A20086A4A00435572 /* TestTaskBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDF69920086A4A00435572 /* TestTaskBean.m */; };
 		1ECDF74920089AB600435572 /* libNFCPSyncEngineMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDF74820089AAE00435572 /* libNFCPSyncEngineMac.a */; };
 		1ECDF74E2008A49400435572 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDF74D2008A49400435572 /* libstdc++.tbd */; };
+		1ECDF7512008A63B00435572 /* TestResponseMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDF7502008A63B00435572 /* TestResponseMsg.m */; };
+		1ECDF7542008ACA900435572 /* TestChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDF7532008ACA900435572 /* TestChannel.m */; };
+		1ECDF75A2008AD5C00435572 /* TestSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDF7592008AD5C00435572 /* TestSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,12 @@
 		1ECDF69920086A4A00435572 /* TestTaskBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTaskBean.m; sourceTree = "<group>"; };
 		1ECDF6A02008924900435572 /* Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 		1ECDF74D2008A49400435572 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		1ECDF74F2008A63B00435572 /* TestResponseMsg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestResponseMsg.h; sourceTree = "<group>"; };
+		1ECDF7502008A63B00435572 /* TestResponseMsg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestResponseMsg.m; sourceTree = "<group>"; };
+		1ECDF7522008ACA900435572 /* TestChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestChannel.h; sourceTree = "<group>"; };
+		1ECDF7532008ACA900435572 /* TestChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestChannel.m; sourceTree = "<group>"; };
+		1ECDF7582008AD5C00435572 /* TestSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSession.h; sourceTree = "<group>"; };
+		1ECDF7592008AD5C00435572 /* TestSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSession.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +143,10 @@
 				1ECDF6942008640500435572 /* protocol */,
 				1ECDF691200863D200435572 /* TestClient.h */,
 				1ECDF692200863D200435572 /* TestClient.m */,
+				1ECDF7522008ACA900435572 /* TestChannel.h */,
+				1ECDF7532008ACA900435572 /* TestChannel.m */,
+				1ECDF7582008AD5C00435572 /* TestSession.h */,
+				1ECDF7592008AD5C00435572 /* TestSession.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -144,6 +157,8 @@
 				1ECDF69820086A4A00435572 /* TestTaskBean.h */,
 				1ECDF69920086A4A00435572 /* TestTaskBean.m */,
 				1ECDF6A02008924900435572 /* Protocol.h */,
+				1ECDF74F2008A63B00435572 /* TestResponseMsg.h */,
+				1ECDF7502008A63B00435572 /* TestResponseMsg.m */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -239,6 +254,9 @@
 			files = (
 				1ECDF69A20086A4A00435572 /* TestTaskBean.m in Sources */,
 				1ECDF693200863D200435572 /* TestClient.m in Sources */,
+				1ECDF75A2008AD5C00435572 /* TestSession.m in Sources */,
+				1ECDF7542008ACA900435572 /* TestChannel.m in Sources */,
+				1ECDF7512008A63B00435572 /* TestResponseMsg.m in Sources */,
 				1ECDF67A2008624000435572 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

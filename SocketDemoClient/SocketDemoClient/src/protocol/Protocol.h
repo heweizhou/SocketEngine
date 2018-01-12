@@ -11,8 +11,16 @@
 
 typedef struct _tag_package_header
 {
-    long tag;
-    long package_size;
+    int64_t tag;
+    long    package_size;
 }package_header;
+
+
+
+/*
+ 
+ #!@# + package header data + body data + #@!#
+ 
+*/
 
 #endif /* Protocol_h */

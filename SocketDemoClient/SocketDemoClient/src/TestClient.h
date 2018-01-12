@@ -8,9 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol serverResponseDelegate <NSObject>
+
+- (void)onMessageArrival:(NSString*)msg;
+
+@end
+
 @interface TestClient : NSObject
 
-- (instancetype)initWithHosts:(NSArray*)hosts timeout:(int)timeout;
+@property (nonatomic, weak) id<serverResponseDelegate> delegate;
+
+
 - (void)sendMessage:(NSString*)msg;
 
 @end

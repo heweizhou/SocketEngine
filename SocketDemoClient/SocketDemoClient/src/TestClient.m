@@ -8,118 +8,48 @@
 
 #import "TestClient.h"
 
-#import "NFCPResponseMessage.h"
-#import "NFCPSession.h"
-#import "Channel.h"
-#import "TaskBean.h"
+#import "TestChannel.h"
+#import "TestSession.h"
 
-@interface TestClient() <NFCPSessionStatusDelegate, NFCPSessionActionDelegate, ChannelTaskDelegate>
+#import "TestTaskBean.h"
+#import "TestResponseMsg.h"
+
+@interface TestClient() <ChannelTaskDelegate>
 {
-    Channel*        _channel;
-    NFCPSession*    _session;
+    TestSession*        _session;
+    TestChannel*        _channel;
 }
 @end
 
 @implementation TestClient
 
-- (instancetype)initWithHosts:(NSArray*)hosts timeout:(int)timeout
+- (instancetype)init
 {
     self = [super init];
     if (self) {
-        
-        _channel = [[Channel alloc] init];
+        _channel = [[TestChannel alloc] init];
         _channel.taskDelegate = self;
         
-        _session = [[NFCPSession alloc] initWithHosts:hosts timeout:timeout];
-        _session.sessionActionDelegate = self;
-        _session.sessionStatusDelegate = self;
-        
-        [_session registerChannel:_channel];
-        
-        [_session start];
+        _session = [[TestSession alloc] initWithHosts:nil timeout:30 channel:_channel];
     }
+    
     return self;
 }
 
 - (void)sendMessage:(NSString*)msg
 {
-    
+    TestTaskBean* task = [[TestTaskBean alloc] initWithData:msg];
+    [_channel sendWithBean:task HighPriority:NO];
 }
 
 #pragma --mark ChannelTaskDelegate
 
 - (BOOL)onProcessMsg:(TaskBean *)bean channel:(Channel *)channel withMsg:(id)msg
 {
+    TestResponseMsg* tMsg = (TestResponseMsg*)msg;
+    
+    NSLog(@"%@", [tMsg getPackageContent]);
     return NO;
-}
-
-#pragma --mark NFCPSessionActionDelegate
-
--(BOOL)onSessionActionIsAuthNeeded:(NFCPSession*)session
-{
-    return NO;
-}
-
--(void)onSessionActionAuthWithChannel:(Channel*)channel dataChannels:(NSArray<Channel*>*)dataChannels session:(NFCPSession*)session
-{
-    
-}
-
--(void)onSessionActionSendTask:(Channel*)channel bean:(id)bean
-{
-    
-}
-
--(NSArray<NFCPResponseMessage*>*)onSessionActionResponseData:(NSData*)data
-{
-    return nil;
-}
-
--(BOOL)onSessionActionUnHandledMsg:(NFCPResponseMessage*)msg
-{
-    return YES;
-}
-
-#pragma --mark NFCPSessionStatusDelegate
-
--(void)onSessionStatusInit:(NFCPSession*)session
-{
-    
-}
-
--(void)onSessionStatusStart:(NFCPSession*)session
-{
-    
-}
-
--(void)onSessionStatusSuccessed:(NFCPSession*)session
-{
-    
-}
-
--(void)onSessionStatusTimeout:(NFCPSession*)session
-{
-    
-}
-
--(void)onSessionStatusCloesd:(NFCPSession*)session
-{
-    
-}
-
--(void)onSessionStatusFailed:(NFCPSession*)session
-{
-    
-}
-
--(void)onSessionStatusError:(int)errorCode session:(NFCPSession*)session
-{
-    
-}
-
--(void)onSessionStatusNeedRebuild:(NFCPSession*)session
-{
-    
 }
 
 @end

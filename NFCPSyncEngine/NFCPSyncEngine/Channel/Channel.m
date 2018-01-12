@@ -307,11 +307,13 @@
 {
     if (self.taskDelegate) {
         if ([self.taskDelegate respondsToSelector:@selector(onProcessMsg:channel:withMsg:)]){
-            if([self.taskDelegate onProcessMsg:bean channel:self withMsg:msg]){
-                [self removeTaskBean:bean];
+            if(![self.taskDelegate onProcessMsg:bean channel:self withMsg:msg]){
+                return ;
             }
         }
     }
+    
+    [self removeTaskBean:bean];
 }
 
 -(BOOL)enableTaskManage
